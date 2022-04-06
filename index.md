@@ -14,3 +14,69 @@ Die Dokumente werden über [docsify](https://docsify.js.org/#/)
 auf [github pages](https://docs.github.com/en/pages/quickstart) publiziert
 und mit [markdown](https://www.markdownguide.org/basic-syntax/) geschrieben.
 
+--
+
+## Services
+
+- Mobiltäts Hub (Bus, Zug, Taxi...)
+    - Termine
+    - Zeiten
+    - Tickets
+    - Parkplatzsuche
+    - (KI für Suche und Vorschläge)
+- Straßenverkehrsamt
+    - Steuern
+    - An-/Abmeldung
+    - Ummeldung
+- Bauamt
+    - Anträge
+    - Abmessung
+    - Begutachtung
+- Finanzamt
+- Zollamt
+- Arbeitsamt
+    - Anträge
+- Bildungsportal
+    - Übersicht (Kitas, Schule...)
+    - An-/Abmeldung
+    - Informationen
+- Kulturportal
+    - Übersicht (Veranstaltungen...)
+        - Termine
+        - Ort
+        - Geschäfte
+        - Reservierung (Tische,...)
+- Jobportal
+    - Suche (Job, Ausbildung,...)
+- Bankenportal
+    - Übersicht
+        - Geldautomaten
+        - Banken
+    - Verweise auf die Bankenseiten
+- Gesundheitsportal
+    - Arztsuche
+    - Termine
+    - Medikamente kaufen
+    - Onlinecall mit Ärzte
+- Bürgerbüro
+    - Anträge
+    - Termine
+    - Neu und ältere Bürger
+- Zentrales Hub
+    - Login
+    - Register
+    - Gastlogin
+- Polizei
+    - Anzeigen aufgeben
+    - Gesuchte Leute anzeigen
+    - Neuigkeiten über Unfälle
+    - Einbruchsradar
+- Nachrichten/Soziale Medien Portal
+    - Benachrichtungen für Bürger
+        - Warnungen
+        - Inforamation (Newsletter)
+    - Mitbürger einladen
+    - Bewertungen abgeben
+- Immobilienportal
+    - Wohungssuche
+    - Preisalarm
