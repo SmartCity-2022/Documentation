@@ -7,28 +7,65 @@
 ### Organisation
 
 - Verwendetes Vorgehensmodell.
+  - Scrum mit Sprints (Dauer 2 Wochen)
 - Welche Arten von Meetings finden wöchentlich statt?
-- Geplanter Ablauf der Meetings.  
+  - Wöchentlich vor Ort in Raum D317 um 14-17 Uhr 
+- Geplanter Ablauf der Meetings. 
+  - Jeder zeigt seinen aktuellen Stand
+  - Zusammenarbeit an dem Projekten
+  - Probleme ansprechen
 - Werkzeuge für Projektorganisation? Kanban-Board?
+  - Github Projects (Kanban-Board)
+  - Github Issues
+  - Discord
+  - Milestones
 - Wie läuft ein typischer Sprint ab?
+  - Dauer: 14 Tage
+  - Ziele setzen
 - Wie sieht hier ein Codereview aus?
+  - Passiert bei Pull Requests
+  - Kommentare dirket in den Pull Requests
 - Wie und womit wird die Teamkommunikation durchgeführt?
+  - Discord Kanal
+  - Kommentare in Pull Request
+  - Github Issues
 - Dokumentation:
-  - Entwicklerdokumentation?
-  - Kundendokumentation?
-  - Meeting-Protokoll-Dokumentation?
+  - Entwicklerdokumentation
+    - Englisch
+    - Kommentare & Variablen
+  - Meeting-Protokoll-Dokumentation
+    - Deutsch
+    - Zusammenfassung des Meetings
 - Was ist der Produktlieferzeitplan? (x-Mal-wöchentliche Auslieferungen / Continuous I/D/D)
+  - Alle 14 Tage vor Ort
 - Wie wird der Projektfortschritt gemessen und was passiert, wenn zeitlich verschoben werden muss?
+  - Jeweils abhänig vom Meilenstein(Feature)
 - Wer setzt Erwartungen und Ziele fest und wie werden diese dokumentiert?
+  - Gemeinsam
+  - Dokumentation wird am Anfang erstellt
+  - Dokumentation wird dauerhaft erweitert
+  - Dokumentation ist aufgeteilt
+    - Services von Entwicklern
 - Was passiert, wenn jemand Verbesserungsmöglichkeiten identifiziert?
+  - In Meeting oder Scrum Master ansprechen
 - Einschränkungen, Betriebsbedingungen, Faktoren und Risiken, die die Entwicklung beeinflussen können.
+  - Krankheit
+    - Notfalls online
+  - Zeit
 
 ### Team
 
 - Werte und menschliche Umgangsformen
+  - Respektvoll
+  - Offenheit
 - Wie werden Meinungsverschiedenheiten gelöst?
+  - Scrum Master / Software Architekt löst den Streit
 - Wer legt Prioritäten und Zeitpläne fest?
+  - Features Prioritäten werden festgelegt vom Product Owner
+  - Gemeinsam als Gruppe in Meetings
 - Was passiert, wenn ein Teammitglied ein Ziel nicht einhält bzw. die Erwartungen nicht erfüllt?
+  - Person ansprechen (Ursache suchen)
+  - Dozent Bescheid sagen
 
 ### Technik
 
@@ -38,10 +75,17 @@
   - automatische und manuelle Tests
   - Statische Codeanalyse
   - ...
-- Aufteilung in Repositories gemäß Systemarchitektur? Monorepo?
+- Aufteilung in Repositories gemäß Systemarchitektur?
+  - Pro Service ein Repository
 - Versionskontrolle? Git-Workflow?
+  - Github-Workflow (master & dev branch)
 - Wie werden Änderungen intgriert und ausgeliefert? CI/CD? 
+  - Github Actions
+    - Tests
+    - Build
 - Wie wird die Infrastruktur spezifiziert? Containerisierung?
+  - Docker
+    - Dockerfile Template
 - Implementierung
   - Entwicklungsumgebung.
   - Betriebssysteme.
