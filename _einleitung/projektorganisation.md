@@ -104,15 +104,15 @@
 | Finn Watermann | Software Architekt | Technische Leitung/Vision, Code Reviews, Mentoring, Technikevaluation, Softwarequalität |
 | Dennis Edler | Software Engineer | Microservice [Parkplatz](parkplatz/index) |
 | Ben-Lukas Horn | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Nico Hübner | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
+| Nico Hübner | Software Engineer | Microservice [Veranstaltungsportal](veranstaltungsportal/index) |
 | Fabian Pechta | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
 | Patrick Hüntelmann | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Finn Bechinka | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Clemens Vogtländer | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
+| Finn Bechinka | Software Engineer | Microservice [Buergerbuero](buergerbuero/index) |
+| Clemens Vogtländer | Software Engineer | Microservice [Bankenportal](bankenportal/index) |
+| Maurice Leenders | Software Engineer | Microservice [Gesundheitsamt](gesundheitsamt/index) |
 | Dennis Gorpinic | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Maurice Leenders | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Marc Leenders | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Kevin Fischer | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
+| Marc Leenders | Software Engineer | Microservice [Bauamt](bauamt/index) |
+| Kevin Fischer | Software Engineer | Microservice [Straßenverkehrsamt](straßenverkehrsamt/index) |
 
 Hinweis: Ein Microservice für die Authentifizierung/Autorisierung könnte sinnvoll sein.
 
