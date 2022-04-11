@@ -102,7 +102,7 @@
 | Justin Kühnel | Product Owner | Produktvision, Integrations-Microservice, Softwareproduktqualität |
 | Niklas Schumann | DevOps Engineer | Github-Repos, Docker, CI/CD, Dokumentation, Support, Infrastrukturqualität | 
 | Finn Watermann | Software Architekt | Technische Leitung/Vision, Code Reviews, Mentoring, Technikevaluation, Softwarequalität |
-| Dennis Edler | Software Engineer | Microservice [Mobilitäts Hub](mobilitäts hub/index) |
+| Dennis Edler | Software Engineer | Microservice [Mobilitäts_Hub](mobilitäts_hub/index) |
 | Ben-Lukas Horn | Software Engineer | Microservice [Polizei](polizei/index) |
 | Nico Hübner | Software Engineer | Microservice [Kulturportal](kulturportal/index) |
 | Fabian Pechta | Software Engineer | Microservice [Immobilienportal](immobilienportal/index) |
