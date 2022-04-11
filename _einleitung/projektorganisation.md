@@ -102,17 +102,18 @@
 | Justin Kühnel | Product Owner | Produktvision, Integrations-Microservice, Softwareproduktqualität |
 | Niklas Schumann | DevOps Engineer | Github-Repos, Docker, CI/CD, Dokumentation, Support, Infrastrukturqualität | 
 | Finn Watermann | Software Architekt | Technische Leitung/Vision, Code Reviews, Mentoring, Technikevaluation, Softwarequalität |
-| Dennis Edler | Software Engineer | Microservice [Parkplatz](parkplatz/index) |
-| Ben-Lukas Horn | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Nico Hübner | Software Engineer | Microservice [Veranstaltungsportal](veranstaltungsportal/index) |
-| Fabian Pechta | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
-| Patrick Hüntelmann | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
+| Dennis Edler | Software Engineer | Microservice [Mobilitäts Hub](mobilitäts hub/index) |
+| Ben-Lukas Horn | Software Engineer | Microservice [Polizei](polizei/index) |
+| Nico Hübner | Software Engineer | Microservice [Kulturportal](kulturportal/index) |
+| Fabian Pechta | Software Engineer | Microservice [Immobilienportal](immobilienportal/index) |
+| Patrick Hüntelmann | Software Engineer | Microservice [Bildungsportal](bildungsportal/index) |
 | Finn Bechinka | Software Engineer | Microservice [Buergerbuero](buergerbuero/index) |
-| Clemens Vogtländer | Software Engineer | Microservice [Bankenportal](bankenportal/index) |
+| Clemens Vogtländer | Software Engineer | Microservice [Jobportal](bobportal/index) |
 | Maurice Leenders | Software Engineer | Microservice [Gesundheitsamt](gesundheitsamt/index) |
-| Dennis Gorpinic | Software Engineer | Microservice [Krankenhaus](krankenhaus/index) |
+| Dennis Gorpinic | Software Engineer | Microservice [Bankenportal](bankenportal/index) |
 | Marc Leenders | Software Engineer | Microservice [Bauamt](bauamt/index) |
 | Kevin Fischer | Software Engineer | Microservice [Straßenverkehrsamt](straßenverkehrsamt/index) |
+| Finn Amini Kaveh / Patrick Mayer / Justin Kuehnel | Software Engineer | Microservice [Zentrales Hub](zentrales hub/index) |
 
 Hinweis: Ein Microservice für die Authentifizierung/Autorisierung könnte sinnvoll sein.
 
