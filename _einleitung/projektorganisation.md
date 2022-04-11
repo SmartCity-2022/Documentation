@@ -113,7 +113,7 @@
 | Dennis Gorpinic | Software Engineer | Microservice [Bankenportal](bankenportal/index) |
 | Marc Leenders | Software Engineer | Microservice [Bauamt](bauamt/index) |
 | Kevin Fischer | Software Engineer | Microservice [Straßenverkehrsamt](straßenverkehrsamt/index) |
-| Finn Amini Kaveh / Patrick Mayer / Justin Kuehnel | Software Engineer | Microservice [Zentrales Hub](zentrales hub/index) |
+| Finn Amini Kaveh / Patrick Mayer / Justin Kuehnel | Software Engineer | Microservice [Zentrales_Hub](zentrales_hub/index) |
 
 Hinweis: Ein Microservice für die Authentifizierung/Autorisierung könnte sinnvoll sein.
 
