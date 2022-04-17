@@ -13,13 +13,14 @@
 
 * Definition der Akteure
 
-| Akteure | Definition |
+| **Akteure** | **Definition** |
+| :------ | :----- |
 | Benutzer | Benutzer mit grundlegenden Berechtigungen  |
 | Immobilienmakler | Benutzer mit zusätzlichen Berechtigungen |
 
 * Use-Case Diagramme
 
-![](media/usecase.svg)
+![](media/usecase.png)
 
 
 * Strukturierung der Diagramme in funktionale Gruppen
@@ -38,6 +39,7 @@
 **User Stories**
 
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
+| :------ | :----- | :------ | :-------- |
 | Benutzer | authentifiziert werden | ich Termine und andere Handlungen in meinem Namen ausführen kann | Benutzername wird angezeigt |
 | Benutzer | nach Immobilien suchen können | ich gute Angebote finden kann | Immobiliensuche liefert Ergebnisse |
 | Benutzer | Immobilien anbieten können | andere Benutzer das Angebot bekommen | Immobilie hochgeladen und wird angezeigt |
