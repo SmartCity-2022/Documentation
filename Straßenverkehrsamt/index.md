@@ -20,12 +20,12 @@
 * Begriffe konsistent in der Spezifikation verwenden  
 * Begriffe im Glossar darstellen
 
-## Anforderungen im Detail
+**Definition der Akteure**
 
-- User Stories mit Akzeptanzkritierien 
-- Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-- Strukturierung der User Stories in funktionale Gruppen
-- Sicherheit: Misuse-Stories formulieren
+- Bürger: Ein im HUB registrierter Benutzer, der über normale Berechtigungen verfügt
+- Sachbearbeiter: Ein Bearbeiter, der die Anträge eines Bürgers bearbeitet
+
+## Anforderungen im Detail
 
 **User Stories**
 
@@ -37,6 +37,14 @@
 | Auto ummelden | Benutzer  | bereits registriertes Kennzeichen auf anderes Auto umschreiben  | das gleiche Kennzeichen auf anderes Auto gemeldet ist | Anfrage auf Ummeldung erstellt wurde  | Muss  |
 | Autos anzeigen  | Benutzer  | Autos die auf meinen Namen registriert sind anzeigen  | ich dieses mit ihren Details sehen kann | Autos in meinen Daten dargestellt werden | Muss |
 | Anfragen bearbeiten | Sachbearbeiter  | Anfragen auf An- und Ummeldungen bearbeiten können  | diese genehmigt oder abgelehnt werden können  | Einträge in DB gelöscht / geändert / hinzugefügt werden | Optional  |
+
+
+**Misuse Stories**
+
+- Der Service ist NICHT dazu gedacht, sich allgemeine Informationen über Fahrzeuge zu beschaffen
+- Der Service wird die Anträge (voraussichtlich) NICHT vollautomatisch bearbeiten, ein Sachbearbeiter ist immernoch von Nöten
+- Der Service bietet keine direkte Konservation zwischen Bürger und Bearbeiter
+
 
 ## Graphische Benutzerschnittstelle
 
@@ -181,8 +189,9 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 
 ### Verwendete Technologien
 
-- Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
-
-* Frontend
-* Backend
-* Datenbank
+- Frontend
+-- HTML5, CSS und Java Script mittels ReactJS Framework
+- Backend
+-- Python, Framework entweder Django oder FastAPI
+- Datenbank
+-- MySQL, wahrscheinlich MariaDB
