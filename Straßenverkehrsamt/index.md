@@ -22,8 +22,10 @@
 
 **Definition der Akteure**
 
-- Bürger: Ein im HUB registrierter Benutzer, der über normale Berechtigungen verfügt
-- Sachbearbeiter: Ein Bearbeiter, der die Anträge eines Bürgers bearbeitet
+- Bürger
+  - Ein im HUB registrierter Benutzer, der über normale Berechtigungen verfügt
+- Sachbearbeiter
+  - Ein Bearbeiter, der die Anträge eines Bürgers bearbeitet
 
 ## Anforderungen im Detail
 
@@ -190,8 +192,8 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 ### Verwendete Technologien
 
 - Frontend
--- HTML5, CSS und Java Script mittels ReactJS Framework
+  - HTML5, CSS und Java Script mittels ReactJS Framework
 - Backend
--- Python, Framework entweder Django oder FastAPI
+  - Python, Framework entweder Django oder FastAPI
 - Datenbank
--- MySQL, wahrscheinlich MariaDB
+  - MySQL, wahrscheinlich MariaDB
