@@ -4,7 +4,9 @@
 
 ## Beschreibung
 
-Beschreibung des Softwareprodukts "Smart City".
+SmartCity ist ein Projekt, das darauf abziehlt, eine Stadt weitestgehend zu digitalisieren. Dies bedeutet auch, dass eine SmartCity in gewisser Hinsicht
+autonom handeln kann und Entscheidungen interkativ getroffen werden. Durch einen zentralen Aufbau ist die Stadt damit übersichtlich und komfortabel
+bei der Bedienung.
 
 ## Github Repository
 
@@ -16,11 +18,28 @@ Beschreibung des Softwareprodukts "Smart City".
 - Informationen zu Zielbenutzergruppen und deren Merkmale (Bildung, Erfahrung, Sachkenntnis)
 - Abgrenzung (Was ist das Softwaresystem _nicht_)
 
+Ziel des SmartCity Projekts ist es, eine Stadt modern und digital zu gestalten. Dazu gehört eine zentrale Informationsverwaltung, in einem sogenannten 
+"Hub", sowie eine transparente Einsicht in die Przosesse und Verwaltung einer SmartCity für ihre Bürger. Die Motivation dahinter ist es, das Leben in 
+solch einer Stadt durch digitalisierung zu erleichtern und Prozesse zu automatisieren. Ebenso soll durch die digitalisierung bürokratischer Prozesse den
+Beruf des Beamten automatisiert werden. Auch kann durch den übersichtlichen Ablauf der SmartCity die Stadt weiter demokratisiert werden, bzw. ihre Einwohner
+dazu anregen, mehr am demokratischen Prozess teilzunehmen. Dieses Projekt umfasst hauptsächlich alle Prozesse, die regional in einer Stadt ablaufen. Dies
+beinhaltet bestimmte Ämter wie das Straßenverkerhsamt, Bauamt und Gesundheitsamt sowie essentielle Portale einer Stadt, Kulturportal, Bildungsportal,
+Bankenportal und weiteres. Eine SmartCity grenzt sich damit stark zu einer herkömmlichen Stadt ab, da sich nicht, wie es gängig wäre, vor Ort und 
+dezentralisiert verwaltet wird, sondern digital und automatisiert.
+Die Zielgruppe beschränkt sich in einer SmarCity auf die Einwohner ihrer Stadt sowie all ihrer Gäste. Dabei spielt es keine Rolle welcher Klasse,
+Bildungsgrad oder politischen Hintergrund ihre Einwohner entspringen. Alle Einwohner werden gleichermaßen gehandhabt.
+Die SmartCity grenzt sicht damit durch gängige Städte ab durch eine höhere digitalisierungsrate sowie einen größen Bezug zur Informationsfreiheit, die mehr
+Transparenz in die Abläufe einer Stadt erlauben.
+
 ## Risiken
 
 * SWOT-Analyse
 * Verfügen wir über die notwendigen Kompetenzen? (Umsetzbarkeit)
 * Welche Risiken und negativen Nebeneffekte sind zu erwarten?
+
+|  | Harmful | Harmful |
+|---|---|---|
+| internal origin| Digitalisierung | Datenschutz |
 
 ## Stakeholder
 
@@ -65,23 +84,23 @@ Qualitätsmerkmal | sehr gut | gut | normal | nicht relevant
 ---|---|---|---|---
 **Zuverlässigkeit** | | | | |
 Fehlertoleranz |X|-|-|-|
-Wiederherstellbarkeit |X|-|-|-|
+Wiederherstellbarkeit |-|X|-|-|
 Ordnungsmäßigkeit |X|-|-|-|
 Richtigkeit |X|-|-|-|
 Konformität |-|X|-|-|
 **Benutzerfreundlichkeit** | | | | |
-Installierbarkeit |-|-|X|-|
+Installierbarkeit |-|X|-|-|
 Verständlichkeit |X|-|-|-|
-Erlernbarkeit |-|X|-|-|
-Bedienbarkeit |-|X|-|-|
+Erlernbarkeit |X|-|-|-|
+Bedienbarkeit |X|-|-|-|
 **Performance** | | | | |
 Zeitverhalten |-|-|X|-|
-Effizienz|-|-|-|X|
+Effizienz|-|-|X|-|
 **Sicherheit** | | | | |
 Analysierbarkeit |X|-|-|-|
-Modifizierbarkeit |-|-|-|X|
+Modifizierbarkeit |-|X|-|-|
 Stabilität |X|-|-|-|
-Prüfbarkeit |X|-|-|-|
+Prüfbarkeit |-|X|-|-|
 
 
 ## Glossar 
