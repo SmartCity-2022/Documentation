@@ -9,12 +9,12 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 ## Funktionale Anforderungen
 
-* Definition der Akteure
-* Use-Case Diagramme
-* Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren 
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
+* __Akteure__:
+  * Bürger
+  * Stadt
+  * Ämter
+
+[USE CASE DIAGRAMM]
 
 ## Anforderungen im Detail
 
@@ -23,23 +23,16 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 - Strukturierung der User Stories in funktionale Gruppen
 - Sicherheit: Misuse-Stories formulieren
 
-**Schablone für User Stories**
+### User Stories
 
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
-| Wer | Was | Warum | Wann akzeptiert |
+| Bürger | einen Termin vereinbaren | ich mein Anliegen besprechen kann | Termin wird gebucht |
+| Bürger | meinen Umzug melden | ich keine Probleme bekomme | Umzug meldung möglich |
+| Bürger | mich Informieren | ich informiert bin | Infoseiten existieren |
+| Bürger | Fundsachen einsehen | ich gucken kann ob etwas was ich verlohren habe dabei ist | liste von Fundsachen einsehbar |
 
-**Beispiel 1**
 
-| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
-| Benutzer | bei Fehleingabe die Lösung angezeigt bekommen | ich lernen kann | Lösung wird angezeigt |
-
-**Beispiel**
-
-| **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
-|:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-| Lernen  |Benutzer| bei Fehleingabe die Lösung angezeigt bekommen|ich lernen kann| Lösung wird angezeigt | Muss |
 
 ## Graphische Benutzerschnittstelle
 
