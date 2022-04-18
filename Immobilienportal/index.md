@@ -1,6 +1,6 @@
 # Krankenhaus
 
-**Autor:** Fabian
+**Autor:** Fabian Pechta
 
 
 ## Überblick
@@ -53,6 +53,18 @@
 - Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
 - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
 - Mockups für unterschiedliche Akteure
+
+## Mockup Home
+
+![](media/mockup_home.png)
+
+## Mockup Immobilien
+
+![](media/mockup_immobilien.png)
+
+## Mockup Termin
+
+![](media/mockup_termin.png)
 
 
 ## Datenmodell 
@@ -192,5 +204,8 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 - Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
 * Frontend
+  - HTML5, CSS und ReactJS
 * Backend
+  - Fast API (Python)
 * Datenbank
+  - MySQL
