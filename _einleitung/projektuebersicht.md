@@ -1,6 +1,6 @@
 # Projektübersicht *Smart City*
 
-**Autor:** Product Owner
+**Autor:** Patrick Mayer, Finn Amini Kaveh, Justin Kühnel
 
 ## Beschreibung
 
@@ -16,18 +16,17 @@ https://github.com/SmartCity-2022
 
 Ziel des SmartCity Projekts ist es, eine Stadt modern und digital zu gestalten. Dazu gehört eine zentrale Informationsverwaltung, in einem sogenannten 
 "Hub", sowie eine transparente Einsicht in die Prozesse und Verwaltung einer SmartCity für ihre Bürger. Die Motivation dahinter ist es, das Leben in 
-solch einer Stadt durch Digitalisierung zu erleichtern und Prozesse zu automatisieren. Ebenso soll durch die Digitalisierung bürokratischer Prozesse den
-Beruf des Beamten automatisiert werden. Auch kann durch den übersichtlichen Ablauf der SmartCity die Stadt weiter demokratisiert werden, bzw. ihre Einwohner
-dazu anregen, mehr am demokratischen Prozess teilzunehmen. Dieses Projekt umfasst hauptsächlich alle Prozesse, die regional in einer Stadt ablaufen. Dies
-beinhaltet bestimmte Ämter wie das Straßenverkehrsamt, Bauamt und Gesundheitsamt sowie essenzielle Portale einer Stadt, Kulturportal, Bildungsportal,
-Bankenportal und weiteres. Unsere SmartCity unterscheidet sich damit stark zu einer herkömmlichen Stadt, da sich nicht, wie es gängig wäre, vor Ort und 
+solch einer Stadt durch Digitalisierung zu erleichtern und Prozesse zu automatisieren. Ebenso soll durch die Digitalisierung bürokratischer Prozesse der
+Beruf des Beamten automatisiert werden. Auch kann durch den übersichtlichen Ablauf der SmartCity die Stadt weiter demokratisiert, bzw. ihre Einwohner
+dazu angeregt werden, mehr am demokratischen Prozess teilzunehmen. Dieses Projekt umfasst hauptsächlich alle Prozesse, die regional in einer Stadt ablaufen. Dies
+beinhaltet bestimmte Ämter wie das Straßenverkehrsamt, Bauamt und Gesundheitsamt sowie essenzielle Portale einer Stadt, wie das Kulturportal, Bildungsportal,
+Bankenportal und weitere. Unsere SmartCity unterscheidet sich damit stark von einer herkömmlichen Stadt, da sie nicht, wie es gängig wäre, vor Ort und 
 dezentralisiert verwaltet wird, sondern digital und mehrheitlich automatisiert.
 
 Die Zielgruppe beschränkt sich in einer SmarCity auf die Einwohner ihrer Stadt sowie all ihrer Gäste. Dabei spielt es keine Rolle welcher Klasse,
 Bildungsgrad oder politischen Hintergrund ihre Einwohner entspringen. Alle Einwohner werden gleichermaßen gehandhabt.
 
-SmartCity grenzt sich damit durch gängige Städte ab über eine höhere Digitalisierungsrate sowie einen großen Bezug zur Informationsfreiheit, die mehr
-Transparenz in die Abläufe einer Stadt erlauben.
+SmartCity grenzt sich somit von gängigen Städten über eine höhere Digitalisierungsrate sowie einen großen Bezug zur Informationsfreiheit und einer hohen Transparenz bezüglich bürokratischer Abläufe ab.
 
 ## Risiken
 
@@ -75,6 +74,18 @@ Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe da
 
 - "Globale" Funktionalitäten, die alle Microservices überspannen
 
+**Akteure**
+| **Akteur** | **Definition** |
+| :--------- | :----- |
+| Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
+| Gast | Nicht angemeldeter Besucher mit eingeschränkten Berechtigungen |
+
+- Benutzer und Gäste müssen in der Lage sein, zwischen den einzelnen Microservices zu navigieren
+- Benutzer und Gäste müssen in der Lage sein, einen Microservice auszuwählen, um mit diesem zu interagieren
+- Gäste müssen in der Lage sein, sich in der Anwendung zu registrieren
+- Es muss möglich sein, dass sich Benutzer mit ihren Anmeldedaten in der Anwendung anmelden können
+- Die Anwendung muss rechtliche- sowie Kontaktinformationen bereitstellen
+
 ## Abläufe
 
 - Abläufe der Kommunikation von Microservices
@@ -83,16 +94,17 @@ Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe da
 ## Nicht-funktionale Anforderungen 
 
 ### Rahmenbedingungen
-
-- Normen, Standards, Protokolle, Hardware, externe Vorgaben
+- Das Softwareprodukt soll ein verteiltes System darstellen, bei dem jeder Microservice ein in sich geschlossenes System aus Frontend, Backend und Datenbank ist, wobei alle Microservices über ein Event-System mit einem zentralen Hub kommunizieren. 
+- Die Kundendaten sollen zentral verwaltet werden und bei Änderungen der Kundendaten werden alle, bzw. eine ausgewählte Gruppe von Microservices über diese Änderung benachrichtigt.
+- Als Kommunikationsprotokoll soll https genutzt werden
+- Das interne Datenformat ist json, bzw. jwt
+- Innerhalb des gesamten Systems, sowie aller Microservices muss backendseitig validiert werden, sodass kein schädlicher Code eingepflegt werden kann
 
 ### Betriebsbedingungen
-
-- Vorgaben des Kunden (z.B. Web Browser / Betriebssystem Versionen, Programmiersprache)
+- Die Software muss in allen modernen Browser voll funktional sein, welche in der Lage sind HTML5 zu interpretieren. Explizit ausgeschlossen wird hier der Internet Explorer.
+- Für das zentrale Hub werden HTML5, CSS3 und Javascript, bzw. React.js für das Frontend, Node.js für das Backend und MySQL als Datenbanksystem genutzt. Die einzelnen Microservices werden jeweils mit unterschiedlichen Tech-Stacks entwickelt, wobei diese geneuer in den jeweiligen Spezifikationen definiert sind
 
 ### Qualitätsmerkmale
-
-- Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
 
 Qualitätsmerkmal | sehr gut | gut | normal | nicht relevant
 ---|---|---|---|---
