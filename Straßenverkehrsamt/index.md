@@ -2,7 +2,7 @@
 
 **Autor:** Kevin Fischer
 
-![](media/parkplatz.jpg)
+![](media/thumbnail.png)
 
 
 ## Überblick
@@ -34,6 +34,7 @@
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
 | Authentifizierung  |Benutzer| meine Identität bestätigt bekommen|ich Handlungen unter meinen Namen tätigen kann| meine Daten angezeigt werden | Muss |
+| Übersicht | Benutzer | eine Übersicht über alle Funktionen bekommen | ich schnell zu jeder Funktion gelangen kann | ich die Home-Page erreiche | Muss |
 | Auto anmelden | Benutzer  | neue Autos anmelden können  | diese offiziell zugelassen sind | ein Antrag auf Zulassung gestellt wurde | Muss  |
 | Auto abmelden | Benutzer  | bereits registriertes Auto abmelden | dieses nicht mehr in meinen Daten erscheint | Auto aus Datenbank gelöscht | Muss  |
 | Auto ummelden | Benutzer  | bereits registriertes Kennzeichen auf anderes Auto umschreiben  | das gleiche Kennzeichen auf anderes Auto gemeldet ist | Anfrage auf Ummeldung erstellt wurde  | Muss  |
@@ -56,7 +57,16 @@
 - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
 - Mockups für unterschiedliche Akteure
 
-
+### Übersicht
+![](media/Home.png)
+### Auto anmelden
+![](media/Anmelden.png)
+### Auto abmelden
+![](media/Abmelden.png)
+### Auto ummelden
+![](media/Ummelden.png)
+### Autos anzeigen
+![](media/Fahrzeuge.png)
 ## Datenmodell 
 
 - Begriffe im Glossar darstellen
