@@ -46,19 +46,17 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 ## Graphische Benutzerschnittstelle
 
-![](media/mockup1.png)
+![mockup](media/mockup1.png)
 
-![](media/mockup2.png)
+![mockup](media/mockup2.png)
 
-![](media/mockup3.png)
+![mockup](media/mockup3.png)
 
-![](media/mockup4.png)
+![mockup](media/mockup4.png)
 
 ## Datenmodell 
 
-- Begriffe im Glossar darstellen
-- Modellierung des physikalischen Datenmodells 
-  - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+![uml](media/uml.png)
 
 
 ## Schnittstellen
