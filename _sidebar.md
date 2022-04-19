@@ -9,7 +9,7 @@
 
 * [**Parkplatz**](parkplatz/index)
 * [**Bankportal**](bankportal/index)
-* [**Bauamt**](Bauamt/index)
+* [**Bauamt**](bauamt/index)
 * [**Bildungsportal**](bildungsportal/index)
 * [**Bürgerbüro**](buergerbuero/index)
 * [**Gesundheitsportal**](gesundheitsportal/index)
