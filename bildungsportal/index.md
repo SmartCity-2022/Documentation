@@ -7,20 +7,20 @@
 
 ## Funktionale Anforderungen
 
-## Akteure
+### Akteure
 
 | **Akteur**  | **Definition**                                                                                                     |
 |:------------|:-------------------------------------------------------------------------------------------------------------------|
 | Benutzer    | Angemeldeter Benutzer mit grundlegenden Berechtigungen                                                             |
 | Institution | Sachbearbeiter einer Institution mit zusätzlichen Berechtigungen für die Bearbeitung des eigenen Bildungsangebotes |
 
-## Anwendungsfalldiagramm
+### Anwendungsfalldiagramm
 
 ![](media/use_case.svg)
 
 ## Anforderungen im Details
 
-__User Stories__
+### User Stories
 
 | **Als**     | **möchte ich**                           | **so dass**                                    | **Akzeptanz**                            | **Priorität** |
 |:------------|:-----------------------------------------|:-----------------------------------------------|:-----------------------------------------|:--------------|
