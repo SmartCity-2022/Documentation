@@ -30,16 +30,13 @@ SmartCity grenzt sich somit von gängigen Städten über eine höhere Digitalisi
 
 ## Risiken
 
-* SWOT-Analyse
-* Verfügen wir über die notwendigen Kompetenzen? (Umsetzbarkeit)
-* Welche Risiken und negativen Nebeneffekte sind zu erwarten?
-
 | SWOT-Analyse| Hilfreich | Schädlich |
 |---|---|---|
 | <b>Intern</b> | <b>Stärken:</b> Digitalisierung, Automatisierung, Komfortabilität| <b>Schwächen:</b> Datenschutzrechtliche Bedenken, Externe Vulnerabilität  |
 | <b>Extern</b>| <b>Möglichkeiten:</b> Stadterweiterung, Verbesserte Lebensbedingungen | <b>Gefahren:</b> Cyberangriff, Datenschutzdiebstahl, Datenmissbrauch
 
-Risiken könnten sich bei der Entwicklung des Programmes sowie der Benutzung ergeben. So bestehen Risiken bei der Verwaltung großer Datenmengen, sowie bei der Sendung von Daten zwischen Schnittstellen. Risiken könnten auch bei einem nicht vorhergesehen Umgang durch den Benutzer mit der Software hervorgehen.
+Risiken könnten sich bei der Entwicklung der Anwendung sowie der Benutzung ergeben. Dabei kann es zu Sicherheitslücken kommen, wenn die einzelnen Services, sowie der Hub keine umfangreiche Validierung der Daten vornehmen. Zudem ist es wichtig eine sichere Authentifizierung zu implentieren, um eventuellen Angriffen und unberechtigten Zugriffen vorzubeugen. Dies gilt insbesondere für die Kommunikation der Microservices mit dem Hub und umgekehrt, da zu jedem Zeitpunkt garantiert werden muss, dass die benötigten Rechte vorliegen. 
+Die Validierung spielt insbesondere eine große Rolle, um SQL-Injections und Cross-Site-Scripting Angriffe zu verhindern. Neben den Risiken müssen ebenfalls die Synchronisation der Daten und ein regelmäßiger Austausch zwischen den Services gewährleistet sein. Dies ist insbesondere wichtig, damit keine Inkonsistenzen in den Daten zwischen den einzelnen Microservices entstehen. Um dieses Problem zu vermeiden muss mit einem Event System gearbeitet werden, bei dem sich die Microservices untereinander vernetzen und bei Datenänderungen gegenseitig informieren. 
 
 ## Stakeholder
 
@@ -71,8 +68,6 @@ Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe da
 ## Kommunikationsprotokolle und Datenformate
 
 ## Funktionale Anforderungen 
-
-- "Globale" Funktionalitäten, die alle Microservices überspannen
 
 **Akteure**
 | **Akteur** | **Definition** |
