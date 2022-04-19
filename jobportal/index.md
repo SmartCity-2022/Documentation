@@ -93,7 +93,7 @@ Chat-Funktion | kann | Bürger | Bei Rückfragen mit dem Ansprechpartner der Fir
 
 ### URL
 
-http://smart.city/microservices/customer
+http://smart.city/microservices/jobportal
 
 ### Commands
 
@@ -200,5 +200,10 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 - Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
 * Frontend
+  * Javascript
+      * React.js
 * Backend
+  * Javascript
+      * Express.js
 * Datenbank
+  * MySQL
