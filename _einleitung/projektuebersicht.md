@@ -70,6 +70,7 @@ Alle Events, die über RabbitMQ gesendet werden, müssen in einem vorgegebenen J
       "birthday": "01.01.1970",
   }
 }
+```
 
 ## Funktionale Anforderungen 
 
