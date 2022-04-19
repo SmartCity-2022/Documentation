@@ -26,6 +26,26 @@
 
 ## Anforderungen im Detail
 
+**Als**|**Möchte ich**|**So dass **|**Akzeptanz**
+:-----:|:-----:|:-----:|:-----:
+Benutzer|Veranstaltungen angezeigt bekommen|Ich über sie Informiert bin und an ihnen Teilnehmen kann|Veranstaltungen werden aufgelistet (evtl. in einem Kalender)
+Benutzer |Sportangebote in meiner Stadt einsehen können|Ich über sie informiert bin und an ihnen Teilnehmen kann|Vereine und Sportangebote werden in einem "Hub" angezeigt
+Benutzer|Restaurants in meiner Stadt angezeigt bekommen|Ich über sie informiert bin|Eine Liste mit allen Restaurants wird angezeigt
+Benutzer |Bei einem Restaurant meiner Wahl eine Reservierung tätigen, jedoch Zeit X im Voraus|Ich dort einen Platz reservieren kann, für eine definierte Zeit|Das Restaurant erfährt von meiner Reservierung
+ | | | 
+Veranstaltungsersteller (Creator)|Veranstaltungen erstellen|Sie mit Informationen für alle Nutzer sichtbar sind|Veranstaltungen können  in einem definierten Format hinzugefügt werden
+Veranstaltungsersteller (Creator)|Veranstaltungen bearbeiten |Informationen (Ort, Zeit etc.) verändert werden können   |Veranstaltungen können bearbeitet/verändert werden
+Veranstaltungsersteller (Creator)|Veranstaltungen canceln|Veranstaltungen canceln und dies ggf. mit einer Begründung|Veranstaltungen können gelöscht werden, eine Erklärung wird hinzugefügt
+ | | | 
+Sporteinrichtungen|Über ihren Verein informieren/werben|Benutzer die Einrichtung in einem Hub angezeigt bekommen|Sporteinrichtungen können in einem definierten Format hinzugefügt werden
+Sporteinrichtungen|Informationen über ihren Dings aktualisieren|Informationen aktuell gehalten werden|Sporteinrichtungen können bearbeitet/verändert werden
+Sporteinrichtungen|Können schließen|Das der Verein nicht mehr zu finden ist|Sporteinrichtungen können gelöscht werden
+Restaurants |Über ihr Lokal informieren/werben |Benutzer bekommen Lokale in einem Hub angezeigt|Lokale können in einem definierten Format hinzugefügt werden 
+Restaurants|Ihr Lokal aktualisieren |Informationen aktuell gehalten werden|Lokale können bearbeitet/verändert werden
+Restaurants|Können schließen|Das der Lokale nicht mehr zu finden ist|Lokale können gelöscht werden
+Restaurants|Können Reservierungen entgegen nehmen|Sie mit diesen Arbeiten/Planen können |Restaurants bekommen stündlich eine Liste mit Reservierungen
+
+
 - Sicherheit: Misuse-Stories formulieren
 
 **Schablone für User Stories**
