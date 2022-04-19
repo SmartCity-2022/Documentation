@@ -76,16 +76,21 @@ Alle Events, die über RabbitMQ gesendet werden, müssen in einem vorgegebenen J
 
 - "Globale" Funktionalitäten, die alle Microservices überspannen
 
-## Abläufe
+<!--## Abläufe
 
 - Abläufe der Kommunikation von Microservices
-  in Sequenz- oder Aktivitätsdiagramm darstellen
+  in Sequenz- oder Aktivitätsdiagramm darstellen-->
 
 ## Nicht-funktionale Anforderungen 
 
 ### Rahmenbedingungen
 
-- Normen, Standards, Protokolle, Hardware, externe Vorgaben
+<!--- Normen, Standards, Protokolle, Hardware, externe Vorgaben-->
+
+- Protokolle
+  - AMQP 0-9-1: Event Messaging via RabbitMQ
+  - HTTP/S: Übertragung von Inhalten zwischen Server/Client
+  - MySQL: Datenbankanbindung (nur Intern)
 
 ### Betriebsbedingungen
 
