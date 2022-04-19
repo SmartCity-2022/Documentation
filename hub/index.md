@@ -35,7 +35,16 @@
 
 ## Graphische Benutzerschnittstelle
 
-- GUI-Mockups passend zu User Stories
+- GUI-Mockups 
+  - Als Gast
+  ![](images/hub.jpg)
+  ![](images/hub_impressum.jpg)
+  ![](images/hub_login.jpg)
+  ![](images/hub_register.jpg)
+  ![](images/hub_eingeklappt.jpg)
+  - Als angemeldeter Benutzer
+  ![](images/hubreg.jpg)
+  ![](images/hub_impressum_reg.jpg)
 - Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
 - Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
 - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
