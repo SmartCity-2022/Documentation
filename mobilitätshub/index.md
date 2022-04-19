@@ -49,7 +49,7 @@ Die Möglichkeiten der Vernetzungen sind zu allen anderen Services gegeben. Man 
 
 ## Schnittstellen
 
-Durch die Arbeit mit React ist keine API notwendig, da die Daten, welche auf dem Server liegen, direkt beim rendern ausgelesen werden können. 
+Zur Abfrage der Daten aus der Datenbank wird eine API erstellt. Diese wird mit Prisma umgestzt, einer Library welche serverseitig Daten aus der Datenbank lesen und schreiben kann. Diese Library ist für MySQL und TypeScript ausgelegt und passt damit perfekt ins Anforderungsprofil. 
 
 ## Technische Umsetzung
 
