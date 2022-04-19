@@ -176,9 +176,9 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
   so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
 
 ### Verwendete Technologien
-
-- Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
-
 * Frontend
+  * React.js
 * Backend
+  * Node.js
 * Datenbank
+  * MySQL
