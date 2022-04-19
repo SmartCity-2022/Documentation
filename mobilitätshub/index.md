@@ -5,9 +5,6 @@
 
 ## Überblick
 
-- Textuelle Beschreibung der Anwendungsdomäne
-- Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
-
 Das Ziel ist es eine Übersichtsseite für den (öffentlichen) Personen-Nahverkehr zu bieten. Diese Seite soll Abfahrt- und Ankunftszeiten alles Bus- und Bahnverbindungen beinhalten, sowie eine Übersicht über sonstige Verkehrsmittel wie Taxen, Mieträder, E-Scooter die zur Verfügung stehen. Es sollen mögliche Verbindungen anhand des Start- und Zielortes angezeigt werden, wobei die Möglichkeit besteht diese anhand von Filtern einzuschränken (z.B. Zeitaufwand, Verkehrsmittel, Kosten, etc.). Innerhalb des Portals soll die Möglichkeit bestehen Tickets für den ÖPNV zu erwerben oder direkt eine Reservierung für Taxen, Fahrräder oder E-Scooter vorzunehmen. Bei Störungen oder Ausfällen sollen Personen benachrichtigt und mit Alternativen versorgt werden.
 
 Die Möglichkeiten der Vernetzungen sind zu allen anderen Services gegeben. Man könnte anhand von Reservierungen und Terminen bei Ämtern, Restaurants oder Veranstaltungen direkt passende Verbindungen anzeigen um rechtzeitig dort zu sein. Wenn große Veranstaltungen stattfinden könnte man die Verkehrsmittel entsprechend auf einer Route aufstocken um das zunehmende Transportationsaufkommen besser zu verteilen. Mit dem Service der Polizei könnte eine Kommunikation stattfinden so dass bei Einsätzen/Strassensperrungen eine Verzögerung anzeigt oder Umleitungen vorgeschlagen werden.
@@ -15,12 +12,7 @@ Die Möglichkeiten der Vernetzungen sind zu allen anderen Services gegeben. Man 
 
 ## Funktionale Anforderungen
 
-* Definition der Akteure
-* Use-Case Diagramme
-* Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren 
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
+![](media/use-case-mobility.png)
 
 ## User-Stories
 
