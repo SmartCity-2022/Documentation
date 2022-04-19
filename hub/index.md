@@ -39,25 +39,25 @@
   - Als Gast
     
     - Startseite
-    - User Storie: Zugriff Microservices
+    - User Story: Zugriff Microservices
 
     ![](images/hub.jpg)
     
     
     - Impressum 
-    - User Storie: Impressum
+    - User Story: Impressum
 
     ![](images/hub_impressum.jpg)
     
     
     - Loginseite 
-    - User Storie: Login
+    - User Story: Login
 
     ![](images/hub_login.jpg)
     
     
     - Registierungsseite
-    - User Storie: Registrieren
+    - User Story: Registrieren
 
     ![](images/hub_register.jpg)
     
