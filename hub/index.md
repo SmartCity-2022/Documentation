@@ -5,14 +5,14 @@
 
 ## Überblick
 
-- Der Hub zielt darauf ab, als zentrale Schnittstelle für den Bürger zu dienen, über welche dieser alle vorhandenen Microservices erreichen und mit diesen interagieren kann. Dabei sollen die Microservices in den Hub eingebettet werden und somit indirekt Teil der Anwendung sein. Zudem stellt er die Funktionalität für die Registrierung und den Login bereit und umfasst ein Impressum. 
+- Der Hub zielt darauf ab, als zentrale Schnittstelle für den Benutzer zu dienen, über welche dieser alle vorhandenen Microservices erreichen und mit diesen interagieren kann. Dabei sollen die Microservices in den Hub eingebettet werden und somit indirekt Teil der Anwendung sein. Zudem stellt er die Funktionalität für die Registrierung und den Login bereit und umfasst ein Impressum. 
 
 
 ## Funktionale Anforderungen
 **Akteure**
 | **Akteur** | **Definition** |
 | :--------- | :----- |
-| Bürger | Angemeldeter Bürger mit grundlegenden Berechtigungen |
+| Bürger | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
 | Gast | Nicht angemeldeter Besucher mit eingeschränkten Berechtigungen |
 
 - Bürger und Gäste müssen in der Lage sein, zwischen den einzelnen Microservices zu navigieren
@@ -34,10 +34,10 @@
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
 | Registrieren |Gast| mich registrieren können|ich Zugriff auf weitere Funktionen erhalte und meine Daten gespeichert werden können| ein Gast sich registrieren kann | Must |
-| Login  Bürger| mich einloggen können|Zugriff auf meine Daten erhalte und weitere Funktionalitäten nutzen kann| ein Bürger sich einloggen kann | Must |
-| Logout  Bürger| mich ausloggen können|es nicht länger möglich ist über das aktuelle Gerät Daten auszulesen oder zu ändern | ein Bürger sich ausloggen kann | Must |
-| Zugriff Microservices  Bürger, Gast| auf die verschiedenen Microservices zugreifen können|ich mit dem jeweiligen Microservice interagieren kann| der Zugriff auf die Microservices möglich ist | Must |
-| Impressum  Bürger, Gast| rechtliche- und Kontaktinformationen einsehen können|ich diesbezüglich bescheid weiß| wenn eine Art Impressum bereit gestellt wird | Must |
+| Login | Bürger|  mich einloggen können|Zugriff auf meine Daten erhalte und weitere Funktionalitäten nutzen kann| ein Bürger sich einloggen kann | Must |
+| Logout | Bürger| mich ausloggen können|es nicht länger möglich ist über das aktuelle Gerät Daten auszulesen oder zu ändern | ein Bürger sich ausloggen kann | Must |
+| Zugriff Microservices | Bürger, Gast| auf die verschiedenen Microservices zugreifen können|ich mit dem jeweiligen Microservice interagieren kann| der Zugriff auf die Microservices möglich ist | Must |
+| Impressum | Bürger, Gast| rechtliche- und Kontaktinformationen einsehen können|ich diesbezüglich bescheid weiß| wenn eine Art Impressum bereit gestellt wird | Must |
 
 ### Misuse Stories
 
@@ -47,7 +47,7 @@
 | Zu einfaches Passwort |Gast| bei der Registrierung sehr einfache und kurze Passwörter verwenden können|ich mir diese besser merken kann| es eine mindestanforderung an das Passwort gibt | Must |
 | Account Diebstahl |Gast, Bürger| mich problemlos mit fremden Accounts anmelden können|ich Aktionen in deren Namen durchführen und ihre Daten auslesen kann| dies durch ein Passwort oder sonstige Sicherheitsmaßnahmen verhindert wird | Must |
 
-## Graphische Bürgerschnittstelle
+## Graphische Benutzerschnittstelle
 
 - GUI-Mockups 
   - Als Gast
@@ -186,7 +186,7 @@ Da im Frontend mit dem Javascript Framework React gearbeitet werden soll, welche
     * Im Falle eines Backendfehlers: Etwas ist schiefgelaufen! Bitte versuchen Sie es später erneut! 
 
   * Bei dem Login eines Bürgers
-    * Die eingegebenen Bürgerdaten sind falsch.
+    * Die eingegebenen Benutzerdaten sind falsch.
     * Sie haben sich zu oft in zu kurzer Zeit versucht einzuloggen.
     * Alle Felder müssen ausgefüllt werden.
     * Im Falle eines Backendfehlers: Etwas ist schiefgelaufen! Bitte versuchen Sie es später erneut!
