@@ -88,8 +88,10 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 - Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
 * Frontend
-    * Javascript React.js
+    * Javascript 
+     * React.js
 * Backend
-    * Javascript oder Python
+    * Javascript
+     * Express.js 
 * Datenbank
   * MySQL
