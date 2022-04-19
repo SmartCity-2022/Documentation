@@ -6,7 +6,6 @@
 
 Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistungen zur Verfügung stellen.
 
-
 ## Funktionale Anforderungen
 
 - Informationen bereitstellen
@@ -45,15 +44,15 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 | Bürger | Fundsachen einsehen | ich gucken kann ob etwas was ich verlohren habe dabei ist | liste von Fundsachen einsehbar |
 
 
-
 ## Graphische Benutzerschnittstelle
 
-- GUI-Mockups passend zu User Stories
-- Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
-- Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
-- Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-- Mockups für unterschiedliche Akteure
+![](media/mockup1.png)
 
+![](media/mockup2.png)
+
+![](media/mockup3.png)
+
+![](media/mockup4.png)
 
 ## Datenmodell 
 
