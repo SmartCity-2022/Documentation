@@ -97,6 +97,7 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 
 ### Verwendete Technologien
 
-- Front- und  Backend:  TypeScript
+- Frontend:             TypeScript
+- Backend:              TypeScript, Express-Framework, node.js
 - Framework:            React.js
 - Datenbank:            MySQL
