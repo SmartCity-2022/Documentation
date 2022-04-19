@@ -1,4 +1,4 @@
-# Krankenhaus
+# CentralHub
 
 **Autor:** Justin Kühnel, Patrick Mayer, Finn Amini Kaveh
 
@@ -58,6 +58,13 @@
   in einem Sequenz- oder Aktivitätsdiagramm darstellen
 - Modellieren Sie des weiteren die Diagramme, die für das (eigene) Verständnis des
   Softwaresystems hilfreich sind. 
+
+<br>
+
+
+  Aktivität Einloggen      |  Aktivität Registrieren      |  Aktivität Registrieren      |  Aktivität Registrieren      |  Aktivität Registrieren
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](images/einloggen.png)  |  ![](images/registrieren.png)  |  ![](images/abmelden.png)  |  ![](images/impressum.png)  |  ![](images/microservice.png)
 
 
 ## Schnittstellen
