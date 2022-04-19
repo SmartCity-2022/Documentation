@@ -1,30 +1,31 @@
-# Parkplatz
+# Kulturportal
 
-**Autor:** Max Mustermann
+**Autor:** Nico Hübner
 
 ![](media/parkplatz.jpg)
 
 
 ## Überblick
 
-- Textuelle Beschreibung der Anwendungsdomäne
-- Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
+- Der Service Kulturportal soll eine Vielzahl an Kultur-, Restaurant-, und Sportangeboten in der Statt darlegen. Ein zentraler Ort an dem sich Informationen für eine Vielzahl an Freizeitangeboten und Veranstaltungen finden lassen. Für die Veranstaltungen (z.B. Konzerte, Feste, Verkaufsoffene Sonntage, Tag der offenen Tür etc.) sollte neben einer kurzen Beschreibung der Termin, Ort und die angesprochene Zielgruppe vermerkt sein. Es sollten Restaurants zu finden sein, die neben einer kurzen Beschreibung bei sich einen Tisch reservieren lassen. Zudem gibt es eine Liste mit Sportvereinen und Sportanbietern (Fitnessstudios, öffentliche Sportplätze). Diese können hier effektiv für sich werben und über sich informieren (Trainingszeiten, Mitgliedsbeiträge etc.)
 
 
 ## Funktionale Anforderungen
 
-* Definition der Akteure
-* Use-Case Diagramme
-* Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren 
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
+* Definition der Akteure:
+    ○ User -> Benutzer
+		○ Creator von Events -> Veranstalter
+		○ Vereine -> müssen auch Veranstaltungen erstellen
+		○ Restaurants -> müssen auch Veranstaltungen erstellen 
+    ○ Moderator? Kann überall eingreifen quasi Admin
+
+* Use-Case Diagramm:
+
+![Image of Use-Case-Diagram](media/Use-Case-Diagramm.png)
+
 
 ## Anforderungen im Detail
 
-- User Stories mit Akzeptanzkritierien 
-- Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-- Strukturierung der User Stories in funktionale Gruppen
 - Sicherheit: Misuse-Stories formulieren
 
 **Schablone für User Stories**
@@ -33,17 +34,6 @@
 | :------ | :----- | :------ | :-------- |
 | Wer | Was | Warum | Wann akzeptiert |
 
-**Beispiel 1**
-
-| **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
-| :------ | :----- | :------ | :-------- |
-| Benutzer | bei Fehleingabe die Lösung angezeigt bekommen | ich lernen kann | Lösung wird angezeigt |
-
-**Beispiel**
-
-| **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
-|:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-| Lernen  |Benutzer| bei Fehleingabe die Lösung angezeigt bekommen|ich lernen kann| Lösung wird angezeigt | Muss |
 
 ## Graphische Benutzerschnittstelle
 
