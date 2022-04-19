@@ -5,22 +5,20 @@
 
 ## Überblick
 
-- Der Hub zielt darauf ab, als zentrale Schnittstelle für den Benutzer zu dienen, über welche dieser alle vorhandenen Microservices erreichen und mit diesen interagieren kann. Dabei sollen die Microservices in den Hub eingebettet werden und somit indirekt Teil der Anwendung sein. Zudem stellt er die Funktionalität für die Registrierung und den Login bereit und umfasst ein Impressum. 
-
-- Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
+- Der Hub zielt darauf ab, als zentrale Schnittstelle für den Bürger zu dienen, über welche dieser alle vorhandenen Microservices erreichen und mit diesen interagieren kann. Dabei sollen die Microservices in den Hub eingebettet werden und somit indirekt Teil der Anwendung sein. Zudem stellt er die Funktionalität für die Registrierung und den Login bereit und umfasst ein Impressum. 
 
 
 ## Funktionale Anforderungen
 **Akteure**
 | **Akteur** | **Definition** |
 | :--------- | :----- |
-| Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
+| Bürger | Angemeldeter Bürger mit grundlegenden Berechtigungen |
 | Gast | Nicht angemeldeter Besucher mit eingeschränkten Berechtigungen |
 
-- Benutzer und Gäste müssen in der Lage sein, zwischen den einzelnen Microservices zu navigieren
-- Benutzer und Gäste müssen in der Lage sein, einen Microservice auszuwählen, um mit diesem zu interagieren
+- Bürger und Gäste müssen in der Lage sein, zwischen den einzelnen Microservices zu navigieren
+- Bürger und Gäste müssen in der Lage sein, einen Microservice auszuwählen, um mit diesem zu interagieren
 - Gäste müssen in der Lage sein, sich in der Anwendung zu registrieren
-- Es muss möglich sein, dass sich Benutzer mit ihren Anmeldedaten in der Anwendung anmelden können
+- Es muss möglich sein, dass sich Bürger mit ihren Anmeldedaten in der Anwendung anmelden können
 - Die Anwendung muss rechtliche- sowie Kontaktinformationen bereitstellen
 
 <br>
@@ -36,10 +34,10 @@
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
 | Registrieren |Gast| mich registrieren können|ich Zugriff auf weitere Funktionen erhalte und meine Daten gespeichert werden können| ein Gast sich registrieren kann | Must |
-| Login |Benutzer| mich einloggen können|Zugriff auf meine Daten erhalte und weitere Funktionalitäten nutzen kann| ein Benutzer sich einloggen kann | Must |
-| Logout |Benutzer| mich ausloggen können|es nicht länger möglich ist über das aktuelle Gerät Daten auszulesen oder zu ändern | ein Benutzer sich ausloggen kann | Must |
-| Zugriff Microservices |Benutzer, Gast| auf die verschiedenen Microservices zugreifen können|ich mit dem jeweiligen Microservice interagieren kann| der Zugriff auf die Microservices möglich ist | Must |
-| Impressum |Benutzer, Gast| rechtliche- und Kontaktinformationen einsehen können|ich diesbezüglich bescheid weiß| wenn eine Art Impressum bereit gestellt wird | Must |
+| Login  Bürger| mich einloggen können|Zugriff auf meine Daten erhalte und weitere Funktionalitäten nutzen kann| ein Bürger sich einloggen kann | Must |
+| Logout  Bürger| mich ausloggen können|es nicht länger möglich ist über das aktuelle Gerät Daten auszulesen oder zu ändern | ein Bürger sich ausloggen kann | Must |
+| Zugriff Microservices  Bürger, Gast| auf die verschiedenen Microservices zugreifen können|ich mit dem jeweiligen Microservice interagieren kann| der Zugriff auf die Microservices möglich ist | Must |
+| Impressum  Bürger, Gast| rechtliche- und Kontaktinformationen einsehen können|ich diesbezüglich bescheid weiß| wenn eine Art Impressum bereit gestellt wird | Must |
 
 ### Misuse Stories
 
@@ -47,9 +45,9 @@
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
 | Doppelte E-mail Adresse |Gast| eine E-Mail Adresse bei der Registrierung mehrfach verwenden können|ich mir leichter merken kann, was ich für eine E-Mail Adresse verwendet habe| Bei erneuter Verwendung einer E-Mail Adresse wird eine Fehlermeldung angezeigt | Must |
 | Zu einfaches Passwort |Gast| bei der Registrierung sehr einfache und kurze Passwörter verwenden können|ich mir diese besser merken kann| es eine mindestanforderung an das Passwort gibt | Must |
-| Account Diebstahl |Gast, Benutzer| mich problemlos mit fremden Accounts anmelden können|ich Aktionen in deren Namen durchführen und ihre Daten auslesen kann| dies durch ein Passwort oder sonstige Sicherheitsmaßnahmen verhindert wird | Must |
+| Account Diebstahl |Gast, Bürger| mich problemlos mit fremden Accounts anmelden können|ich Aktionen in deren Namen durchführen und ihre Daten auslesen kann| dies durch ein Passwort oder sonstige Sicherheitsmaßnahmen verhindert wird | Must |
 
-## Graphische Benutzerschnittstelle
+## Graphische Bürgerschnittstelle
 
 - GUI-Mockups 
   - Als Gast
@@ -83,7 +81,7 @@
 
     ![](images/hub_eingeklappt.jpg)
     
-  - Als angemeldeter Benutzer
+  - Als angemeldeter Bürger
     - Startseite 
 
     ![](images/hubreg.jpg)
@@ -91,25 +89,16 @@
 
     ![](images/hub_impressum_reg.jpg)
 
-- Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-
 
 ## Datenmodell 
 
-- Begriffe im Glossar darstellen
-- Modellierung des physikalischen Datenmodells 
-  - ![](images/er.jpg)
+![](images/er_hub.jpg)
+
+<br>
+
+![](images/phy_hub.jpg)
 
 ## Abläufe
-
-- Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
-- Aktivitätsdiagramme für relevante Use Cases
-- Aktivitätsdiagramm mit Swimlanes sind in der Regel hilfreich 
-  für die Darstellung der Interaktion von Akteuren der Use Cases / User Stories
-- Abläufe der Kommunikation von Rechnerknoten (z.B. Client/Server)
-  in einem Sequenz- oder Aktivitätsdiagramm darstellen
-- Modellieren Sie des weiteren die Diagramme, die für das (eigene) Verständnis des
-  Softwaresystems hilfreich sind. 
 
 <br>
 
@@ -121,72 +110,41 @@
 
 ## Schnittstellen
 
-- Schnittstellenbeschreibung (API), z.B. mit OpenAPI 
-- Auflistung der nach außen sichtbaren Schnittstelle des Microservices. Über welche Schnittstelle kann z.B. der Client den Server erreichen?
-- In Event-gesteuerten Systemen ebenfalls die Definition der Ereignisse und deren Attribute
-- Aufteilen in Commands, Events, Queries
-* Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
+### Externe Schnittstellen
+- **/**:  Navigiert zu der Homepage
+- **/login**: Navigiert zur Login- / Registrierungseite
+- **/impressum**: Navigiert zur Impressumsseite
+
+### Interne Schnittstellen
+- **GET (' /api/citizens')**: Daten für alle Citizens
+- **GET ('/api/citizens/:id')**: Daten für einen Citizen
+- **POST (' /api/citizens')**: Erstellen eines neuen Citizens
+- **PUT (' /api/citizens/:id')**: Updaten eines bestehenden Citizens
+- **DELETE (' /api/citizens/:id')**: Löschen eines Citizens
 
 **Beispiel:**
 
 ### URL
 
-http://smart.city/microservices/customer
-
-### Commands
-
-**Synchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| createCustomer() | int id | int id |
-| deleteOrder() | int id | int id |
-
-**Asynchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| createContract() | int id | int id |
-| changeContract() | int id | - |
+http://smart.city
 
 ### Events
 
-**Customer event channel**
+**Citizen event channel**
 
 | **Name** | **Payload** | 
 | :------ | :----- | 
-| Customer Authorized | int id |
-| Customer Deleted | int id |
-
-**Contract event channel**
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-| Contract Received | int id |
-| Contract Deleted | int id |
-
-### Queries
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| getContracts() | - | Contract [] list |
-| getContract() | int id | Contract c |
+| Citizen Created | Object citizen |
+| Citizen Authorized | int id |
 
 ### Dependencies
-
-#### RPC
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Authorization Service | authenticateUser() |
-| Hospital Service | blockDate() |
 
 #### Event-Subscriptions
 
 | **Service** | **Funktion** |
 | :------ | :----- | 
-| Cinema channel | CancelFilmCreatedEvent |
-| Customer reply channel | CreateCustomerEvent |
+| Citizen channel | CitizenUpdatedEvent |
+| Citizen channel | CitizenDeletedEvent |
 
 
 ## Technische Umsetzung
@@ -194,44 +152,58 @@ http://smart.city/microservices/customer
 
 ### Softwarearchitektur
 
-- Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
-
-Hier stellen Sie die Verteilung der Softwarebausteine auf die Rechnerknoten dar. Das ist die Softwarearchitektur. Zum Beispiel Javascript-Software auf dem Client und Java-Software auf dem Server. In der Regel wird die Software dabei sowohl auf dem Client als auch auf dem Server in Schichten dargestellt.
+![](images/verteilungsdiagramm.jpg)
 
 * Server
-  * Web-Schicht
-  * Logik-Schicht
-  * Persistenz-Schicht
+  * Web-Schicht: JavaScript
+  * Logik-Schicht: Node.js, Express.js
+  * Persistenz-Schicht: MySQL Datenbank
+
+Da im Frontend mit dem Javascript Framework React gearbeitet werden soll, welches einen sehr modularen Ansatz verfolgt, bei dem einzelne Komponenten mindestens die View-Schicht und die Logik-Schicht miteinander vereinen, kann hier keine klare Trennung zwischen den einzelnen Schichten definiert werden. In der Theorie setzen sich die Schichten jedoch wie folgt zusammen.
 
 * Client
-  * View-Schicht
-  * Logik-Schicht
-  * Kommunikation-Schicht
+  * View-Schicht: JSX (HTML), CSS
+  * Logik-Schicht: JavaScript
+  * Kommunikation-Schicht: JavaScript, JSON
 
-Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach "unten". Die Softwarearchitektur aus Kapitel "Softwarearchitektur" ist demnach detaillierter als die Systemübersicht aus dem Kapitel "Systemübersicht". Die Schichten können entweder als Ganzes als ein Softwarebaustein angesehen werden. In der Regel werden die Schichten aber noch weiter detailliert und in Softwarebausteine aufgeteilt. 
-
-
-
-### Entwurf
-
-- Detaillierte UML-Diagramme für relevante Softwarebausteine
 
 ### Fehlerbehandlung 
 
-* Mögliche Fehler / Exceptions auflisten
-* Fehlercodes / IDs sind hilfreich
-* Nicht nur Fehler technischer Art ("Datenbankserver nicht erreichbar") definieren, sondern auch fachliche Fehler wie "Kunde nicht gefunden", "Nachricht wurde bereits gelöscht" o.ä. sind relevant. 
+* Technische Fehler
+  * Fehler: 404 Not Found -> Eine Datei, ein Verzeichnis oder eine Schnittstelle konnte nicht gefunden werden.
+  * Fehler: 400 Bad Request -> Es wurden fehlerhafte Informationen an die API übergeben
+  * SQL-Error -> Ein Fehler in der Datenbank ist aufgetreten
+  * Timeout Error: -> Zeitüberschreitungsfehler
+
+* Fachliche Fehler
+  * Bei der Registrierung eines Bürgers
+    * Es existiert bereits ein Bürger mit dieser E-Mail Adresse.
+    * Es existiert bereits ein Bürger mit dieser HandyNummer.
+    * Es müssen alle Felder ausgefüllt werden.
+    * Die angegebene E-Mail-Adresse muss dem genannten Format entsprechen.
+    * Die angegebene Handynummer muss dem genannten Format entsprechen.
+    * Ungültiges Passwort! Das Passwort muss das folgende Format haben.
+    * Im Falle eines Backendfehlers: Etwas ist schiefgelaufen! Bitte versuchen Sie es später erneut! 
+
+  * Bei dem Login eines Bürgers
+    * Die eingegebenen Bürgerdaten sind falsch.
+    * Sie haben sich zu oft in zu kurzer Zeit versucht einzuloggen.
+    * Alle Felder müssen ausgefüllt werden.
+    * Im Falle eines Backendfehlers: Etwas ist schiefgelaufen! Bitte versuchen Sie es später erneut!
 
 ### Validierung
 
-* Relevante (Integrations)-Testfälle, die aus den Use Cases abgeleitet werden können
-* Testfälle für 
-  - Datenmodell
-  - API
-  - User Interface
-* Fokussieren Sie mehr auf Integrationstestfälle als auf Unittests
-* Es bietet sich an, die IDs der Use Cases / User Stories mit den Testfällen zu verbinden,
-  so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
+| **Testfalltyp** | **Beschreibung** | **Testschritt** | **Erwartetes Ergebnis** | **Status** |
+| :------ | :----- | :----- | :----- | :----- | 
+| Sicherheit | Passwort muss den Anforderungen entsprechen | Ein neues Passwort wird erstellt, welches den Anforderungen entspricht | Das Passwort wird akzeptiert |Erfolgreich oder durchgefallen |
+| Funktionalität | Die Links zu den Microservices funktionieren | Alle Verlinkungen werden getestet | Statuscode 200 |Erfolgreich oder durchgefallen |
+| Sicherheit | E-Mail Adressen dürfen nicht mehrfach verwendet werden | Eingabe einer bereits genutzten E-Mail Adresse | Eine Fehlermeldung wird angezeigt |Erfolgreich oder durchgefallen |
+| Funktionalität, Benutzerfreundlichkeit | Alle Felder müssen bei der Registrierung ausgefüllt werden | Formular wird abgeschickt ohne, dass alle Felder ausgefüllt wurden | Eine Fehlermeldung wird angezeigt |Erfolgreich oder durchgefallen |
+| Sicherheit | E-Mail Adresse muss den Anforderungen entsprechen | Eingabe einer E-Mail Adresse, die nicht den Anforderungen entspricht | Eine Fehlermeldung wird angezeigt |Erfolgreich oder durchgefallen |
+
+Es muss grundsätzlich in allen Schnittstellen validiert werden. Dies gilt besonders für die Schnittstellen, die dem Benutzer zugänglich sind.
+Bei POST Befehlen müssen die Daten auf ihre Richtigkeit validiert werden und jegliche Benutzerinputs müssen Datenbanksicher gemacht werden. Das bedeutet, dass sie sowohl dahingehend entwertet werden müssen, dass sie keine Gefahr für die Datenbank an sich darstellen (Stichwort SQL Injections) als auch für andere Benutzer (Cross-site-scripting).
+Ebenso muss bei allen Zugriffen geprüft werden, ob der Benutzer über die benötigten Rechte verfügt, die Aktion auszuführen. Gleiches gilt in diesem Fall für die GET Befehle.
 
 ### Verwendete Technologien
 
