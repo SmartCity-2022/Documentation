@@ -210,6 +210,6 @@ Ebenso muss bei allen Zugriffen geprüft werden, ob der Benutzer über die benö
 * Frontend
   - HTML5, CSS3, Javascript - React.js
 * Backend
-  - Node.js
+  - Node.js, Express.js
 * Datenbank
   - MySQL
