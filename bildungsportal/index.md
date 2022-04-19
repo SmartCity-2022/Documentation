@@ -34,3 +34,7 @@
 | Institution | Anmeldungen freigeben                    |                                                | Freigabe von Anmeldungen                 | Must          |
 | Institution | Benotungen eintragen                     | ich die Benutzer benoten kann                  | Eintragung von Benotungen                | Should        |
 | Institution | Zeugnis eintragen                        |                                                | Eintragung von Zeugnissen                | Should        |
+
+## Graphische Benutzerschnittstelle
+
+![](media/mockups.svg)
