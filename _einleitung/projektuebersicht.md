@@ -100,27 +100,27 @@ Alle Events, die über RabbitMQ gesendet werden, müssen in einem vorgegebenen J
 
 - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
 
-Qualitätsmerkmal | sehr gut | gut | normal | nicht relevant
----|---|---|---|---
-**Zuverlässigkeit** | | | | |
-Fehlertoleranz |X|-|-|-|
-Wiederherstellbarkeit |X|-|-|-|
-Ordnungsmäßigkeit |X|-|-|-|
-Richtigkeit |X|-|-|-|
-Konformität |-|X|-|-|
-**Benutzerfreundlichkeit** | | | | |
-Installierbarkeit |-|-|X|-|
-Verständlichkeit |X|-|-|-|
-Erlernbarkeit |-|X|-|-|
-Bedienbarkeit |-|X|-|-|
-**Performance** | | | | |
-Zeitverhalten |-|-|X|-|
-Effizienz|-|-|-|X|
-**Sicherheit** | | | | |
-Analysierbarkeit |X|-|-|-|
-Modifizierbarkeit |-|-|-|X|
-Stabilität |X|-|-|-|
-Prüfbarkeit |X|-|-|-|
+| Qualitätsmerkmal           | sehr gut | gut | normal | nicht relevant |
+|----------------------------|----------|-----|--------|----------------|
+| **Zuverlässigkeit**        |          |     |        |                |
+| Fehlertoleranz             | X        | -   | -      | -              |
+| Wiederherstellbarkeit      | X        | -   | -      | -              |
+| Ordnungsmäßigkeit          | X        | -   | -      | -              |
+| Richtigkeit                | X        | -   | -      | -              |
+| Konformität                | -        | X   | -      | -              |
+| **Benutzerfreundlichkeit** |          |     |        |                |
+| Installierbarkeit          | -        | -   | X      | -              |
+| Verständlichkeit           | X        | -   | -      | -              |
+| Erlernbarkeit              | -        | X   | -      | -              |
+| Bedienbarkeit              | -        | X   | -      | -              |
+| **Performance**            |          |     |        |                |
+| Zeitverhalten              | -        | -   | X      | -              |
+| Effizienz                  | -        | -   | x      | -              |
+| **Sicherheit**             |          |     |        |                |
+| Analysierbarkeit           | X        | -   | -      | -              |
+| Modifizierbarkeit          | -        | -   | X      | -              |
+| Stabilität                 | X        | -   | -      | -              |
+| Prüfbarkeit                | X        | -   | -      | -              |
 
 
 ## Glossar 
