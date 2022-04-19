@@ -55,7 +55,7 @@
 - Begriffe im Glossar darstellen
 
 **ERD**
-![](media/erd.png)
+![](media/ERD.png)
 
 ## Abläufe
 
