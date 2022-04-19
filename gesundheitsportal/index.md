@@ -7,8 +7,12 @@
 
 # Überblick
 
-- Textuelle Beschreibung der Anwendungsdomäne
-- Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
+Das Ziel des Gesundheitsportal ist die Digitalisierung von Praxen, Krankenhäusern und Medikamenten auf einer zentralen Seite.
+Die Benutzer haben die Möglichkeit nach Praxen, Krankenhäuser und Medikamente zu suchen. Zudem gibt es die Möglichkeit die Suche mit einem
+Filter einzugrenzen (z.B. Kategorie, Fachbereich, Mitarbeiter, Öffnungszeiten), um das Suchergebnis zu verringern. Ein Benutzer kann 
+alle Krankenhäuser der Stadt überblicken und in der detalliert Ansicht alle wichtigen Informationen erhalten. Bei Bedarf kann ein Benutzer im Portal
+Medikamente bestellen, diese werden in einer Bestellung direkt an den Benutzer versendet. Eine Praxis beinhaltet mehrere Termine, für die man sich
+einschreiben kann, sofern diese frei sind. Die Praxis hat die Möglichkeit ihre Termine zu verwalten und spezifische Termine freizugeben oder akzeptieren.
 
 <br>
 
@@ -20,63 +24,75 @@
 | **Akteur** | **Definition** | 
 | :--------- | :------------- | 
 | Benutzer | Angemeldeter Nutzer mit Berechtigungen für alle grundlegenden Funktionnen |
-| Praxisingaber | Erweitert die Benutzerrolle mit Privilegien zur Verwaltung der jeweiligen Praxis  |
-| Apothek | Erweitert die Benutzerrolle mit Privilegien zur Verwaltung der jeweiligen Apotheke |
+| Praxis | Erweitert die Benutzerrolle mit Privilegien zur Verwaltung der zugehörigen Praxis  |
 
 <br>
 
 ## Use-Case Diagramme
 
-### Benutzer:
-![](media/benutzer.png)
-
-### Praxis:
-![](media/praxis.png)
-
-### Apotheke:
-![](media/apotheke.png)
+### Benutzer und Praxis:
+![](media/diagramm.png)
 
 <br>
-
-<!--
-## Anforderungen im Detail
-
-- User Stories mit Akzeptanzkritierien 
-- Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-- Strukturierung der User Stories in funktionale Gruppen
-- Sicherheit: Misuse-Stories formulieren
--->
 
 
 # User-Stories
 
 | **Name** | **In meiner Rolle als**... | ...**möchte ich**... | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität** |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
-| Apotheke registrieren | Benutzer | Eine Apotheke in meinem Namen registrieren | Die Apotheke ist für jeden Nutzer erreichbar | Datensatz wurde erfolgreich in die Datenbank eingefügt | Kann |
-| Praxis registrieren | Benutzer | Eine Praxis in meinem Namen registrieren | Die Praxis ist für jeden Nutzer erreichbar | Datensatz wurde erfolgreich in die Datenbank eingefügt | Kann |
-| Suche | Benutzer | Nach Krankenhäuser, Praxen, Apotheken und Medikamenten suchen können | Suchergebnis der Suchpräferenz entspricht | Alle Datensätze der Suchpräferenz ausgegeben werden | Muss |
-| Krankenhaus einsehen | Benutzer | Eine Praxis in meinem Namen registrieren   | ich lernen kann | Lösung wird angezeigt | Muss |
-| Praxis einsehen | Benutzer | Eine Praxis in meinem Namen registrieren   | ich lernen kann | Lösung wird angezeigt | Muss |
-| Apotheke einsehen | Benutzer | Eine Praxis in meinem Namen registrieren   | ich lernen kann | Lösung wird angezeigt | Muss |
-| Medikament einsehen | Benutzer | Eine Praxis in meinem Namen registrieren   | ich lernen kann | Lösung wird angezeigt | Muss |
+| Praxis registrieren | Benutzer | Praxis registrieren | Praxis für jeden Nutzer sichtbar ist | Datensatz in Datenbank eingefügt | Muss |
+| Praxis anmelden | Benutzer | Praxis anmelden | Praxis verwalten werden kann | Authentifizierung erfolgreich | Muss |
+| Suchen | Benutzer | Krankenhäuser, Praxen und Medikamente suchen | Alle Inhalte angezeigt werden | Datensätze zurückgegeben werden | Muss |
+| Krankenhaus anzeigen | Benutzer | Spezifisches Krankenhaus einsehen | Spezifische Inhalte sichtbar sind | Datensatz zurückgegeben wird | Muss |
+| Praxis anzeigen | Benutzer | Spezifische Praxis einsehen  | Spezifische Inhalte sichtbar sind | Datensatz zurückgegeben wird | Muss |
+| Medikament anzeigen | Benutzer | Spezifisches Medikament einsehen | Spezifische Inhalte sichtbar sind | Datensatz zurückgegeben wird | Muss |
+| Termin belegen | Benutzer | Termin bei Praxen belegen | Termin wird Benutzer zugewiesen | Datensatz in Datenbank eingefügt | Muss |
+| Medikament bestellen | Benutzer | Medikament | Medikament an Benutzer versendet wird | Datensatz in Datenbank eingefügt | Muss |
+| Termine einsehen | Praxis |Termine der Praxis einsehen | Alle Termin verwaltet werden können | Datensätze zurückgegeben werden | Muss |
+| Termin freigeben | Praxis | Termin freigeben | Termin wird Benutzer nicht zugewiesen | Datensatz in Datenbank entfernt | Muss |
+| Termin akzeptieren | Praxis | Termin akzeptieren | Termin wird von der Praxis akzeptiert | Datensatz in Datenbank eingefügt | Muss |
 
 <br>
 
 
 # Graphische Benutzerschnittstelle
 
-- GUI-Mockups passend zu User Stories
-- Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
-- Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
-- Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-- Mockups für unterschiedliche Akteure
+## Authentifizier-Seite
+![](media/authentifizieren.png)
+
+<br>
+
+## Such-Seite
+![](media/suchen.png)
+
+<br>
+
+## Krankenhaus-Seite
+![](media/krankenhaus.png)
+
+<br>
+
+## Medikament-Seite
+![](media/medikament.png)
+
+<br>
+
+## Praxis-Seite
+![](media/praxis.png)
+
+<br>
+
+## Praxisverwaltung-Seite
+![](media/praxisverwaltung.png)
+
+<br>
 
 
 # Datenmodell 
 
-- Begriffe im Glossar darstellen
-- Modellierung des physikalischen Datenmodells 
-  - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+![](media/erd.png)
+
+<br>
 
 
 # Abläufe
@@ -202,8 +218,7 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
   so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
 
 ## Verwendete Technologien
-- Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
 
-* Frontend
-* Backend
-* Datenbank
+* Frontend: Javascript, React
+* Backend: Javascript, ExpressJS
+* Datenbank: MySQL
