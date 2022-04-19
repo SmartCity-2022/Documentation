@@ -56,8 +56,6 @@ Dieser Mircoservice bietet die Dienstleistung einer Bank wie die Eröffnung und 
 - Aufteilen in Commands, Events, Queries
 * Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
 
-**Beispiel:**
-
 ### URL
 
 http://smart.city/microservices/bankportal
