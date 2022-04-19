@@ -22,6 +22,12 @@
 * Begriffe konsistent in der Spezifikation verwenden  
 * Begriffe im Glossar darstellen
 
+<br>
+
+![](images/use_case_hub.png)
+
+<br>
+
 ## Anforderungen im Detail
 - Strukturierung der User Stories in funktionale Gruppen
 - Sicherheit: Misuse-Stories formulieren
