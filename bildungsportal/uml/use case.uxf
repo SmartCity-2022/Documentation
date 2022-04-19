@@ -39,7 +39,7 @@ halign=left</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>510</x>
-      <y>640</y>
+      <y>570</y>
       <w>150</w>
       <h>60</h>
     </coordinates>
@@ -51,7 +51,7 @@ freigeben</panel_attributes>
     <id>UMLUseCase</id>
     <coordinates>
       <x>510</x>
-      <y>540</y>
+      <y>500</y>
       <w>150</w>
       <h>60</h>
     </coordinates>
@@ -160,24 +160,120 @@ anmelden</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>270</x>
-      <y>560</y>
+      <y>520</y>
       <w>260</w>
-      <h>80</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 </panel_attributes>
-    <additional_attributes>10.0;60.0;240.0;10.0</additional_attributes>
+    <additional_attributes>10.0;100.0;240.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>270</x>
-      <y>630</y>
+      <y>590</y>
       <w>260</w>
-      <h>60</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 </panel_attributes>
-    <additional_attributes>10.0;10.0;240.0;40.0</additional_attributes>
+    <additional_attributes>10.0;50.0;240.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>540</x>
+      <y>260</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Benotung
+einsehen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>540</x>
+      <y>330</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Zeugnisse
+einsehen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>510</x>
+      <y>640</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Benotung
+eintragen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>640</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>670</y>
+      <w>260</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;240.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>510</x>
+      <y>710</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Zeugnis
+eintragen</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>270</y>
+      <w>290</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>290</y>
+      <w>290</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;270.0;70.0</additional_attributes>
   </element>
 </diagram>
