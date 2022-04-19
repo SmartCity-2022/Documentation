@@ -40,9 +40,7 @@ Die Möglichkeiten der Vernetzungen sind zu allen anderen Services gegeben. Man 
 
 ## Datenmodell 
 
-- Begriffe im Glossar darstellen
-- Modellierung des physikalischen Datenmodells 
-  - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+![](media/erm.png)
 
 ## Abläufe
 
@@ -68,7 +66,7 @@ Die Möglichkeiten der Vernetzungen sind zu allen anderen Services gegeben. Man 
 
 ### URL
 
-http://smart.city/microservices/customer
+http://smart.city/microservices/mobility
 
 ### Commands
 
@@ -133,11 +131,6 @@ http://smart.city/microservices/customer
 
 - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
 
-- TypeScript (Front- und  Backend)
-- React.js
-
-- MySQL
-
 Hier stellen Sie die Verteilung der Softwarebausteine auf die Rechnerknoten dar. Das ist die Softwarearchitektur. Zum Beispiel Javascript-Software auf dem Client und Java-Software auf dem Server. In der Regel wird die Software dabei sowohl auf dem Client als auch auf dem Server in Schichten dargestellt.
 
 * Server
@@ -177,8 +170,6 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 
 ### Verwendete Technologien
 
-- Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
-
-* Frontend
-* Backend
-* Datenbank
+- Front- und  Backend:  TypeScript
+- Framework:            React.js
+- Datenbank:            MySQL
