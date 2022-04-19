@@ -47,14 +47,17 @@
 
     ![](images/hub_impressum.jpg)
     - User Storie: Impressum
+    
     - Loginseite 
 
     ![](images/hub_login.jpg)
     - User Storie: Login
+    
     - Registierungsseite
 
     ![](images/hub_register.jpg)
     - User Storie: Registrieren
+    
     - Startseite mit Eingeklappter Navbar
 
     ![](images/hub_eingeklappt.jpg)
