@@ -9,6 +9,23 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 ## Funktionale Anforderungen
 
+- Informationen bereitstellen
+  - Abfallkalender
+- Termine Vereinbaren
+  - An- und Ummelden
+  - Beantragung Ausweisdokumente
+  - Belaubiegungen
+  - Fischereischein
+  - Ausländer-Angelegenheiten
+  - Führerscheinangelegenheiten
+- Speermüll Anmelden
+- Meldebescheinigung
+- Bearbeitungs Statusabfrage
+- Briefwahlunterlagen Beantragen
+- Wohnungsgeberbestätigung
+- Umzug Melden
+- Fundsachen einsehen
+
 * __Akteure__:
   * Bürger
   * Stadt
@@ -17,11 +34,6 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 [USE CASE DIAGRAMM]
 
 ## Anforderungen im Detail
-
-- User Stories mit Akzeptanzkritierien 
-- Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-- Strukturierung der User Stories in funktionale Gruppen
-- Sicherheit: Misuse-Stories formulieren
 
 ### User Stories
 
@@ -69,94 +81,79 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 - Aufteilen in Commands, Events, Queries
 * Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
 
-**Beispiel:**
-
-### URL
-
-http://smart.city/microservices/customer
-
 ### Commands
 
 **Synchronous**
 
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-| createCustomer() | int id | int id |
-| deleteOrder() | int id | int id |
+
 
 **Asynchronous**
 
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-| createContract() | int id | int id |
-| changeContract() | int id | - |
+
 
 ### Events
 
-**Customer event channel**
+- Umzug gemeldet
+- 
 
 | **Name** | **Payload** | 
 | :------ | :----- | 
-| Customer Authorized | int id |
-| Customer Deleted | int id |
 
-**Contract event channel**
 
 | **Name** | **Payload** | 
 | :------ | :----- | 
-| Contract Received | int id |
-| Contract Deleted | int id |
+
 
 ### Queries
 
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-| getContracts() | - | Contract [] list |
-| getContract() | int id | Contract c |
+
 
 ### Dependencies
+
+- Authentifizierung
 
 #### RPC
 
 | **Service** | **Funktion** |
 | :------ | :----- | 
 | Authorization Service | authenticateUser() |
-| Hospital Service | blockDate() |
+
 
 #### Event-Subscriptions
 
 | **Service** | **Funktion** |
 | :------ | :----- | 
-| Cinema channel | CancelFilmCreatedEvent |
-| Customer reply channel | CreateCustomerEvent |
-
 
 ## Technische Umsetzung
 
-
 ### Softwarearchitektur
-
-- Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
-
-Hier stellen Sie die Verteilung der Softwarebausteine auf die Rechnerknoten dar. Das ist die Softwarearchitektur. Zum Beispiel Javascript-Software auf dem Client und Java-Software auf dem Server. In der Regel wird die Software dabei sowohl auf dem Client als auch auf dem Server in Schichten dargestellt.
 
 * Server
   * Web-Schicht
+    * HTTP
+    * Express Routing
   * Logik-Schicht
+    * Node.js
+    * Sequelize
   * Persistenz-Schicht
+    * MySQL Datenbank
 
 * Client
   * View-Schicht
+    * HTML
+    * CSS
   * Logik-Schicht
+    * React.js
   * Kommunikation-Schicht
-
-Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach "unten". Die Softwarearchitektur aus Kapitel "Softwarearchitektur" ist demnach detaillierter als die Systemübersicht aus dem Kapitel "Systemübersicht". Die Schichten können entweder als Ganzes als ein Softwarebaustein angesehen werden. In der Regel werden die Schichten aber noch weiter detailliert und in Softwarebausteine aufgeteilt. 
-
-
+    * HTTP
 
 ### Entwurf
-
-- Detaillierte UML-Diagramme für relevante Softwarebausteine
 
 ### Fehlerbehandlung 
 
