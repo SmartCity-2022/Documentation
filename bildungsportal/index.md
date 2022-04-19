@@ -44,3 +44,9 @@ Dieser Microservice soll einem Benutzer die Möglichkeit bieten auf das Bildungs
 ## Datenmodell
 
 ![](media/erm.svg)
+
+## Schnittstellen
+
+Die Kommunikation ziwschen der Client- und Server-Komponente soll über OpenAPI REST-Schnittstelle stattfinden. Die Kommunikation zwischen dem Server und der Datenbank soll über eine bereits existierende Komponente umgesetzt werden und wird daher nicht näher beschrieben.
+
+
