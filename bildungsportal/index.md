@@ -5,6 +5,8 @@
 
 ## Überblick
 
+Dieser Microservice soll einem Benutzer die Möglichkeit bieten auf das Bildungsangebot sämtlicher Bildungseinrichtungen der Stadt zuzugreifen. Dabei kann der Benutzer die aktuellen Bildungsangebote und die anbietende Einrichtung einsehen und sich zu diesem Anmelden. Des weiteren kann ein Benutzer seine bisherigen Leistungen (Klausuren, Abschlüsse) einsehen.
+
 ## Funktionale Anforderungen
 
 ### Akteure
