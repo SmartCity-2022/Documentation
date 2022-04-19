@@ -89,7 +89,7 @@
 
 - Begriffe im Glossar darstellen
 - Modellierung des physikalischen Datenmodells 
-  - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+  - ![](images/er.jpg)
 
 ## Abläufe
 
