@@ -53,8 +53,9 @@
 ## Datenmodell 
 
 - Begriffe im Glossar darstellen
-- Modellierung des physikalischen Datenmodells 
-  - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+
+**ERD**
+![](media/erd.png)
 
 ## Abläufe
 
