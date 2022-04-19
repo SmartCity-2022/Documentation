@@ -32,11 +32,44 @@ Beschreibung des Softwareprodukts "Smart City".
 
 ## Systemübersicht
 
-Dieser Abschnitt zeigt die technische Beschreibung des Softwaresystems
+<!--Dieser Abschnitt zeigt die technische Beschreibung des Softwaresystems
 in Form eines Systemarchitekturdiagramms.
-Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe dar. Abläufe werden im Kapitel "Abläufe" dargestellt. Im Kapitel "Systemübersicht" soll genau ein Diagramm dargstellt werden. Das "Box-and-Arrow"-Diagramm soll als Systemarchitekturdiagramm eine abstrakte Übersicht über das Softwaresystem geben. Dazu stellt es die Rechnerknoten und deren Kommunikationsbeziehungen (Protokoll (z.B. HTTP), Datenformat (z.B. JSON)) dar. Also Rechtecke und gerichtete Pfeile. Ähnlich einem UML-Deployment-Diagramm, aber noch abstrakter, denn es zeigt nicht die Verteilung der Softwarebausteine auf die Rechnerknoten. So erlangt der Leser einen schnellen und guten Überblick über das Softwaresystem. 
+Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe dar. Abläufe werden im Kapitel "Abläufe" dargestellt. Im Kapitel "Systemübersicht" soll genau ein Diagramm dargstellt werden. Das "Box-and-Arrow"-Diagramm soll als Systemarchitekturdiagramm eine abstrakte Übersicht über das Softwaresystem geben. Dazu stellt es die Rechnerknoten und deren Kommunikationsbeziehungen (Protokoll (z.B. HTTP), Datenformat (z.B. JSON)) dar. Also Rechtecke und gerichtete Pfeile. Ähnlich einem UML-Deployment-Diagramm, aber noch abstrakter, denn es zeigt nicht die Verteilung der Softwarebausteine auf die Rechnerknoten. So erlangt der Leser einen schnellen und guten Überblick über das Softwaresystem.-->
+
+![Systemübersicht](../_assets/images/systemarchitektur.png)
 
 ## Kommunikationsprotokolle und Datenformate
+
+### RabbitMQ - Events
+
+Alle Events, die über RabbitMQ gesendet werden, müssen in einem vorgegebenen JSON-Format versendet werden:
+```json
+{
+  "event": {
+    "name": "event_name",
+    "sender": "sender_name",
+    "timestamp": 1011567600, //Unix-Timestamp (in seconds)
+    "payload": {
+      //Payload of Event in JSON-Format
+    }
+  }
+}
+```
+**Beispiel:**
+```json
+{
+  "event": {
+    "name": "new_citizen",
+    "sender": "Bürgerbüro-i324",
+    "timestamp": 1011567600,
+    "payload": {
+      "citizen_id": "00000000-0000-4000-0000-000000000001",
+      "firstname": "Max",
+      "lastname": "Mustermann",
+      "address": "Musterstraße 1",
+      "birthday": "01.01.1970",
+  }
+}
 
 ## Funktionale Anforderungen 
 
