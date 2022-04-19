@@ -39,7 +39,17 @@ Dieser Microservice soll einem Benutzer die Möglichkeit bieten auf das Bildungs
 
 ## Graphische Benutzerschnittstelle
 
-![](media/mockups.svg)
+### Bildungsangebot Übersicht
+![](media/mockup_overview.svg)
+
+### Bildungsangebot Details
+![](media/mockup_detail.svg)
+
+### Institution Details
+![](media/mockup_institution.svg)
+
+### Prüfungsübersicht
+![](media/mockup_assessment.svg)
 
 ## Datenmodell
 
