@@ -42,6 +42,10 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 | Bürger | meinen Umzug melden | ich keine Probleme bekomme | Umzug meldung möglich |
 | Bürger | mich Informieren | ich informiert bin | Infoseiten existieren |
 | Bürger | Fundsachen einsehen | ich gucken kann ob etwas was ich verlohren habe dabei ist | liste von Fundsachen einsehbar |
+| Bürger | Briefwahl beantragen | über Briefwahl wählen kann | Briefwahl beantragbar |
+| Bürger | eine Meldebescheinigung | um einen Nachweis meines Wohnsitzes zu haven | Meldebescheinigung kann beantragt werden |
+| Bürger | wissen ob mein Antrag bearbeitet wurde | ich bescheid weiß/einen neuen Termin vereinbaren kann | Antragsstatus kann abgefragt werden |
+| Stadt | dass die Müllabfuhr reibungslos funktioniert | keine Probleme mit der Müllabfuhr aufkommen | aktueller Abfallkalender wird bereitgestellt und Speermüll kann angemeldet werden|
 
 
 ## Graphische Benutzerschnittstelle
@@ -58,7 +62,6 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 ![uml](media/uml.png)
 
-
 ## Schnittstellen
 
 ### Commands
@@ -68,12 +71,10 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
 
-
 **Asynchronous**
 
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-
 
 ### Events
 
@@ -84,16 +85,10 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 | **Name** | **Payload** | 
 | :------ | :----- | 
 
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-
-
 ### Queries
 
 | **Name** | **Parameter** | **Resultat** |
 | :------ | :----- | :------ |
-
 
 ### Dependencies
 
@@ -104,7 +99,6 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 | **Service** | **Funktion** |
 | :------ | :----- | 
 | Authorization Service | authenticateUser() |
-
 
 #### Event-Subscriptions
 
