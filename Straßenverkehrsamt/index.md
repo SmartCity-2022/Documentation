@@ -27,6 +27,11 @@
 - Sachbearbeiter
   - Ein Bearbeiter, der die Anträge eines Bürgers bearbeitet
 
+**Use-Case Diagramm**
+
+![](media/Use-Case.png)
+
+
 ## Anforderungen im Detail
 
 **User Stories**
@@ -72,6 +77,10 @@
 - Begriffe im Glossar darstellen
 - Modellierung des physikalischen Datenmodells 
   - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+
+**Entity Relationship Model**
+
+![](media/ERD.png)
 
 ## Abläufe
 
