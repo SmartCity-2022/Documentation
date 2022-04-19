@@ -5,7 +5,8 @@
 
 ## Überblick
 
-- Das Hub zielt darauf ab, als zentrale Schnittstelle für den Benutzer zu dienen, über welche dieser alle vorhandenen Microservices erreichen und mit diesen interagieren kann. 
+- Der Hub zielt darauf ab, als zentrale Schnittstelle für den Benutzer zu dienen, über welche dieser alle vorhandenen Microservices erreichen und mit diesen interagieren kann. Dabei sollen die Microservices in den Hub eingebettet werden und somit indirekt Teil der Anwendung sein. Zudem stellt er die Funktionalität für die Registrierung und den Login bereit und umfasst ein Impressum. 
+
 - Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
 
 
@@ -16,8 +17,11 @@
 | Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
 | Gast | Nicht angemeldeter Besucher mit eingeschränkten Berechtigungen |
 
-* Use-Case Diagramme
-* Strukturierung der Diagramme in funktionale Gruppen
+- Benutzer und Gäste müssen in der Lage sein, zwischen den einzelnen Microservices zu navigieren
+- Benutzer und Gäste müssen in der Lage sein, einen Microservice auszuwählen, um mit diesem zu interagieren
+- Gäste müssen in der Lage sein, sich in der Anwendung zu registrieren
+- Es muss möglich sein, dass sich Benutzer mit ihren Anmeldedaten in der Anwendung anmelden können
+- Die Anwendung muss rechtliche- sowie Kontaktinformationen bereitstellen
 
 ## Anforderungen im Detail
 
@@ -28,7 +32,6 @@
 | Registrieren |Gast| mich registrieren können|ich Zugriff auf weitere Funktionen erhalte und meine Daten gespeichert werden können| ein Gast sich registrieren kann | Must |
 | Login |Benutzer| mich einloggen können|Zugriff auf meine Daten erhalte und weitere Funktionalitäten nutzen kann| ein Benutzer sich einloggen kann | Must |
 | Logout |Benutzer| mich ausloggen können|es nicht länger möglich ist über das aktuelle Gerät Daten auszulesen oder zu ändern | ein Benutzer sich ausloggen kann | Must |
-| Benutzerprofil |Benutzer| mir meine Daten angucken können | ich weiß, was für Daten hinterlegt sind | Must |
 | Zugriff Microservices |Benutzer, Gast| auf die verschiedenen Microservices zugreifen können|ich mit dem jeweiligen Microservice interagieren kann| der Zugriff auf die Microservices möglich ist | Must |
 | Impressum |Benutzer, Gast| rechtliche- und Kontaktinformationen einsehen können|ich diesbezüglich bescheid weiß| wenn eine Art Impressum bereit gestellt wird | Must |
 
