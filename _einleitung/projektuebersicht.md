@@ -45,8 +45,8 @@ Risiken könnten sich bei der Entwicklung des Programmes sowie der Benutzung erg
 
 | Funktion / Relevanz | Name | Kontakt / Verfügbarkeit | Wissen  | Interessen / Ziele  | 
 |---|---|---|---|---|
-| Leiter der Bibliothek, Fachlicher Entscheider  |  Herr Bauer | Tel. 409000, Von 9-19 Uhr telefonisch erreichbar, Mitarbeit zu 30% möglich, Nürnberg  | Kennt das Altsystem aus der Anwendersicht, soll mit dem System arbeiten  | Vereinfachung der Ausleihprozesse  |  
-| Administrator, Software Architekt | Finn Watermann  | Verfügbarkeit 100%, telefonisch und email  | Vertraut mit vergleichbarer Verwaltungssoftware   |  Stabiles System, geringer Wartungsaufwand | 
+| Administrator, DevOps  |  Niklas Schumann | Verfügbarkeit 100%, telefonisch und email  | Umgang mit Github-Repos, Docker, CI/CD und vertraut mit Infrastrukturqualität | Korrekter Umgang mit Repos, Vollständige Dokumentation des Projekts  |  
+| Software Architekt | Finn Watermann  | Verfügbarkeit 100%, telefonisch und email  | Vertraut mit der Microservicesoftware, Technische Expertise  |  Stabiles System, geringer Wartungsaufwand, Softwarequalität und Funktionalität | 
 | Product-Owner, Entscheider - als Koordinator der Stakeholderanforderungen   | Justin Kühnel  |  Verfügbarkeit 100%, telefonisch und email  | Koordinator für die Inputs der Stakeholder  | ROI des Systems sicherstellen  |
 | Scrum-Master, Leiter des Projekts   | Finn Amini Kaveh / Patrick Mayer  |  Verfügbarkeit 100%, telefonisch und email  | Leiter und Organisator des SmartCity Projektes  | Richtigkeit des Software-Developing Prozesses zu garantieren  |
 | Software Engineer   | Dennis Edler |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Mobilitäts Hub  | Vollständig Umsetzung des Microservice  |
