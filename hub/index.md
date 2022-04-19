@@ -23,6 +23,12 @@
 - Es muss möglich sein, dass sich Benutzer mit ihren Anmeldedaten in der Anwendung anmelden können
 - Die Anwendung muss rechtliche- sowie Kontaktinformationen bereitstellen
 
+<br>
+
+![](images/use_case_hub.png)
+
+<br>
+
 ## Anforderungen im Detail
 
 ### User Stories
@@ -92,7 +98,7 @@
 
 - Begriffe im Glossar darstellen
 - Modellierung des physikalischen Datenmodells 
-  - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+  - ![](images/er.jpg)
 
 ## Abläufe
 
