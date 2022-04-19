@@ -73,8 +73,7 @@
   - Erweiterbarkeit
   - Dokumentation
   - automatische und manuelle Tests
-  - Statische Codeanalyse
-  - ...
+  - (Statische Codeanalyse)
 - Aufteilung in Repositories gemäß Systemarchitektur?
   - Pro Service ein Repository
 - Versionskontrolle? Git-Workflow?
@@ -83,16 +82,31 @@
   - Github Actions
     - Tests
     - Build
-- Wie wird die Infrastruktur spezifiziert? Containerisierung?
-  - Docker
+  - Auslieferung nach "Knopfdruck"
+- Wie wird die Infrastruktur spezifiziert?
+  - Pro Service ein Docker Container
     - Dockerfile Template
+  - Kubernetes Cluster
 - Implementierung
-  - Entwicklungsumgebung.
-  - Betriebssysteme.
+  - Entwicklungsumgebung
+    - Wahlweise:
+      - VisualStudio Code
+      - WebStorm
+      - eclipse
+  - Betriebssysteme
+    - Server: Linux (Debian/Ubuntu)
   - Programmiersprachen.
-  - Frameworks.
-  - Logging.
-- Technologieauswahl: Messaging zum Beispiel mit [RabbitMQ](https://www.rabbitmq.com/) und [AsyncAPI](https://www.asyncapi.com/)
+    - JavaScript & TypeScript
+    - Python
+  - Frameworks:
+    - React (Java-/TypeScript)
+    - Express (Java-/TypeScript)
+    - Django (Python)
+    - FastAPI (Python)
+- Technologien:
+  - Datenbanken:
+    - MySQL / MariaDB
+  - Eventdriven Environment via [RabbitMQ](https://www.rabbitmq.com/)
 
 ## Rollen und Verantwortlichkeiten
 

@@ -61,11 +61,45 @@ Die Validierung spielt insbesondere eine große Rolle, um SQL-Injections und Cro
 
 ## Systemübersicht
 
-Dieser Abschnitt zeigt die technische Beschreibung des Softwaresystems
+<!--Dieser Abschnitt zeigt die technische Beschreibung des Softwaresystems
 in Form eines Systemarchitekturdiagramms.
-Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe dar. Abläufe werden im Kapitel "Abläufe" dargestellt. Im Kapitel "Systemübersicht" soll genau ein Diagramm dargstellt werden. Das "Box-and-Arrow"-Diagramm soll als Systemarchitekturdiagramm eine abstrakte Übersicht über das Softwaresystem geben. Dazu stellt es die Rechnerknoten und deren Kommunikationsbeziehungen (Protokoll (z.B. HTTP), Datenformat (z.B. JSON)) dar. Also Rechtecke und gerichtete Pfeile. Ähnlich einem UML-Deployment-Diagramm, aber noch abstrakter, denn es zeigt nicht die Verteilung der Softwarebausteine auf die Rechnerknoten. So erlangt der Leser einen schnellen und guten Überblick über das Softwaresystem. 
+Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe dar. Abläufe werden im Kapitel "Abläufe" dargestellt. Im Kapitel "Systemübersicht" soll genau ein Diagramm dargstellt werden. Das "Box-and-Arrow"-Diagramm soll als Systemarchitekturdiagramm eine abstrakte Übersicht über das Softwaresystem geben. Dazu stellt es die Rechnerknoten und deren Kommunikationsbeziehungen (Protokoll (z.B. HTTP), Datenformat (z.B. JSON)) dar. Also Rechtecke und gerichtete Pfeile. Ähnlich einem UML-Deployment-Diagramm, aber noch abstrakter, denn es zeigt nicht die Verteilung der Softwarebausteine auf die Rechnerknoten. So erlangt der Leser einen schnellen und guten Überblick über das Softwaresystem.-->
+
+![Systemübersicht](../_assets/images/systemarchitektur.png)
 
 ## Kommunikationsprotokolle und Datenformate
+
+### RabbitMQ - Events
+
+Alle Events, die über RabbitMQ gesendet werden, müssen in einem vorgegebenen JSON-Format versendet werden:
+```json
+{
+  "event": {
+    "name": "event_name",
+    "sender": "sender_name",
+    "timestamp": 1011567600, //Unix-Timestamp (in seconds)
+    "payload": {
+      //Payload of Event in JSON-Format
+    }
+  }
+}
+```
+**Beispiel:**
+```json
+{
+  "event": {
+    "name": "new_citizen",
+    "sender": "Bürgerbüro-i324",
+    "timestamp": 1011567600,
+    "payload": {
+      "citizen_id": "00000000-0000-4000-0000-000000000001",
+      "firstname": "Max",
+      "lastname": "Mustermann",
+      "address": "Musterstraße 1",
+      "birthday": "01.01.1970",
+  }
+}
+```
 
 ## Funktionale Anforderungen 
 
@@ -83,17 +117,34 @@ Das Diagramm ist statisch und nicht dynamisch und stellt daher keine Abläufe da
 
 ## Abläufe
 
-- Abläufe der Kommunikation von Microservices
-  in Sequenz- oder Aktivitätsdiagramm darstellen
+<!--- Abläufe der Kommunikation von Microservices
+  in Sequenz- oder Aktivitätsdiagramm darstellen-->
+
+- Die Kommunikation von Microservices untereinander sollte so weit wie möglich vermieden werden. Jeglich Event Messaging via RabbitMQ sollte von den Microservices zum Austausch von Informationen verwendet werden.
+
+- Um die Autorisierung eines angemeldeten Benutzer für jeden einzelnen Microservice zu ermöglichen, werden JWT Tokens verwendet.
+
+  - JWT Tokens sind mit einem Secret signiert, welches vom `CentralHub`-Microservice verwaltet und über den Event-Bus verteilt wird.
+  Mit hilfe des Secrets kann ein Microservice die Echtheit des Tokens prüfen und damit die Autorisierung eines Benutzers für den jeweiligen Microservice durchführen.
+
+![Verteilen des Secrets](../_assets/images/austausch_jwt_secret.png)
 
 ## Nicht-funktionale Anforderungen 
 
 ### Rahmenbedingungen
+
+<!--- Normen, Standards, Protokolle, Hardware, externe Vorgaben-->
+
 - Das Softwareprodukt soll ein verteiltes System darstellen, bei dem jeder Microservice ein in sich geschlossenes System aus Frontend, Backend und Datenbank ist, wobei alle Microservices über ein Event-System mit einem zentralen Hub kommunizieren. 
 - Die Kundendaten sollen zentral verwaltet werden und bei Änderungen der Kundendaten werden alle, bzw. eine ausgewählte Gruppe von Microservices über diese Änderung benachrichtigt.
 - Als Kommunikationsprotokoll soll https genutzt werden
 - Das interne Datenformat ist json, bzw. jwt
 - Innerhalb des gesamten Systems, sowie aller Microservices muss backendseitig validiert werden, sodass kein schädlicher Code eingepflegt werden kann
+
+- Protokolle
+  - AMQP 0-9-1: Event Messaging via RabbitMQ
+  - HTTP/S: Übertragung von Inhalten zwischen Server/Client
+  - MySQL: Datenbankanbindung (nur Intern)
 
 ### Betriebsbedingungen
 - Die Software muss in allen modernen Browser voll funktional sein, welche in der Lage sind HTML5 zu interpretieren. Explizit ausgeschlossen wird hier der Internet Explorer.
