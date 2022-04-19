@@ -28,5 +28,9 @@
 | Benutzer    | mich beim Bildungsangebot anmelden       | ich an dem Angebot teilnehmen kann             | Anmeldung an einem Bildungsangebot       | Must          |
 | Benutzer    | Details eines Bildungsangebotes einsehen | ich mich über das Angebot informieren kann     | Detailanzeige eines Bildungsangebotes    | Should        |
 | Benutzer    | Details einer Institution einsehen       | ich mich über die Institution informieren kann | Detailanzeige einer Institution          | Should        |
+| Benutzer    | meine Benotung einsehen                  |                                                | Noteneinsicht                            | Should        |
+| Benutzer    | meine Zeugnisse einsehen                 |                                                | Zeugniseinsicht                          | Should        |
 | Institution | Bildungsangebote erstellen               | sich Benutzer bei dem Angebot anmelden können  | Erstellung eines Bildungsangebots        | Must          |
 | Institution | Anmeldungen freigeben                    |                                                | Freigabe von Anmeldungen                 | Must          |
+| Institution | Benotungen eintragen                     | ich die Benutzer benoten kann                  | Eintragung von Benotungen                | Should        |
+| Institution | Zeugnis eintragen                        |                                                | Eintragung von Zeugnissen                | Should        |
