@@ -76,10 +76,19 @@ Alle Events, die über RabbitMQ gesendet werden, müssen in einem vorgegebenen J
 
 - "Globale" Funktionalitäten, die alle Microservices überspannen
 
-<!--## Abläufe
+## Abläufe
 
-- Abläufe der Kommunikation von Microservices
+<!--- Abläufe der Kommunikation von Microservices
   in Sequenz- oder Aktivitätsdiagramm darstellen-->
+
+- Die Kommunikation von Microservices untereinander sollte so weit wie möglich vermieden werden. Jeglich Event Messaging via RabbitMQ sollte von den Microservices zum Austausch von Informationen verwendet werden.
+
+- Um die Autorisierung eines angemeldeten Benutzer für jeden einzelnen Microservice zu ermöglichen, werden JWT Tokens verwendet.
+
+  - JWT Tokens sind mit einem Secret signiert, welches vom `CentralHub`-Microservice verwaltet und über den Event-Bus verteilt wird.
+  Mit hilfe des Secrets kann ein Microservice die Echtheit des Tokens prüfen und damit die Autorisierung eines Benutzers für den jeweiligen Microservice durchführen.
+
+![Verteilen des Secrets](../_assets/images/austausch_jwt_secret.png)
 
 ## Nicht-funktionale Anforderungen 
 
