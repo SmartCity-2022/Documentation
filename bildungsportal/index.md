@@ -50,3 +50,26 @@ Dieser Microservice soll einem Benutzer die Möglichkeit bieten auf das Bildungs
 Die Kommunikation ziwschen der Client- und Server-Komponente soll über OpenAPI REST-Schnittstelle stattfinden. Die Kommunikation zwischen dem Server und der Datenbank soll über eine bereits existierende Komponente umgesetzt werden und wird daher nicht näher beschrieben.
 
 
+# Technische Umsetzung
+
+## Softwarearchitektur
+
+ * Client
+   * Darstellungs-Schicht (Views)
+   * Logik-Schicht (Services)
+   * Kommunikations-Schicht (Models, REST)
+ * Server
+   * Zugriffs-Schicht (Controller, REST)
+   * Logik-Schicht (Services)
+   * Persistenz-Schicht (Models, Datenbank)
+  
+## Verwendete Technologien
+ * Frontend
+   * Typescript
+   * React.js
+ * Backend
+   * Kotlin
+   * Spring Boot
+   * JPA
+ * Datenbank
+   * MySQL
