@@ -60,25 +60,8 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 - Modellierung des physikalischen Datenmodells 
   - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
 
-## Abläufe
-
-- Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
-- Aktivitätsdiagramme für relevante Use Cases
-- Aktivitätsdiagramm mit Swimlanes sind in der Regel hilfreich 
-  für die Darstellung der Interaktion von Akteuren der Use Cases / User Stories
-- Abläufe der Kommunikation von Rechnerknoten (z.B. Client/Server)
-  in einem Sequenz- oder Aktivitätsdiagramm darstellen
-- Modellieren Sie des weiteren die Diagramme, die für das (eigene) Verständnis des
-  Softwaresystems hilfreich sind. 
-
 
 ## Schnittstellen
-
-- Schnittstellenbeschreibung (API), z.B. mit OpenAPI 
-- Auflistung der nach außen sichtbaren Schnittstelle des Microservices. Über welche Schnittstelle kann z.B. der Client den Server erreichen?
-- In Event-gesteuerten Systemen ebenfalls die Definition der Ereignisse und deren Attribute
-- Aufteilen in Commands, Events, Queries
-* Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
 
 ### Commands
 
@@ -97,7 +80,8 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 ### Events
 
 - Umzug gemeldet
-- 
+- Speermüll gemeldet
+- Briefwahl beantragt
 
 | **Name** | **Payload** | 
 | :------ | :----- | 
@@ -151,25 +135,6 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
     * React.js
   * Kommunikation-Schicht
     * HTTP
-
-### Entwurf
-
-### Fehlerbehandlung 
-
-* Mögliche Fehler / Exceptions auflisten
-* Fehlercodes / IDs sind hilfreich
-* Nicht nur Fehler technischer Art ("Datenbankserver nicht erreichbar") definieren, sondern auch fachliche Fehler wie "Kunde nicht gefunden", "Nachricht wurde bereits gelöscht" o.ä. sind relevant. 
-
-### Validierung
-
-* Relevante (Integrations)-Testfälle, die aus den Use Cases abgeleitet werden können
-* Testfälle für 
-  - Datenmodell
-  - API
-  - User Interface
-* Fokussieren Sie mehr auf Integrationstestfälle als auf Unittests
-* Es bietet sich an, die IDs der Use Cases / User Stories mit den Testfällen zu verbinden,
-  so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
 
 ### Verwendete Technologien
 * Frontend
