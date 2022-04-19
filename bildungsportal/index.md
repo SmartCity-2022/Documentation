@@ -38,3 +38,7 @@
 ## Graphische Benutzerschnittstelle
 
 ![](media/mockups.svg)
+
+## Datenmodell
+
+![](media/erm.svg)
