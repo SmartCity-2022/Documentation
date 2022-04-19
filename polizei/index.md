@@ -154,7 +154,7 @@ Ein Beamter kann durch eine Benachrichtigung in seinem Interface einen Notruf en
 
 ## Schnittstellen
 
-**Beispiel:**
+### Beispiel:
 
 **Synchronous**
 
