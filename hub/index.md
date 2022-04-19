@@ -1,4 +1,4 @@
-# Hub
+# CentralHub
 
 **Autor:** Justin Kühnel, Patrick Mayer, Finn Amini Kaveh
 
@@ -42,11 +42,47 @@
 
 ## Graphische Benutzerschnittstelle
 
-- GUI-Mockups passend zu User Stories
-- Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
-- Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
+- GUI-Mockups 
+  - Als Gast
+    
+    - Startseite
+    - User Story: Zugriff Microservices
+
+    ![](images/hub.jpg)
+    
+    
+    - Impressum 
+    - User Story: Impressum
+
+    ![](images/hub_impressum.jpg)
+    
+    
+    - Loginseite 
+    - User Story: Login
+
+    ![](images/hub_login.jpg)
+    
+    
+    - Registierungsseite
+    - User Story: Registrieren
+
+    ![](images/hub_register.jpg)
+    
+    
+    - Startseite mit eingeklappter Navbar
+    - User Storie: Zugriff Microservices
+
+    ![](images/hub_eingeklappt.jpg)
+    
+  - Als angemeldeter Benutzer
+    - Startseite 
+
+    ![](images/hubreg.jpg)
+    - Impressum
+
+    ![](images/hub_impressum_reg.jpg)
+
 - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-- Mockups für unterschiedliche Akteure
 
 
 ## Datenmodell 
@@ -65,6 +101,13 @@
   in einem Sequenz- oder Aktivitätsdiagramm darstellen
 - Modellieren Sie des weiteren die Diagramme, die für das (eigene) Verständnis des
   Softwaresystems hilfreich sind. 
+
+<br>
+
+
+  Aktivität Einloggen      |  Aktivität Registrieren      |  Aktivität Abmelden      |  Aktivität Impressum aufrufen      |  Aktivität Microservice aufrufen
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](images/einloggen.png)  |  ![](images/registrieren.png)  |  ![](images/abmelden.png)  |  ![](images/impressum.png)  |  ![](images/microservice.png)
 
 
 ## Schnittstellen
