@@ -37,20 +37,37 @@
 
 - GUI-Mockups 
   - Als Gast
+    
+    - Startseite
 
-  ![](images/hub.jpg)
-  ![](images/hub_impressum.jpg)
-  ![](images/hub_login.jpg)
-  ![](images/hub_register.jpg)
-  ![](images/hub_eingeklappt.jpg)
+    ![](images/hub.jpg)
+    - User Storie: Zugriff Microservices
+    
+    - Impressum 
+
+    ![](images/hub_impressum.jpg)
+    - User Storie: Impressum
+    - Loginseite 
+
+    ![](images/hub_login.jpg)
+    - User Storie: Login
+    - Registierungsseite
+
+    ![](images/hub_register.jpg)
+    - User Storie: Registrieren
+    - Startseite mit Eingeklappter Navbar
+
+    ![](images/hub_eingeklappt.jpg)
+    - User Storie: Zugriff Microservices
   - Als angemeldeter Benutzer
-  
-  ![](images/hubreg.jpg)
-  ![](images/hub_impressum_reg.jpg)
-- Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
-- Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
+    - Startseite 
+
+    ![](images/hubreg.jpg)
+    - Impressum
+
+    ![](images/hub_impressum_reg.jpg)
+
 - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-- Mockups für unterschiedliche Akteure
 
 
 ## Datenmodell 
