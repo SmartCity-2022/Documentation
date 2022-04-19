@@ -39,29 +39,34 @@
   - Als Gast
     
     - Startseite
+    - User Storie: Zugriff Microservices
 
     ![](images/hub.jpg)
-    - User Storie: Zugriff Microservices
+    
     
     - Impressum 
+    - User Storie: Impressum
 
     ![](images/hub_impressum.jpg)
-    - User Storie: Impressum
+    
     
     - Loginseite 
+    - User Storie: Login
 
     ![](images/hub_login.jpg)
-    - User Storie: Login
+    
     
     - Registierungsseite
+    - User Storie: Registrieren
 
     ![](images/hub_register.jpg)
-    - User Storie: Registrieren
     
-    - Startseite mit Eingeklappter Navbar
+    
+    - Startseite mit eingeklappter Navbar
+    - User Storie: Zugriff Microservices
 
     ![](images/hub_eingeklappt.jpg)
-    - User Storie: Zugriff Microservices
+    
   - Als angemeldeter Benutzer
     - Startseite 
 
