@@ -1,4 +1,4 @@
-# Krankenhaus
+# Hub
 
 **Autor:** Justin Kühnel, Patrick Mayer, Finn Amini Kaveh
 
@@ -18,20 +18,27 @@
 
 * Use-Case Diagramme
 * Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren 
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
 
 ## Anforderungen im Detail
-- Strukturierung der User Stories in funktionale Gruppen
-- Sicherheit: Misuse-Stories formulieren
+
+### User Stories
 
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
 | Registrieren |Gast| mich registrieren können|ich Zugriff auf weitere Funktionen erhalte und meine Daten gespeichert werden können| ein Gast sich registrieren kann | Must |
 | Login |Benutzer| mich einloggen können|Zugriff auf meine Daten erhalte und weitere Funktionalitäten nutzen kann| ein Benutzer sich einloggen kann | Must |
+| Logout |Benutzer| mich ausloggen können|es nicht länger möglich ist über das aktuelle Gerät Daten auszulesen oder zu ändern | ein Benutzer sich ausloggen kann | Must |
+| Benutzerprofil |Benutzer| mir meine Daten angucken können | ich weiß, was für Daten hinterlegt sind | Must |
 | Zugriff Microservices |Benutzer, Gast| auf die verschiedenen Microservices zugreifen können|ich mit dem jeweiligen Microservice interagieren kann| der Zugriff auf die Microservices möglich ist | Must |
 | Impressum |Benutzer, Gast| rechtliche- und Kontaktinformationen einsehen können|ich diesbezüglich bescheid weiß| wenn eine Art Impressum bereit gestellt wird | Must |
+
+### Misuse Stories
+
+| **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
+|:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
+| Doppelte E-mail Adresse |Gast| eine E-Mail Adresse bei der Registrierung mehrfach verwenden können|ich mir leichter merken kann, was ich für eine E-Mail Adresse verwendet habe| Bei erneuter Verwendung einer E-Mail Adresse wird eine Fehlermeldung angezeigt | Must |
+| Zu einfaches Passwort |Gast| bei der Registrierung sehr einfache und kurze Passwörter verwenden können|ich mir diese besser merken kann| es eine mindestanforderung an das Passwort gibt | Must |
+| Account Diebstahl |Gast, Benutzer| mich problemlos mit fremden Accounts anmelden können|ich Aktionen in deren Namen durchführen und ihre Daten auslesen kann| dies durch ein Passwort oder sonstige Sicherheitsmaßnahmen verhindert wird | Must |
 
 ## Graphische Benutzerschnittstelle
 
