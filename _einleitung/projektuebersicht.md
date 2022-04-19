@@ -1,34 +1,63 @@
 # Projektübersicht *Smart City*
 
-**Autor:** Product Owner
+**Autor:** Patrick Mayer, Finn Amini Kaveh, Justin Kühnel
 
 ## Beschreibung
 
-Beschreibung des Softwareprodukts "Smart City".
+SmartCity ist ein Projekt, das darauf abzielt, eine Stadt weitestgehend zu digitalisieren. Dies bedeutet auch, dass eine SmartCity in gewisser Hinsicht
+autonom handeln kann und Entscheidungen interaktiv getroffen werden. Durch einen zentralen Aufbau ist die Stadt damit übersichtlich und komfortabel
+bei der Bedienung.
 
 ## Github Repository
 
-* Link zum Github Repository mit Source Code, Dokumentation, Kanban-Board
+https://github.com/SmartCity-2022
 
 ## Ziele
 
-- Anwendungsbereiche, Motivation, Umfang, Alleinstellungsmerkmale, Marktanforderungen
-- Informationen zu Zielbenutzergruppen und deren Merkmale (Bildung, Erfahrung, Sachkenntnis)
-- Abgrenzung (Was ist das Softwaresystem _nicht_)
+Ziel des SmartCity Projekts ist es, eine Stadt modern und digital zu gestalten. Dazu gehört eine zentrale Informationsverwaltung, in einem sogenannten 
+"Hub", sowie eine transparente Einsicht in die Prozesse und Verwaltung einer SmartCity für ihre Bürger. Die Motivation dahinter ist es, das Leben in 
+solch einer Stadt durch Digitalisierung zu erleichtern und Prozesse zu automatisieren. Ebenso soll durch die Digitalisierung bürokratischer Prozesse der
+Beruf des Beamten automatisiert werden. Auch kann durch den übersichtlichen Ablauf der SmartCity die Stadt weiter demokratisiert, bzw. ihre Einwohner
+dazu angeregt werden, mehr am demokratischen Prozess teilzunehmen. Dieses Projekt umfasst hauptsächlich alle Prozesse, die regional in einer Stadt ablaufen. Dies
+beinhaltet bestimmte Ämter wie das Straßenverkehrsamt, Bauamt und Gesundheitsamt sowie essenzielle Portale einer Stadt, wie das Kulturportal, Bildungsportal,
+Bankenportal und weitere. Unsere SmartCity unterscheidet sich damit stark von einer herkömmlichen Stadt, da sie nicht, wie es gängig wäre, vor Ort und 
+dezentralisiert verwaltet wird, sondern digital und mehrheitlich automatisiert.
+
+Die Zielgruppe beschränkt sich in einer SmarCity auf die Einwohner ihrer Stadt sowie all ihrer Gäste. Dabei spielt es keine Rolle welcher Klasse,
+Bildungsgrad oder politischen Hintergrund ihre Einwohner entspringen. Alle Einwohner werden gleichermaßen gehandhabt.
+
+SmartCity grenzt sich somit von gängigen Städten über eine höhere Digitalisierungsrate sowie einen großen Bezug zur Informationsfreiheit und einer hohen Transparenz bezüglich bürokratischer Abläufe ab.
 
 ## Risiken
 
-* SWOT-Analyse
-* Verfügen wir über die notwendigen Kompetenzen? (Umsetzbarkeit)
-* Welche Risiken und negativen Nebeneffekte sind zu erwarten?
+| SWOT-Analyse| Hilfreich | Schädlich |
+|---|---|---|
+| <b>Intern</b> | <b>Stärken:</b> Digitalisierung, Automatisierung, Komfortabilität| <b>Schwächen:</b> Datenschutzrechtliche Bedenken, Externe Vulnerabilität  |
+| <b>Extern</b>| <b>Möglichkeiten:</b> Stadterweiterung, Verbesserte Lebensbedingungen | <b>Gefahren:</b> Cyberangriff, Datenschutzdiebstahl, Datenmissbrauch
+
+Risiken könnten sich bei der Entwicklung der Anwendung sowie der Benutzung ergeben. Dabei kann es zu Sicherheitslücken kommen, wenn die einzelnen Services, sowie der Hub keine umfangreiche Validierung der Daten vornehmen. Zudem ist es wichtig eine sichere Authentifizierung zu implentieren, um eventuellen Angriffen und unberechtigten Zugriffen vorzubeugen. Dies gilt insbesondere für die Kommunikation der Microservices mit dem Hub und umgekehrt, da zu jedem Zeitpunkt garantiert werden muss, dass die benötigten Rechte vorliegen. 
+Die Validierung spielt insbesondere eine große Rolle, um SQL-Injections und Cross-Site-Scripting Angriffe zu verhindern. Neben den Risiken müssen ebenfalls die Synchronisation der Daten und ein regelmäßiger Austausch zwischen den Services gewährleistet sein. Dies ist insbesondere wichtig, damit keine Inkonsistenzen in den Daten zwischen den einzelnen Microservices entstehen. Um dieses Problem zu vermeiden muss mit einem Event System gearbeitet werden, bei dem sich die Microservices untereinander vernetzen und bei Datenänderungen gegenseitig informieren. 
 
 ## Stakeholder
 
 | Funktion / Relevanz | Name | Kontakt / Verfügbarkeit | Wissen  | Interessen / Ziele  | 
 |---|---|---|---|---|
-| Leiter der Bibliothek, Fachlicher Entscheider  |  Herr Bauer | Tel. 409000, Von 9-19 Uhr telefonisch erreichbar, Mitarbeit zu 30% möglich, Nürnberg  | Kennt das Altsystem aus der Anwendersicht, soll mit dem System arbeiten  | Vereinfachung der Ausleihprozesse  |  
-| Administrator, Informationslieferant bzgl. Wartungsanforderungen  | Herr Heiner  | Heiner@gmx.net, Per E-Mail, immer erreichbar, Verfügbarkeit 50%, Nürnberg  | Vertraut mit vergleichbarer Verwaltungssoftware   |  Stabiles System, geringer Wartungsaufwand | 
-| Product-Owner, Entscheider - als Koordinator der Stakeholderanforderungen   | Paul Ottmer  |  po@ottmer.de, Per E-Mail und tel. tagsüber, Verfügbarkeit 100%, Nürnberg  | Koordinator für die Inputs der Stakeholder  | ROI des Systems sicherstellen  | 
+| Administrator, DevOps  |  Niklas Schumann | Verfügbarkeit 100%, telefonisch und email  | Umgang mit Github-Repos, Docker, CI/CD und vertraut mit Infrastrukturqualität | Korrekter Umgang mit Repos, Vollständige Dokumentation des Projekts  |  
+| Software Architekt | Finn Watermann  | Verfügbarkeit 100%, telefonisch und email  | Vertraut mit der Microservicesoftware, Technische Expertise  |  Stabiles System, geringer Wartungsaufwand, Softwarequalität und Funktionalität | 
+| Product-Owner, Entscheider - als Koordinator der Stakeholderanforderungen   | Justin Kühnel  |  Verfügbarkeit 100%, telefonisch und email  | Koordinator für die Inputs der Stakeholder  | ROI des Systems sicherstellen  |
+| Scrum-Master, Leiter des Projekts   | Finn Amini Kaveh / Patrick Mayer  |  Verfügbarkeit 100%, telefonisch und email  | Leiter und Organisator des SmartCity Projektes  | Richtigkeit des Software-Developing Prozesses zu garantieren  |
+| Software Engineer   | Dennis Edler |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Mobilitäts Hub  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Ben-Lukas Horn |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Polizei  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Nico Hübner |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Kulturportal  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Fabian Pechta |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Immobilienportal  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Patrick Hüntelmann |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Bildungsportal  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Finn Bechinka |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Bürgerbüro  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Clemens Vogtländer |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Jobportal  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Maurice Leenders |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Gesundheitsamt  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Dennis Gorpinic |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Bankenportal  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Marc Leenders |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Bauamt  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Kevin Fischer |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Straßenverkehrsamt  | Vollständig Umsetzung des Microservice  |
+| Software Engineer   | Finn Amini Kaveh / Patrick Mayer / Justin Kühnel |  Verfügbarkeit 100%, telefonisch und email  | Vertraut mit Microservice Zentrales Hub  | Vollständig Umsetzung des Microservice  |
 
 ## Systemübersicht
 
@@ -74,7 +103,17 @@ Alle Events, die über RabbitMQ gesendet werden, müssen in einem vorgegebenen J
 
 ## Funktionale Anforderungen 
 
-- "Globale" Funktionalitäten, die alle Microservices überspannen
+**Akteure**
+| **Akteur** | **Definition** |
+| :--------- | :----- |
+| Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
+| Gast | Nicht angemeldeter Besucher mit eingeschränkten Berechtigungen |
+
+- Benutzer und Gäste müssen in der Lage sein, zwischen den einzelnen Microservices zu navigieren
+- Benutzer und Gäste müssen in der Lage sein, einen Microservice auszuwählen, um mit diesem zu interagieren
+- Gäste müssen in der Lage sein, sich in der Anwendung zu registrieren
+- Es muss möglich sein, dass sich Benutzer mit ihren Anmeldedaten in der Anwendung anmelden können
+- Die Anwendung muss rechtliche- sowie Kontaktinformationen bereitstellen
 
 ## Abläufe
 
@@ -96,40 +135,44 @@ Alle Events, die über RabbitMQ gesendet werden, müssen in einem vorgegebenen J
 
 <!--- Normen, Standards, Protokolle, Hardware, externe Vorgaben-->
 
+- Das Softwareprodukt soll ein verteiltes System darstellen, bei dem jeder Microservice ein in sich geschlossenes System aus Frontend, Backend und Datenbank ist, wobei alle Microservices über ein Event-System mit einem zentralen Hub kommunizieren. 
+- Die Kundendaten sollen zentral verwaltet werden und bei Änderungen der Kundendaten werden alle, bzw. eine ausgewählte Gruppe von Microservices über diese Änderung benachrichtigt.
+- Als Kommunikationsprotokoll soll https genutzt werden
+- Das interne Datenformat ist json, bzw. jwt
+- Innerhalb des gesamten Systems, sowie aller Microservices muss backendseitig validiert werden, sodass kein schädlicher Code eingepflegt werden kann
+
 - Protokolle
   - AMQP 0-9-1: Event Messaging via RabbitMQ
   - HTTP/S: Übertragung von Inhalten zwischen Server/Client
   - MySQL: Datenbankanbindung (nur Intern)
 
 ### Betriebsbedingungen
-
-- Vorgaben des Kunden (z.B. Web Browser / Betriebssystem Versionen, Programmiersprache)
+- Die Software muss in allen modernen Browser voll funktional sein, welche in der Lage sind HTML5 zu interpretieren. Explizit ausgeschlossen wird hier der Internet Explorer.
+- Für das zentrale Hub werden HTML5, CSS3 und Javascript, bzw. React.js für das Frontend, Node.js für das Backend und MySQL als Datenbanksystem genutzt. Die einzelnen Microservices werden jeweils mit unterschiedlichen Tech-Stacks entwickelt, wobei diese geneuer in den jeweiligen Spezifikationen definiert sind
 
 ### Qualitätsmerkmale
 
-- Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
-
-| Qualitätsmerkmal           | sehr gut | gut | normal | nicht relevant |
-|----------------------------|----------|-----|--------|----------------|
-| **Zuverlässigkeit**        |          |     |        |                |
-| Fehlertoleranz             | X        | -   | -      | -              |
-| Wiederherstellbarkeit      | X        | -   | -      | -              |
-| Ordnungsmäßigkeit          | X        | -   | -      | -              |
-| Richtigkeit                | X        | -   | -      | -              |
-| Konformität                | -        | X   | -      | -              |
-| **Benutzerfreundlichkeit** |          |     |        |                |
-| Installierbarkeit          | -        | -   | X      | -              |
-| Verständlichkeit           | X        | -   | -      | -              |
-| Erlernbarkeit              | -        | X   | -      | -              |
-| Bedienbarkeit              | -        | X   | -      | -              |
-| **Performance**            |          |     |        |                |
-| Zeitverhalten              | -        | -   | X      | -              |
-| Effizienz                  | -        | -   | x      | -              |
-| **Sicherheit**             |          |     |        |                |
-| Analysierbarkeit           | X        | -   | -      | -              |
-| Modifizierbarkeit          | -        | -   | X      | -              |
-| Stabilität                 | X        | -   | -      | -              |
-| Prüfbarkeit                | X        | -   | -      | -              |
+Qualitätsmerkmal | sehr gut | gut | normal | nicht relevant
+---|---|---|---|---
+**Zuverlässigkeit** | | | | |
+Fehlertoleranz |X|-|-|-|
+Wiederherstellbarkeit |-|X|-|-|
+Ordnungsmäßigkeit |X|-|-|-|
+Richtigkeit |X|-|-|-|
+Konformität |-|X|-|-|
+**Benutzerfreundlichkeit** | | | | |
+Installierbarkeit |-|X|-|-|
+Verständlichkeit |X|-|-|-|
+Erlernbarkeit |X|-|-|-|
+Bedienbarkeit |X|-|-|-|
+**Performance** | | | | |
+Zeitverhalten |-|-|X|-|
+Effizienz|-|-|X|-|
+**Sicherheit** | | | | |
+Analysierbarkeit |X|-|-|-|
+Modifizierbarkeit |-|X|-|-|
+Stabilität |X|-|-|-|
+Prüfbarkeit |-|X|-|-|
 
 
 ## Glossar 
