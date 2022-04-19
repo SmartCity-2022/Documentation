@@ -1,4 +1,4 @@
-# Krankenhaus
+# Immobilienportal
 
 **Autor:** Fabian Pechta
 
@@ -6,7 +6,6 @@
 ## Überblick
 
 - Der Microservice "Immobilienportal" soll Benutzern es ermöglichen, Immobilien zu suchen und Termine, wie zum Beispiel eine Wohnungsbesichtigung, digital buchen zu können.
-- Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
 
 
 ## Funktionale Anforderungen
@@ -16,25 +15,14 @@
 | **Akteure** | **Definition** |
 | :------ | :----- |
 | Benutzer | Benutzer mit grundlegenden Berechtigungen  |
-| Immobilienmakler | Benutzer mit zusätzlichen Berechtigungen |
+| Immobilienmakler | Benutzer mit grundlegenden Berechtigungen |
 
 * Use-Case Diagramme
 
 ![](media/usecase.png)
 
 
-* Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren 
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
-
 ## Anforderungen im Detail
-
-- User Stories mit Akzeptanzkritierien 
-- Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-- Strukturierung der User Stories in funktionale Gruppen
-- Sicherheit: Misuse-Stories formulieren
-
 
 **User Stories**
 
@@ -45,14 +33,12 @@
 | Benutzer | Immobilien anbieten können | andere Benutzer das Angebot bekommen | Immobilie hochgeladen und wird angezeigt |
 | Benutzer | Bilder von den Immobilien sehen können | ich mir das Immobilienobjekt besser vorstellen kann | Immobilien besitzen Bilder |
 | Benutzer | über gute Angebote informiert werden | ich am meisten Geld sparen kann | Meldung über Preisnachlässe / gute Deals |
+| Immobilienmakler | Termine von Benutzern einsehen können | ich diese annehmen oder ablehnen kann | Ansicht von Terminanfragen |
+
+- Misuse-Stories beinhalten Dinge, wie, dass Benutzer einfach alles mögliche eingeben können, wie zum Beispiel eine Immobilie, die garnicht existiert.
+  Daher soll nach einreichen einer Immobilie geprüft werden, ob sich es hierbei um ein Legitimes Objekt handelt.
 
 ## Graphische Benutzerschnittstelle
-
-- GUI-Mockups passend zu User Stories
-- Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
-- Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
-- Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-- Mockups für unterschiedliche Akteure
 
 ## Mockup Home
 
@@ -69,9 +55,7 @@
 
 ## Datenmodell 
 
-- Begriffe im Glossar darstellen
-- Modellierung des physikalischen Datenmodells 
-  - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
+![](media/erm.png)  
 
 ## Abläufe
 
