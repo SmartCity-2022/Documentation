@@ -92,14 +92,6 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 ### Dependencies
 
-- Authentifizierung
-
-#### RPC
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Authorization Service | authenticateUser() |
-
 #### Event-Subscriptions
 
 | **Service** | **Funktion** |
