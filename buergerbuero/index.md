@@ -70,38 +70,11 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 ## Schnittstellen
 
-### Commands
-
-**Synchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-
-**Asynchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-
 ### Events
 
 - Umzug gemeldet
 - Speermüll gemeldet
 - Briefwahl beantragt
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-
-### Queries
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-
-### Dependencies
-
-#### Event-Subscriptions
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
 
 ## Technische Umsetzung
 
