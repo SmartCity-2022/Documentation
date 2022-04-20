@@ -17,58 +17,83 @@ Falls ein Benutzer bereits eine Firma besitzt und Stellen ausschreiben möchte, 
 
 ## Funktionale Anforderungen
 
-### Akteure im Microservice
+### Definition der Akteure
 
-Folgende Akteure interagieren mit dem Microservice:
-
-* **Benutzer** der Standard Benutzer der den Microservice benutzt, um nach Stellen zu suchen.
-* **Unternehmer** ein Bürger der gleichzeitig ein Unternehmen im Microservice repräsentiert und Stellen ausschreiben kann.
+| **Akteur** | **Beschreibung** | 
+| :--------- | :------------- |
+| Benutzer | angemeldeter Benutzer, der von der Hauptseite aus auf den Microservice zugreift|
+| Unternehmer | ein Bürger der ein Unternehmen angemeldet hat und erweiterte Berechtigungen zum einstellen von Jobs oder dem einsehen von Bewerbungen besitzt
 
 ### Use Case Diagramme
 
-#### Benutzer
+#### Benutzer:
 
-![](media/usecase/use-case-benutzer.svg)
+![](media/usecase/uc-user.svg)
 
-#### Unternehmer
+#### Unternehmer:
 
-![](media/usecase/use-case-unternehmer.svg)
+![](media/usecase/uc-company.svg)
 
 ## Anforderungen im Detail
 
-### User Stories
+### User Stories: Benutzer
 
 | **ID** | **Priorität** | **Als** | **möchte ich** | **so dass ich** | **Akzeptanz** |
 | :----- | :------------ | :------ | :------------- | :---------- | :------------ |
-| Stellenanzeige | muss | Bürger | stellen anzeigen lassen | nach passenden Stellen schauen kann | Stellenanzeige funktioniert |
-| Stellensuche | muss | Bürger | nach Stellen suchen können | bessere Ergebnisse erhalte | Suche funktioniert |
-Stelleneinschreibung | muss | Bürger | mich für eine Stelle einschreiben können | die Stelle bekomme | Stelleneinschreibung funktioniert |
-Firma registrieren | soll | Bürger | eine Firma auf meinen Namen registrieren | Stellen ausschreiben kann | Firmenregistrierung funktioniert |
-Stellenausschreibung | soll | Unternehmer | eine Stellenausschreibung für meine Firma vornehmen | neue Bewerber finde | Stellenausschreibung funktioniert |
-Bewerber ansehen | soll | Unternehmer | Bewerber für meine Stellenausschreibungen ansehen | Bewerber filtern kann | Bewerberansicht funktioniert |
-| Stellenranking | kann | Bürger | die beliebtesten Stellen sehen können | die besten Stellen zu sehen | Stellenranking funktioniert |
-| Stellen filtern | kann | Bürger | meine Suche und das Ranking filtern können | genauere Angebote sehe | Filtern nach Stellen funktioniert |
-Stellenrückmeldung | kann | Bürger | den Status meiner Bewerbungen einsehen | weiß ob ich genommen werde | Stellenrückmeldung funktioniert |
-Chat-Funktion | kann | Bürger | Bei Rückfragen mit dem Ansprechpartner der Firma schreiben | mögliche Probleme zu beseitigen | Chat-Funktion zwischen Benutzer und Firma funktioniert
+| Stellenanzeige | muss | Benutzer | stellen im Microservice anzeigen lassen | nach passenden Stellen suchen kann | Stellenanzeige implementiert
+| Stelleneinschreibung | muss | Benutzer | mich für eine Stelle einschreiben | die Stelle möglicherweise bekomme | Stelleneinschreibung implementiert
+| Firma registrieren | muss | Benutzer | eine Firma auf meinen Namen registrieren | selber Stellen ausstellen kann | Firmenregistrierung funktioniert |
+| Stelle suchen | soll | Benutzer | nach Firmen und Berufen suchen können | nach bekannten Firmen ausschau halten kann | Stellensuche implementiert
+| Stellen filtern | soll | Benutzer | meine Suchkriterien nach verschiedenen Aspekten filtern können | präzisere Ergebnisse erhalte | Suchfilter implementiert |
+| Bewerbungen einsehen | soll | Benutzer | meine abgeschickten Bewerbungen einsehen können | Rückmeldungen der Firmen sehe | Bewerbungseinsicht implementiert |
+| Stellenranking | gering | Benutzer | die beliebtesten Stellen ansehen können | möglicherweise Lukrative Stellen wahrnehmen kann | Stellenranking implementiert |
+| Stellenausschreibung | muss | Unternehmer | Stellen für meine Firma ausschreiben können | Bewerber finde | Stellenausschreibung implementiert
+| Bewerbungen einsehen | soll | Unternehmer | Bewerbungen von Interessenten ansehen | sie ablehnen oder annehmen kann | Einsehen für Bewerbungen implementiert
+| Rückmeldung | kann | Unternehmer | Bewerbungen annehmen oder ablehnen können | die Leute in meiner Firma einstelle | Rückmeldung für Bewerbungen funktioniert
+| Kontaktaufnahme | gering | Unternehmer | bei möglichen Fragen oder Unklarheiten den Bewerber kontaktieren können | Unklarheiten kläre | Kontaktaufnahme funktioniert
 
-## Grafische Benutzerschnittstelle
+## Graphische Benutzerschnittstelle
 
-### Stellenanzeige
+### Mockups
 
-![](media/mockups/mockup-stellenanzeige.svg)
+#### **Stellenanzeige**
 
-### Stellensuche
+![](media/mockups/m_alljobs.svg)
 
-![](media/mockups/mockup-stellensuche.svg)
 
-### Stelleneinschreibung
+![](media/mockups/m_jobdetails.svg)
 
-![](media/mockups/mockup-bewerbung.svg)
+#### **Stellensuche**
 
-## Datenmodell
+![](media/mockups/m_jobsearch.svg)
+
+#### **Meine Bewerbungen**
+
+![](media/mockups/m_myapplications.svg)
+
+#### **Firmenregistrierung**
+
+![](media/mockups/m_companyregistration.svg)
+
+#### **Stelle ausschreiben**
+
+![](media/mockups/m_postjob.svg)
+
+
+#### **Meine ausgeschriebenen Stellen**
+
+![](media/mockups/m_myjobs.svg)
+
+#### **Bewerber ansehen**
+
+![](media/mockups/m_myapplicators.svg)
+
+
+## Datenmodel
 
 ![](media/datamodel/datamodel.svg)
 
+## Schnittstellen
 
 ### URL
 
@@ -76,57 +101,37 @@ http://smart.city/microservices/jobportal
 
 ### Events
 
-#### Event Subscriptions
+#### Eigene Events
 
-  * Schule abgeschlossen -> Erinnerung auf Jobportal für Ausbildungssuche
+| **Name** | **Payload** | 
+| :------ | :----- | 
+| NewJobOffer | Job job |
 
-#### Events
+#### Event-Abhängigkeiten
 
-  * Lohnauszahlung
-  * neuer Job registriert
-  * Job angenommen
+| **Service** | **Funktion** | **Beschreibung**|
+| :------ | :----- | :-------- |
+| Mainhub | CitizenUpdated | Falls sich eine userID ändert, die mit Bewerbungen oder einer Firma in verbindung steht, muss sich auch der Eintrag im Microservice ändern
 
+# Technische Umsetzung
 
-
-## Technische Umsetzung
-
-
-### Softwarearchitektur
-
-- Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
-
-Hier stellen Sie die Verteilung der Softwarebausteine auf die Rechnerknoten dar. Das ist die Softwarearchitektur. Zum Beispiel Javascript-Software auf dem Client und Java-Software auf dem Server. In der Regel wird die Software dabei sowohl auf dem Client als auch auf dem Server in Schichten dargestellt.
-
+## Softwarearchitektur
 * Server
   * Web-Schicht
-    * HTTP
-    * Express.js
   * Logik-Schicht
-    * Node.js
-    * React.js Routes
   * Persistenz-Schicht
 
 * Client
   * View-Schicht
   * Logik-Schicht
   * Kommunikation-Schicht
-
-#### Deployment: Backend
-
-![](media/deployment/deployment_backend.svg)
-
-
-### Verwendete Technologien
-
-- Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
-
-* Frontend
-  * HTML
-  * CSS
-  * Javascript
-      * React.js
-* Backend
-  * Javascript
-      * Express.js
-* Datenbank
-  * MySQL
+  
+## Verwendete Technologien
+ * Frontend
+   * Javascript
+      * React Framework
+ * Backend
+   * Javascript
+     * Express Framework
+ * Datenbank
+   * MySQL
