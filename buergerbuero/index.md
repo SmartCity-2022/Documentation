@@ -30,7 +30,7 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
   * Stadt
   * Ämter
 
-[USE CASE DIAGRAMM]
+![usecase](media/use_case.png)
 
 ## Anforderungen im Detail
 
