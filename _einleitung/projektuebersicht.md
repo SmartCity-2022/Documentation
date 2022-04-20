@@ -1,6 +1,6 @@
 # Projektübersicht *Smart City*
 
-**Autor:** Patrick Mayer, Finn Amini Kaveh, Justin Kühnel
+**Autor:** Patrick Mayer, Finn Amini Kaveh, Justin Kühnel, Finn Watermann
 
 ## Beschreibung
 
@@ -104,6 +104,7 @@ Alle Events, die über RabbitMQ gesendet werden, müssen in einem vorgegebenen J
 ## Funktionale Anforderungen 
 
 **Akteure**
+
 | **Akteur** | **Definition** |
 | :--------- | :----- |
 | Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
