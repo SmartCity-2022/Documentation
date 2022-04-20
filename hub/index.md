@@ -10,6 +10,7 @@
 
 ## Funktionale Anforderungen
 **Akteure**
+
 | **Akteur** | **Definition** |
 | :--------- | :----- |
 | Bürger | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
