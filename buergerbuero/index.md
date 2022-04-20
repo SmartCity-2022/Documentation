@@ -58,6 +58,12 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 ![mockup](media/mockup4.png)
 
+![mockup](media/mockup5.png)
+
+![mockup](media/mockup6.png)
+
+![mockup](media/mockup7.png)
+
 ## Datenmodell 
 
 ![uml](media/uml.png)
