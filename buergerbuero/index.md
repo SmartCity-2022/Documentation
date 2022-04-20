@@ -30,7 +30,7 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
   * Stadt
   * Ämter
 
-[USE CASE DIAGRAMM]
+![usecase](media/use_case.png)
 
 ## Anforderungen im Detail
 
@@ -58,44 +58,23 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 ![mockup](media/mockup4.png)
 
+![mockup](media/mockup5.png)
+
+![mockup](media/mockup6.png)
+
+![mockup](media/mockup7.png)
+
 ## Datenmodell 
 
 ![uml](media/uml.png)
 
 ## Schnittstellen
 
-### Commands
-
-**Synchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-
-**Asynchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-
 ### Events
 
 - Umzug gemeldet
 - Speermüll gemeldet
 - Briefwahl beantragt
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-
-### Queries
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-
-### Dependencies
-
-#### Event-Subscriptions
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
 
 ## Technische Umsetzung
 
