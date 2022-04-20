@@ -58,6 +58,7 @@ Ein Beamter kann durch eine Benachrichtigung in seinem Interface einen Notruf en
 ![](media/diagramme/UseCase_Benutzer.jpg)
 ### HomePage/aktuelle Meldungen
 ![](media/mockups/export/buergersicht/Meldungen.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Benutzer | eine Übersicht der gesuchten Personen erhalten | - | Personen werden angezeigt |
@@ -66,22 +67,26 @@ Ein Beamter kann durch eine Benachrichtigung in seinem Interface einen Notruf en
 
 ### Neue Meldung erstellen
 ![](media/mockups/export/buergersicht/Meldung_beantragen.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Benutzer | eine neue Stau-Meldung beantragen | andere Personen diesen umfahren können | Neue Meldung wird angenommen und angezeigt |
 | Benutzer | eine neue Unfall-Meldung beantragen | andere Personen vor weiteren Unfällen zu schützen | Neue Meldung wird angenommen und angezeigt |
 ### Hinweise zu gesuchten Personen
 ![](media/mockups/export/buergersicht/Hinweise_zu_gesuchten_Personen.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Benutzer | einen Hinweis zu einer gesuchten Person hinzufügen | sie Suche schneller voran geht | neuer Hinweis wird angenommen |
 ### Anzeige aufgeben
 ![](media/mockups/export/buergersicht/Anzeigen.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Benutzer | eine Anzeige aufgeben können | - | Anzeige wird bearbeitet |
 ### Notruf
 ![](media/mockups/export/buergersicht/Notruf.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Benutzer | einen Notruf über das Telefon abgeben können | ich Hilfe rufen kann | Notruf wird über Telefonnummer angenommen |
@@ -90,59 +95,71 @@ Ein Beamter kann durch eine Benachrichtigung in seinem Interface einen Notruf en
 ## Aus Beamten Sicht
 ### UseCase-Diagramm
 ![](media/diagramme/UseCase_Beamter.jpg)
+
 ### Neue Meldungen
 ![](media/mockups/export/beamtensicht/Meldungen.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | eine Übersicht der neu eingereichten Staumeldungen erhalten können | diese barbeitet werden können | Meldungen werden angezeigt |
 | Beamter | eine Übersicht der neu eingereichten Unfallmeldungen erhalten können | diese barbeitet werden können | Meldungen werden angezeigt |
 ### Staumeldung
 ![](media/mockups/export/beamtensicht/Staumeldung_details.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | eine Staumeldungen genauer inzpizieren können | diese validiert oder abgelehnt werden kann | Informationen zu einer Meldung werden angezeigt |
 ### Unfallmeldung
 ![](media/mockups/export/beamtensicht/Unfallmeldung_details.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | eine Unfallmeldungen genauer inzpizieren können | diese validiert oder abgelehnt werden kann | Informationen zu einer Meldung werden angezeigt |
 ### Anzeigen-Übersicht
 ![](media/mockups/export/beamtensicht/Anzeigen.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | eine Übersicht der neu eingereichten Anzeigen erhalten | diese bearbeitet werden können | neue Anzeigen werden aufgelistet |
 ### Anzeige-Bearbeiten
 ![](media/mockups/export/beamtensicht/Anzeige_details.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | eine Einsicht zu einer Anzeige erhalten können | diese validiert oder abgelehnt werden kann | Details einer Anzeige werden angezeigt|
 ### Anzeige erstellen
 ![](media/mockups/export/beamtensicht/Anzeige_erstellen.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | eine Anzeige erstellen können | - | Anzeige wird erstellt |
 ### Neuigkeit erstellen
 ![](media/mockups/export/beamtensicht/Neuigkeit_hinzufuegen.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | eine Neuigkeit hinzufügen können | ich Bürger über Ereignisse bezüglich der Polizei informieren kann | Neuigkeit wird erstellt |
 ### Neuigkeiten-Übersicht
 ![](media/mockups/export/beamtensicht/Neuigkeiten.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | eine Übersicht aller Neuigkeiten erhalten | diese verwaltet werden können | Neuigkeiten werden angezeigt |
 ### Gesuchte Person hinzufügen
 ![](media/mockups/export/beamtensicht/gesuchte_Person_hinzufuegen.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | eine Person als gesucht eintragen können | - | Person wird eingetragen |
 ### Übersicht der gesuchten Personen 
 ![](media/mockups/export/beamtensicht/gesuchte_Personen_anzeigen.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | eine Übersicht der gesuchten Personen erhalten | diese verwaltet werden können | Personen werden angezeigt |
 ### Details einer gesuchten Person
 ![](media/mockups/export/beamtensicht/gesuchte_Personen_details.jpg)
+
 | **Als** | **möchte ich** | **so dass** | **Akzeptanz** |
 | :------ | :----- | :------ | :-------- |
 | Beamter | die Details einer gesuchten Personen einsehen können | diese verwaltet werden können | Person wird angezeigt |
