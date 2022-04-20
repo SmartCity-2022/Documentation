@@ -11,11 +11,11 @@
 
 ## Funktionale Anforderungen
 
-**Akteure**
-| **Akteur** | **Definition** |
-| :------ | :----- |
-| Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
-| Mitarbeiter | Sachbearbeiter des Bauamts mit zusätzlichen Berechtigungen für die Bearbeitung und Einsicht |
+**Akteure** 
+ | **Akteur** | **Definition** |
+ | :------ | :----- |
+ | Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
+ | Mitarbeiter | Sachbearbeiter des Bauamts mit zusätzlichen Berechtigungen für die Bearbeitung und Einsicht |
 
 ![](media/use-cases.png)
 
