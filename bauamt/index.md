@@ -12,10 +12,11 @@
 ## Funktionale Anforderungen
 
 **Akteure** 
- | **Akteur** | **Definition** |
- | :------ | :----- |
- | Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
- | Mitarbeiter | Sachbearbeiter des Bauamts mit zusätzlichen Berechtigungen für die Bearbeitung und Einsicht |
+
+| **Akteur** | **Definition** |
+| :------ | :----- |
+| Benutzer | Angemeldeter Benutzer mit grundlegenden Berechtigungen |
+| Mitarbeiter | Sachbearbeiter des Bauamts mit zusätzlichen Berechtigungen für die Bearbeitung und Einsicht |
 
 ![](media/use-cases.png)
 
@@ -25,6 +26,7 @@
 - Sicherheit: Misuse-Stories formulieren
 
 **User Stories**
+
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
 | Authentifizierung |Benutzer| meine Identität bestätigt bekomme | ich Handlungen unter den Benutzer tätigen kann | Die Daten des Benutzers angezeigt werden | Muss |
