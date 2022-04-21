@@ -5,11 +5,7 @@
 
 - ***Microservices***
 
-
-* [**Beispiel: Parkplatz**](parkplatz/index)
 * [**Central Hub**](hub/index)
-
-
 * [**Bankportal**](bankportal/index)
 * [**Bauamt**](bauamt/index)
 * [**Bildungsportal**](bildungsportal/index)
