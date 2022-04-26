@@ -153,20 +153,19 @@ http://smart.city/microservices/strassenverkehrsamt
 
 ### Fehlerbehandlung 
 
-* Mögliche Fehler / Exceptions auflisten
-* Fehlercodes / IDs sind hilfreich
-* Nicht nur Fehler technischer Art ("Datenbankserver nicht erreichbar") definieren, sondern auch fachliche Fehler wie "Kunde nicht gefunden", "Nachricht wurde bereits gelöscht" o.ä. sind relevant. 
+| **Fehler** | **Code** | **Beschreibung** |
+| :------- | :------- | :------------ |
+| Benutzer konnte nicht authentifiziert werden | 404 | Token konnte nicht zu einem Benutzer aufgelöst werden |
+| Falscher Dateiformat für Fileuploads | 400 | Hochgeladene Datei für z.B. HU in einem ungültigen Format |
+| Ungültiges Datum | 400 | Datum für Erstzulassung liegt z.B. in der Zukunft |
+| Falsche Datentypen | 400 | Datentypen von Anfragen nicht dem Schema entsprechend |
 
 ### Validierung
-
-* Relevante (Integrations)-Testfälle, die aus den Use Cases abgeleitet werden können
-* Testfälle für 
-  - Datenmodell
-  - API
-  - User Interface
-* Fokussieren Sie mehr auf Integrationstestfälle als auf Unittests
-* Es bietet sich an, die IDs der Use Cases / User Stories mit den Testfällen zu verbinden,
-  so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
+  
+  | **Name** | **Bereich** | **Beschreibung** |
+  | :----- | :----- | :----- |
+  | Anfragen erstellen | API | Jede Art von Anfrage kann überprüft werden, indem jeweils eine erstellt wird und getestet wird, ob diese auch anschließend existiert |
+  | Datentypen | Datenmodell | Es sollte getestet werden, ob die angegebenen Datentypen auch wirklich funktionieren, indem man Datensätze hinzufügt, die die Attribute bis aufs Maximum füllen |
 
 ### Verwendete Technologien
 
