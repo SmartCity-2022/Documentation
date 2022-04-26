@@ -171,8 +171,8 @@ http://smart.city/microservices/strassenverkehrsamt
 ### Verwendete Technologien
 
 - Frontend
-  - HTML5, CSS3 nd Javasript / ReactJS
+  - HTML5, CSS3, Javascript / ReactJS
 - Backend
-  - Python / Djange
+  - Python / Django
 - Datenbank
   - MySQL
