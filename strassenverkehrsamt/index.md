@@ -7,27 +7,24 @@
 
 ## Überblick
 
-- Der Microservice Straßenverkehrsamt soll einem Benutzer ermöglichen, alle wichtigen Tätigkeiten innerhalb des Amtes digital erledigen zu können.
+Der Microservice "Straßenverkehrsamt" aus dem Projekt "Smart-City 2022", soll einem im [HUB](https://smartcity-2022.github.io/Documentation/#/hub/index) registrierten Bürger die Möglichkeit geben, Angelegenheiten bzgl. Führerschein(-anträge), Fahrzeug Zulassungen und Ab- und Ummeldungen, Steuerangelegenheiten, Technische Überwachung, Punktesystem und sonstige Strafverfahren bzgl. des Straßenverkehrs zu erledigen.
 - Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
 
 
 ## Funktionale Anforderungen
 
-* Definition der Akteure
 * Use-Case Diagramme
-* Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren 
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
 
 **Definition der Akteure**
 
-- Bürger
-  - Ein im HUB registrierter Benutzer, der über normale Berechtigungen verfügt
-- Sachbearbeiter
-  - Ein Bearbeiter, der die Anträge eines Bürgers bearbeitet
+| **Name** | **Beschreibung** |
+| :------- | :------------ |
+| Bürger | Ein im HUB registrierter Benutzer, der über normale Berechtigungen verfügt, um die o.g. Funktionen auszuführen |
+| Sachbearbeiter | Ein Bearbeiter, der die Anträge eines Bürgers einsehen und administrieren kann |
 
-**Use-Case Diagramm**
+**Use-Case Diagramme**
+
+Zulassungsstelle
 
 ![](media/Use-Case.png)
 
@@ -44,6 +41,13 @@
 | Auto abmelden | Benutzer  | bereits registriertes Auto abmelden | dieses nicht mehr in meinen Daten erscheint | Auto aus Datenbank gelöscht | Muss  |
 | Auto ummelden | Benutzer  | bereits registriertes Kennzeichen auf anderes Auto umschreiben  | das gleiche Kennzeichen auf anderes Auto gemeldet ist | Anfrage auf Ummeldung erstellt wurde  | Muss  |
 | Autos anzeigen  | Benutzer  | Autos die auf meinen Namen registriert sind anzeigen  | ich dieses mit ihren Details sehen kann | Autos in meinen Daten dargestellt werden | Muss |
+| Führerschein Antrag | Benutzer | einen Führerschein Antrag stellen können | dieser ausgewertet werden kann | Eine Antwort bezüglich der Auswertung erhalten wird | Muss |
+| Führerschein Infos | Benutzer | Informationen über bestandene Führerscheine erhalten | ich diese einsehen kann | meine Führerscheine mir angezeigt werden | Muss |
+| TüV Status | Benutzer | Benachrichtigt werden, wenn ein TüV ansteht | ich rechtzeitig darauf reagieren kann | Nachricht angezeigt wird / gesendet wird | Muss |
+| TüV Erneuern | Benutzer | TüV Zertifikate hochladen | der TüV "Timer" erneuert wird | das Ablaufdatum nach Verifizierung verändert wird | Muss |
+| Steuer | Benutzer | Benachrichtigt werden, wenn eine Rechnung ansteht | ich rechtzeitig darauf reagieren kann | Nachricht angezeigt wird / gesendet wird | Muss |
+| Punktesystem | Benutzer | meine gesammelten Punkte in Flensburg einsehen können | ich mein Fahrverhalten ggf. anpassen kann | Die Punkte angezeigt werden | Muss |
+| Strafverfahren | Benutzer | getätigte Strafverfahren im Straßenverkehr abrufen können | ich diese mit dessen Details einsehen kann | diese Vergehen angezeigt werden | Muss |
 | Anfragen bearbeiten | Sachbearbeiter  | Anfragen auf An- und Ummeldungen bearbeiten können  | diese genehmigt oder abgelehnt werden können  | Einträge in DB gelöscht / geändert / hinzugefügt werden | Optional  |
 
 
