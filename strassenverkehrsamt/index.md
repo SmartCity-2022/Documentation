@@ -7,29 +7,36 @@
 
 ## Überblick
 
-- Der Microservice Straßenverkehrsamt soll einem Benutzer ermöglichen, alle wichtigen Tätigkeiten innerhalb des Amtes digital erledigen zu können.
-- Konzeptionelles Analyseklassendiagramm (logische Darstellung der Konzepte der Anwendungsdomäne)
+Der Microservice "Straßenverkehrsamt" aus dem Projekt "Smart-City 2022", soll einem im [HUB](https://smartcity-2022.github.io/Documentation/#/hub/index) registrierten Bürger die Möglichkeit geben, Angelegenheiten bzgl. Führerschein(-anträge), Fahrzeug Zulassungen und Ab- und Ummeldungen, Steuerangelegenheiten, Technische Überwachung, Punktesystem und sonstige Strafverfahren bzgl. des Straßenverkehrs zu erledigen.
 
 
 ## Funktionale Anforderungen
 
-* Definition der Akteure
-* Use-Case Diagramme
-* Strukturierung der Diagramme in funktionale Gruppen
-* Akteure sowie andere Begriffe der implementierten Fachdomäne definieren 
-* Begriffe konsistent in der Spezifikation verwenden  
-* Begriffe im Glossar darstellen
 
 **Definition der Akteure**
 
-- Bürger
-  - Ein im HUB registrierter Benutzer, der über normale Berechtigungen verfügt
-- Sachbearbeiter
-  - Ein Bearbeiter, der die Anträge eines Bürgers bearbeitet
+| **Name** | **Beschreibung** |
+| :------- | :------------ |
+| Bürger | Ein im HUB registrierter Benutzer, der über normale Berechtigungen verfügt, um die o.g. Funktionen auszuführen |
+| Sachbearbeiter | Ein Bearbeiter, der die Anträge eines Bürgers einsehen und administrieren kann |
 
-**Use-Case Diagramm**
+**Use-Case Diagramme**
+
+Zulassungsstelle
 
 ![](media/Use-Case.png)
+
+Führerscheinstelle
+
+![](media/Fuehrerschein.png)
+
+Technische Überwachung
+
+![](media/tuev.png)
+
+Steuerstelle, Strafverfahren, Punktesystem
+
+![](media/rest.png)
 
 
 ## Anforderungen im Detail
@@ -44,6 +51,13 @@
 | Auto abmelden | Benutzer  | bereits registriertes Auto abmelden | dieses nicht mehr in meinen Daten erscheint | Auto aus Datenbank gelöscht | Muss  |
 | Auto ummelden | Benutzer  | bereits registriertes Kennzeichen auf anderes Auto umschreiben  | das gleiche Kennzeichen auf anderes Auto gemeldet ist | Anfrage auf Ummeldung erstellt wurde  | Muss  |
 | Autos anzeigen  | Benutzer  | Autos die auf meinen Namen registriert sind anzeigen  | ich dieses mit ihren Details sehen kann | Autos in meinen Daten dargestellt werden | Muss |
+| Führerschein Antrag | Benutzer | einen Führerschein Antrag stellen können | dieser ausgewertet werden kann | Eine Antwort bezüglich der Auswertung erhalten wird | Muss |
+| Führerschein Infos | Benutzer | Informationen über bestandene Führerscheine erhalten | ich diese einsehen kann | meine Führerscheine mir angezeigt werden | Muss |
+| TüV Status | Benutzer | Benachrichtigt werden, wenn ein TüV ansteht | ich rechtzeitig darauf reagieren kann | Nachricht angezeigt wird / gesendet wird | Muss |
+| TüV Erneuern | Benutzer | TüV Zertifikate hochladen | der TüV "Timer" erneuert wird | das Ablaufdatum nach Verifizierung verändert wird | Muss |
+| Steuer | Benutzer | Benachrichtigt werden, wenn eine Rechnung ansteht | ich rechtzeitig darauf reagieren kann | Nachricht angezeigt wird / gesendet wird | Muss |
+| Punktesystem | Benutzer | meine gesammelten Punkte in Flensburg einsehen können | ich mein Fahrverhalten ggf. anpassen kann | Die Punkte angezeigt werden | Muss |
+| Strafverfahren | Benutzer | getätigte Strafverfahren im Straßenverkehr abrufen können | ich diese mit dessen Details einsehen kann | diese Vergehen angezeigt werden | Muss |
 | Anfragen bearbeiten | Sachbearbeiter  | Anfragen auf An- und Ummeldungen bearbeiten können  | diese genehmigt oder abgelehnt werden können  | Einträge in DB gelöscht / geändert / hinzugefügt werden | Optional  |
 
 
@@ -56,12 +70,6 @@
 
 ## Graphische Benutzerschnittstelle
 
-- GUI-Mockups passend zu User Stories
-- Screens mit Überschrift kennzeichnen, die im Inhaltsverzeichnis zu sehen ist
-- Unter den Screens darstellen (bzw. verlinken), welche User Stories mit dem Screen abgehandelt werden
-- Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-- Mockups für unterschiedliche Akteure
-
 ### Übersicht
 ![](media/Home.png)
 ### Auto anmelden
@@ -73,10 +81,6 @@
 ### Autos anzeigen
 ![](media/Fahrzeuge.png)
 ## Datenmodell 
-
-- Begriffe im Glossar darstellen
-- Modellierung des physikalischen Datenmodells 
-  - RDBMS: ER-Diagramm bzw. Dokumentenorientiert: JSON-Schema
 
 **Entity Relationship Model**
 
@@ -106,62 +110,24 @@
 
 ### URL
 
-http://smart.city/microservices/customer
-
-### Commands
-
-**Synchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| createCustomer() | int id | int id |
-| deleteOrder() | int id | int id |
-
-**Asynchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| createContract() | int id | int id |
-| changeContract() | int id | - |
+http://smart.city/microservices/strassenverkehrsamt
 
 ### Events
 
-**Customer event channel**
+**Tax event channel**
 
 | **Name** | **Payload** | 
 | :------ | :----- | 
-| Customer Authorized | int id |
-| Customer Deleted | int id |
-
-**Contract event channel**
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-| Contract Received | int id |
-| Contract Deleted | int id |
-
-### Queries
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| getContracts() | - | Contract [] list |
-| getContract() | int id | Contract c |
+| Tax not payed | int value |
 
 ### Dependencies
-
-#### RPC
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Authorization Service | authenticateUser() |
-| Hospital Service | blockDate() |
 
 #### Event-Subscriptions
 
 | **Service** | **Funktion** |
 | :------ | :----- | 
-| Cinema channel | CancelFilmCreatedEvent |
-| Customer reply channel | CreateCustomerEvent |
+| Citizen channel | CitizenUpdatedEvent |
+| Citizen channel | CitizenDeletedEvent |
 
 
 ## Technische Umsetzung
@@ -169,23 +135,17 @@ http://smart.city/microservices/customer
 
 ### Softwarearchitektur
 
-- Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
-
-Hier stellen Sie die Verteilung der Softwarebausteine auf die Rechnerknoten dar. Das ist die Softwarearchitektur. Zum Beispiel Javascript-Software auf dem Client und Java-Software auf dem Server. In der Regel wird die Software dabei sowohl auf dem Client als auch auf dem Server in Schichten dargestellt.
+![](media/Verteilung.png)
 
 * Server
-  * Web-Schicht
-  * Logik-Schicht
-  * Persistenz-Schicht
+  * Web-Schicht: Python / Django
+  * Logik-Schicht: Python
+  * Persistenz-Schicht: MySQL Database
 
 * Client
-  * View-Schicht
-  * Logik-Schicht
-  * Kommunikation-Schicht
-
-Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach "unten". Die Softwarearchitektur aus Kapitel "Softwarearchitektur" ist demnach detaillierter als die Systemübersicht aus dem Kapitel "Systemübersicht". Die Schichten können entweder als Ganzes als ein Softwarebaustein angesehen werden. In der Regel werden die Schichten aber noch weiter detailliert und in Softwarebausteine aufgeteilt. 
-
-
+  * View-Schicht: HTML5, CSS3
+  * Logik-Schicht: Javascript
+  * Kommunikation-Schicht: Javascript, JSON
 
 ### Entwurf
 
@@ -193,26 +153,27 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 
 ### Fehlerbehandlung 
 
-* Mögliche Fehler / Exceptions auflisten
-* Fehlercodes / IDs sind hilfreich
-* Nicht nur Fehler technischer Art ("Datenbankserver nicht erreichbar") definieren, sondern auch fachliche Fehler wie "Kunde nicht gefunden", "Nachricht wurde bereits gelöscht" o.ä. sind relevant. 
+| **Fehler** | **Code** | **Beschreibung** |
+| :------- | :------- | :------------ |
+| Benutzertoken konnte nicht aufgelöst werden | 401 | Token konnte nicht zu einem Benutzer aufgelöst werden |
+| Fehler beim auflösen des Tokens | 500 | Auflösen des Tokens wirft eine Exception |
+| Token nicht vorhanden | 404 | Ressource nicht mit gesendet worden |
+| Falscher Dateiformat für Fileuploads | 400 | Hochgeladene Datei für z.B. HU in einem ungültigen Format |
+| Ungültiges Datum | 400 | Datum für Erstzulassung liegt z.B. in der Zukunft |
+| Falsche Datentypen | 400 | Datentypen von Anfragen nicht dem Schema entsprechend |
 
 ### Validierung
-
-* Relevante (Integrations)-Testfälle, die aus den Use Cases abgeleitet werden können
-* Testfälle für 
-  - Datenmodell
-  - API
-  - User Interface
-* Fokussieren Sie mehr auf Integrationstestfälle als auf Unittests
-* Es bietet sich an, die IDs der Use Cases / User Stories mit den Testfällen zu verbinden,
-  so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
+  
+  | **Name** | **Bereich** | **Beschreibung** |
+  | :----- | :----- | :----- |
+  | Anfragen erstellen | API | Jede Art von Anfrage kann überprüft werden, indem jeweils eine erstellt wird und getestet wird, ob diese auch anschließend existiert |
+  | Datentypen | Datenmodell | Es sollte getestet werden, ob die angegebenen Datentypen auch wirklich funktionieren, indem man Datensätze hinzufügt, die die Attribute bis aufs Maximum füllen |
 
 ### Verwendete Technologien
 
 - Frontend
-  - HTML5, CSS und Java Script mittels ReactJS Framework
+  - HTML5, CSS3, Javascript / ReactJS
 - Backend
-  - Python, Framework entweder Django oder FastAPI
+  - Python / Django
 - Datenbank
-  - MySQL, wahrscheinlich MariaDB
+  - MySQL
