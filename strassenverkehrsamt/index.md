@@ -155,7 +155,9 @@ http://smart.city/microservices/strassenverkehrsamt
 
 | **Fehler** | **Code** | **Beschreibung** |
 | :------- | :------- | :------------ |
-| Benutzer konnte nicht authentifiziert werden | 404 | Token konnte nicht zu einem Benutzer aufgelöst werden |
+| Benutzertoken konnte nicht aufgelöst werden | 401 | Token konnte nicht zu einem Benutzer aufgelöst werden |
+| Fehler beim auflösen des Tokens | 500 | Auflösen des Tokens wirft eine Exception |
+| Token nicht vorhanden | 404 | Ressource nicht mit gesendet worden |
 | Falscher Dateiformat für Fileuploads | 400 | Hochgeladene Datei für z.B. HU in einem ungültigen Format |
 | Ungültiges Datum | 400 | Datum für Erstzulassung liegt z.B. in der Zukunft |
 | Falsche Datentypen | 400 | Datentypen von Anfragen nicht dem Schema entsprechend |
