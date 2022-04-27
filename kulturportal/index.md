@@ -53,7 +53,25 @@
 
 ## Graphische Benutzerschnittstelle
 
+### Gui Mock Ups für den User
 
+Veranstaltungskalender
+![Image of EventList](media/UserMockUps/EventList.png)
+
+Eine detailierte Veranstaltung
+![Image of EventDetail](media/UserMockUps/EventDetails.png)
+
+Liste der Restaurants
+![Image of RestaurantList](media/UserMockUps/RestaurantListe.png)
+
+Ein detailiertes Restaurant
+![Image of RestaurantDetail](media/UserMockUps/RestaurantDetail.png)
+
+Liste der Sportangebote
+![Image of SportangeboteList](media/UserMockUps/SportangebotsListe.png)
+
+Ein detailiertes Sportangebot
+![Image of SportangeboteDetail](media/UserMockUps/SportvereinDetail.png)
 
 
 ## Datenmodell 
