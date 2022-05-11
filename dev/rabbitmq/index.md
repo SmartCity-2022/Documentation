@@ -111,10 +111,11 @@ Nachrichten werden immer *direkt* an einen Exchange gesendet:
 ```javascript
 channel.publish("<exchange Name>", "<Topic>", Buffer.from("<Nachricht>"));
 ```
-### Implementation
+### Extras
 
 - Producer: [producer.js](https://github.com/SmartCity-2022/Documentation/blob/master/dev/rabbitmq/javascript/producer.js)
 - Consumer: [consumer.js](https://github.com/SmartCity-2022/Documentation/blob/master/dev/rabbitmq/javascript/consumer.js)
+- Um zu sehen wie viele Nachrichten beim Server eingehen, oder weitere Informationen zu sehen, könnt ihr unter http://localhost:15672 (solange der rabbitmq Server läuft) auf des Managemente Interface zugreifen.
 
 ## Python
 
