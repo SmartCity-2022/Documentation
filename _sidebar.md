@@ -3,6 +3,11 @@
 
 <br>
 
+- ***Entwicklung***
+* [**RabbitMQ**](dev/rabbitmq/index)
+
+<br>
+
 - ***Microservices***
 
 * [**Central Hub**](hub/index)
