@@ -1,21 +1,42 @@
 # Rabbit MQ Testumgebung
-Schritt 1:
+
+## Docker Container starten
 ---
- - Installiert euch [Docker](https://docs.docker.com/get-docker/)
- - Führt in der Konsole diesen befehl uas `docker pull rabbitmq:3.9-management`
- - Nun könnt ihr mit `docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-management` den rabbitmq Server starten
+1. Installiert euch [Docker](https://docs.docker.com/get-docker/)
 
-Schritt 2:
- ---
- Für die bereitgestellten Python programme wird das Packet **pika** gebraucht.
+2. Führt in der Konsole diesen befehl aus:
 
- `pip install pika`
+```bash
+docker pull rabbitmq:3.9-management
+```
 
- Nun könnt ihr reciever.py starten. Dieses Programm hört auf alle eingehenden Events und gibt sie in der Konsole aus.
+3. Mit folgendem Befehl wird ein Container erstellt und gestartet:
 
- Schritt 3:
- ---
- Zum manuellen senden eines Events, könnt ihr sender.py nutzen.
+```bash
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-management
+```
+
+## JavaScript
+
+Verwendung von RabbitMQ mit JavaScript
+
+## Python
+
+Verwendung von RabbitMQ mit Python
+
+### Schritt 1.
+
+Für die bereitgestellten Python programme wird das Packet **pika** gebraucht.
+
+```bash
+pip install pika
+```
+
+Nun könnt ihr [receiver.py]("https://github.com/SmartCity-2022/Documentation/blob/master/dev/rabbitmq/python/receiver.py") reciever.py starten. Dieses Programm hört auf alle eingehenden Events und gibt sie in der Konsole aus.
+
+### Schritt 2.
+
+ Zum manuellen senden eines Events, könnt ihr [sender.py]("https://github.com/SmartCity-2022/Documentation/blob/master/dev/rabbitmq/python/sender.py") nutzen.
  Ein Event steht auf zwei Teilen
 
  - Routing Key
@@ -34,15 +55,12 @@ Ein Empfänger kann sich dann aussuchen auf welche Routing Keys er zuhören möc
 
 Die Message sind einfach die Daten die bei dem Event übertragen werden.
 Es kann ein ganz normaler String oder auch ein json String sein.
- 
- `python sender.py [Put Routing Key here] [Your Message here]`
 
- Extras
- ---
- Falls es euch interessiert oder hilft, könnt ihr unter http://localhost:15672 (solange der rabbitmq Server läuft) auf des Managemente Interface zugreifen.
+```bash
+python sender.py <RoutingKey> <Message>
+```
 
-Username: guest
-<details> 
-  <summary>Passwort: </summary>
-   guest
-</details>
+### Extras
+
+Falls es euch interessiert oder hilft, könnt ihr unter http://localhost:15672 (solange der rabbitmq Server läuft) auf des Managemente Interface zugreifen.
+
