@@ -123,13 +123,13 @@ Verwendung von RabbitMQ mit Python
 
 ### Schritt 1.
 
-Für die bereitgestellten Python programme wird das Packet **pika** gebraucht.
+Für die bereitgestellten Python Programme wird das Packet **pika** gebraucht.
 
 ```termnial
 pip install pika
 ```
 
-Nun könnt ihr [receiver.py](https://github.com/SmartCity-2022/Documentation/blob/master/dev/rabbitmq/python/receiver.py) reciever.py starten. Dieses Programm hört auf alle eingehenden Events und gibt sie in der Konsole aus.
+Nun könnt ihr [receiver.py](https://github.com/SmartCity-2022/Documentation/blob/master/dev/rabbitmq/python/receiver.py) starten. Dieses Programm hört auf alle eingehenden Events und gibt sie in der Konsole aus.
 
 ### Schritt 2.
 
@@ -139,7 +139,7 @@ Nun könnt ihr [receiver.py](https://github.com/SmartCity-2022/Documentation/blo
  - Routing Key
  - Message
 
- Routing Keys könnten wie folgt aussehen:
+ Routing Keys könnten wie folgt aussehen (max. 255 Bytes groß):
    - bank
    - bank.ueberweisung
    - bank.ueberweisung.erfolgreich
@@ -160,4 +160,3 @@ python sender.py <RoutingKey> <Message>
 ### Extras
 
 Falls es euch interessiert oder hilft, könnt ihr unter http://localhost:15672 (solange der rabbitmq Server läuft) auf des Managemente Interface zugreifen.
-
