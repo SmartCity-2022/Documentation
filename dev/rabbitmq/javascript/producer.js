@@ -17,7 +17,7 @@ amqp.connect("amqp://user:pass@127.0.0.1:5672", function(error0, connection) {
 
         //Erzeugen eines Exchanges/Verteiler
         //Type = topic: Nachrichten werden an eine Queue weitergeleitet, die zu diesem RoutingKey passen.
-        channel.assertExchange("THEMEN", "topic", {durable: false}); 
+        channel.assertExchange("logs", "topic", {durable: false}); 
 
         let interval = setInterval(() => {
             let rnd =  Math.floor(Math.random() * 3);
