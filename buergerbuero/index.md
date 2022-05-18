@@ -70,11 +70,27 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 ## Schnittstellen
 
+### REST API
+
+| **route** |  **Type** | **Consumes (optional)** | **Consumes (required)** | **Params (optional)** | **Params (required)** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- | :----- | :----- |
+| /citizen/ | GET | {first_name, last_name} | nothing | id or email | none | citizen list
+| /citizen/ | POST | {address, email, phone} | {first_name, last_name} | none | none | citizen data
+| /citizen/ | DELETE | nothing | nothing | none | none | true / false
+| /citizen/verify/ | POST | nothing | {email} | none | id | nothing
+
 ### Events
 
-- Umzug gemeldet
-- Speermüll gemeldet
-- Briefwahl beantragt
+| **Name** | **Payload** | 
+| :------ | :----- | 
+| buergerbuero.citizen_created | citizen email |
+#### TODO
+| **Name** | **Payload** |
+| :------ | :----- |
+| buergerbuero.citizen_moved | old and new address |
+| buergerbuero.citizen_removed | email address |
+| buergerbuero.bulk_waste | address |
+| buergerbuero.bulk_waste | name and address |
 
 ## Technische Umsetzung
 
