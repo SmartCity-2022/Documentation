@@ -23,9 +23,9 @@ amqp.connect("amqp://127.0.0.1:5672", function(error0, connection) {
 
             //Binden der Queue an den Exchange
             //Der Exchange wird mit dem RoutingKey "info" verbunden.
-            channel.bindQueue(queueInstance.queue, "logs", "info");
-            channel.bindQueue(queueInstance.queue, "logs", "warning");
-            channel.bindQueue(queueInstance.queue, "logs", "error");
+            channel.bindQueue(queueInstance.queue, "logs", "log.info");
+            channel.bindQueue(queueInstance.queue, "logs", "log.warning");
+            channel.bindQueue(queueInstance.queue, "logs", "log.error");
 
             channel.consume(queueInstance.queue, function(msg) {
                 console.log(`Received: [${msg.fields.routingKey}] ${msg.content.toString()}`);
