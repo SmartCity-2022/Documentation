@@ -59,6 +59,26 @@ Dieser Microservice soll einem Benutzer die Möglichkeit bieten auf das Bildungs
 
 Die Kommunikation ziwschen der Client- und Server-Komponente soll über OpenAPI REST-Schnittstelle stattfinden. Die Kommunikation zwischen dem Server und der Datenbank soll über eine bereits existierende Komponente umgesetzt werden und wird daher nicht näher beschrieben.
 
+### REST-Schnittstelle
+
+[Schnittstellen-Dokumentation](https://github.com/SmartCity-2022/Service-Bildungsportal/wiki/api)
+
+### Events
+
+| **RoutingKey**                 | **Beschreibung**                                   | **Payload**              |
+|:-------------------------------|:---------------------------------------------------|:-------------------------|
+| service.hello                  | Registrierung des Services                         | Leer                     |
+| service.education.created      | Neues Bildungsangebot erstellt                     | Id des Bildungsangebotes |
+| service.education.matriculated | Schüler hat sich am Bildungsangebot eingeschrieben | Id der Einschreibung     |
+| service.education.graduated    | Schüler hat ein Bildungsangebot abgeschlossen      | Id des Abschlusses       |
+
+
+
+### Dependencies
+
+| **Service** | **RoutingKey** |
+|:------------|:---------------|
+| MainHub     | service.world  |
 
 # Technische Umsetzung
 
