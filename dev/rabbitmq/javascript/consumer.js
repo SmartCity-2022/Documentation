@@ -14,12 +14,12 @@ amqp.connect("amqp://127.0.0.1:5672", function(error0, connection) {
         if(error1) throw error1;
 
         //Erzeugen einer exklusiven Queue. Sie erhält einen zufälligen Namen, da leerer String als name angegeben.
-        //Eine eklusive Queue wird nach dem Beenden des Programms automatisch gelöscht.
-        channel.assertQueue("", { exclusive: true }, (error2, queueInstance) => {
+        //Eine autoDelete Queue wird nach dem Beenden des Programms automatisch gelöscht.
+        channel.assertQueue("", { exclusive: false, autoDelete: true }, (error2, queueInstance) => {
 
             if(error2) throw error2;
 
-            console.log("Created temporary/exclusive queue: " + queueInstance.queue);
+            console.log("Created temporary/autoDelete queue: " + queueInstance.queue);
 
             //Binden der Queue an den Exchange
             //Der Exchange wird mit dem RoutingKey "info" verbunden.

@@ -63,7 +63,7 @@ connection.createChannel(function(error1, channel) {
 Um von einem Exchange Nachrichten zu empfangen, müssen wir eine Queue erstellen.
 
 ```javascript
-channel.assertQueue('', {durable: true, exclusive: true}, function(error2, queueInstance) {
+channel.assertQueue('', {durable: true, exclusive: false, autoDelete: true}, function(error2, queueInstance) {
     if(error2) throw error2;
 
     // Die Queue wurde erfolgreich erstellt
@@ -73,6 +73,7 @@ channel.assertQueue('', {durable: true, exclusive: true}, function(error2, queue
 - `''`: Leerer Queue-Name um einen Namen zufällig generieren zu lassen. 
 - `durable`: Legt fesst, dass die Queue einen neustart des Servers überlebt.
 - `exclusive`: Die Queue ist exclusiv zu dieser Verbindung. Wird die Verbindung geschlossen, wird die Queue gelöscht.
+- `autoDelete`: Diese Queue wird automatisch gelöscht, sobald keine Verbindung diese mehr verwendet.
 
 ### Binden einer Queue an einen Exchange
 
