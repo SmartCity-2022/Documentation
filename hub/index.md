@@ -114,8 +114,6 @@ https://smartcity.w-mi.de/
 
 ### Events
 
-**Citizen event channel**
-
 | **RoutingKey** | **Beschreibung** | **Payload** | 
 | :------ | :----- | :----- | 
 | service.world | Wird verschickt sobald service.hello erhalten wurde | JWT Secret |
@@ -125,7 +123,6 @@ https://smartcity.w-mi.de/
 
 ### Dependencies
 
-#### Event-Subscriptions
 
 | **RoutingKey** | **Beschreibung** |
 | :------ | :----- | 
