@@ -5,7 +5,7 @@
 
 ## Überblick
 
-- Der Hub zielt darauf ab, als zentrale Schnittstelle für den Benutzer zu dienen, über welche dieser alle vorhandenen Microservices erreichen und mit diesen interagieren kann. Dabei sollen die Microservices in den Hub eingebettet werden und somit indirekt Teil der Anwendung sein. Zudem stellt er die Funktionalität für die Registrierung und den Login bereit und umfasst ein Impressum. 
+- Der Hub zielt darauf ab, als zentrale Schnittstelle für den Benutzer zu dienen, über welche dieser alle vorhandenen Microservices erreichen und mit diesen interagieren kann. Dabei sollen die Microservices in den Hub eingebettet werden und somit indirekt Teil der Anwendung sein. Zudem stellt er die Funktionalität für die Registrierung und den Login bereit. 
 
 
 ## Funktionale Anforderungen
@@ -38,7 +38,7 @@
 | Login | Bürger|  mich einloggen können|Zugriff auf meine Daten erhalte und weitere Funktionalitäten nutzen kann| ein Bürger sich einloggen kann | Must |
 | Logout | Bürger| mich ausloggen können|es nicht länger möglich ist über das aktuelle Gerät Daten auszulesen oder zu ändern | ein Bürger sich ausloggen kann | Must |
 | Zugriff Microservices | Bürger, Gast| auf die verschiedenen Microservices zugreifen können|ich mit dem jeweiligen Microservice interagieren kann| der Zugriff auf die Microservices möglich ist | Must |
-| Impressum | Bürger, Gast| rechtliche- und Kontaktinformationen einsehen können|ich diesbezüglich bescheid weiß| wenn eine Art Impressum bereit gestellt wird | Must |
+| Impressum | Bürger, Gast| rechtliche- und Kontaktinformationen einsehen können|ich diesbezüglich bescheid weiß| wenn eine Art Impressum bereit gestellt wird | Optional |
 
 ### Misuse Stories
 
@@ -58,13 +58,6 @@
 
     ![](images/hub.jpg)
     
-    
-    - Impressum 
-    - User Story: Impressum
-
-    ![](images/hub_impressum.jpg)
-    
-    
     - Loginseite 
     - User Story: Login
 
@@ -74,78 +67,66 @@
     - Registierungsseite
     - User Story: Registrieren
 
-    ![](images/hub_register.jpg)
-    
-    
-    - Startseite mit eingeklappter Navbar
-    - User Storie: Zugriff Microservices
-
-    ![](images/hub_eingeklappt.jpg)
+    ![](images/hub_register.png)
     
   - Als angemeldeter Bürger
     - Startseite 
 
     ![](images/hubreg.jpg)
-    - Impressum
-
-    ![](images/hub_impressum_reg.jpg)
 
 
 ## Datenmodell 
 
-![](images/er_hub.jpg)
+![](images/er_mainhub.jpg)
 
 <br>
 
-![](images/phy_hub.jpg)
+![](images/py_mainhub.jpg)
 
 ## Abläufe
 
 <br>
 
 
-  Aktivität Einloggen      |  Aktivität Registrieren      |  Aktivität Abmelden      |  Aktivität Impressum aufrufen      |  Aktivität Microservice aufrufen
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-![](images/einloggen.png)  |  ![](images/registrieren.png)  |  ![](images/abmelden.png)  |  ![](images/impressum.png)  |  ![](images/microservice.png)
+  Aktivität Einloggen      |  Aktivität Registrieren      |  Aktivität Abmelden      |  Aktivität Microservice aufrufen
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![](images/einloggen.png)  |  ![](images/registrieren.png)  |  ![](images/abmelden.png)  |  ![](images/microservice.png)
 
 
 ## Schnittstellen
 
 ### Externe Schnittstellen
 - **/**:  Navigiert zu der Homepage
-- **/login**: Navigiert zur Login- / Registrierungseite
-- **/impressum**: Navigiert zur Impressumsseite
+- **/auth**: Navigiert zur Login- / Registrierungseite
 
 ### Interne Schnittstellen
-- **GET (' /api/citizens')**: Daten für alle Citizens
-- **GET ('/api/citizens/:id')**: Daten für einen Citizen
-- **POST (' /api/citizens')**: Erstellen eines neuen Citizens
-- **PUT (' /api/citizens/:id')**: Updaten eines bestehenden Citizens
-- **DELETE (' /api/citizens/:id')**: Löschen eines Citizens
+- **POST (' /api/register')**: Erstellen eines neuen Citizens
+- **POST (' /api/login')**: Login eines Citizens
+- **DELETE (' /api/deleteuser')**: Löschen eines Citizens
+- **DELETE (' /api/logout')**: Logout eines Citizens
+- **POST (' /api/token')**: Refreshen des Access Tokens
 
 **Beispiel:**
 
 ### URL
 
-http://smart.city
+https://smartcity.w-mi.de/
 
 ### Events
 
-**Citizen event channel**
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-| Citizen Created | Object citizen |
-| Citizen Authorized | int id |
+| **RoutingKey** | **Beschreibung** | **Payload** | 
+| :------ | :----- | :----- | 
+| service.world | Wird verschickt sobald service.hello erhalten wurde | JWT Secret |
+| service.mainhub.login | Wird verschickt sobald ein User sich einloggt | Refresh Token / Access Token | 
+| service.mainhub.register |  Wird verschickt sobald ein User sich registriert | Refresh Token / Access Token |
+| service.mainhub.logout | Wird verschickt sobald ein User sich ausloggt | "msg: logout"|
 
 ### Dependencies
 
-#### Event-Subscriptions
 
-| **Service** | **Funktion** |
+| **RoutingKey** | **Beschreibung** |
 | :------ | :----- | 
-| Citizen channel | CitizenUpdatedEvent |
-| Citizen channel | CitizenDeletedEvent |
+| service.hello |  Wird von einem Service verschickt sobald es gestartet wurde |
 
 
 ## Technische Umsetzung
@@ -173,16 +154,17 @@ Da im Frontend mit dem Javascript Framework React gearbeitet werden soll, welche
 * Technische Fehler
   * Fehler: 404 Not Found -> Eine Datei, ein Verzeichnis oder eine Schnittstelle konnte nicht gefunden werden.
   * Fehler: 400 Bad Request -> Es wurden fehlerhafte Informationen an die API übergeben
+  * Fehler: 500 Internal Server Error -> Es gab einen internen Server Error bei der Anfrage
   * SQL-Error -> Ein Fehler in der Datenbank ist aufgetreten
   * Timeout Error: -> Zeitüberschreitungsfehler
 
 * Fachliche Fehler
+  
   * Bei der Registrierung eines Bürgers
     * Es existiert bereits ein Bürger mit dieser E-Mail Adresse.
     * Es existiert bereits ein Bürger mit dieser HandyNummer.
     * Es müssen alle Felder ausgefüllt werden.
     * Die angegebene E-Mail-Adresse muss dem genannten Format entsprechen.
-    * Die angegebene Handynummer muss dem genannten Format entsprechen.
     * Ungültiges Passwort! Das Passwort muss das folgende Format haben.
     * Im Falle eines Backendfehlers: Etwas ist schiefgelaufen! Bitte versuchen Sie es später erneut! 
 
