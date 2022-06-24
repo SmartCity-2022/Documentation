@@ -34,7 +34,7 @@ einschreiben kann, sofern diese frei sind. Die Praxis hat die Möglichkeit ihre 
 ![](media/diagramm.png)
 
 <br>
-
+g
 
 # User-Stories
 
@@ -93,6 +93,10 @@ einschreiben kann, sofern diese frei sind. Die Praxis hat die Möglichkeit ihre 
 ![](media/erd.png)
 
 <br>
+
+# Abläufe
+
+![](media/portal.png)
 
 
 # Schnittstellen
