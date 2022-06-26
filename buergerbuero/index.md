@@ -8,8 +8,15 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 ## Funktionale Anforderungen
 
+__Geplant:__
 - Informationen bereitstellen
   - Abfallkalender
+- Meldebescheinigung
+- Bearbeitungs Statusabfrage
+- Briefwahlunterlagen Beantragen
+- Wohnungsgeberbestätigung
+
+__Implementiert:__
 - Termine Vereinbaren
   - An- und Ummelden
   - Beantragung Ausweisdokumente
@@ -18,10 +25,6 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
   - Ausländer-Angelegenheiten
   - Führerscheinangelegenheiten
 - Speermüll Anmelden
-- Meldebescheinigung
-- Bearbeitungs Statusabfrage
-- Briefwahlunterlagen Beantragen
-- Wohnungsgeberbestätigung
 - Umzug Melden
 - Fundsachen einsehen
 
@@ -74,23 +77,30 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 
 | **route** |  **Type** | **Consumes (optional)** | **Consumes (required)** | **Params (optional)** | **Params (required)** | **Produces** |
 | :------ | :----- | :----- | :----- | :----- | :----- | :----- |
-| /citizen/ | GET | {first_name, last_name} | nothing | id or email | none | citizen list
-| /citizen/ | POST | {address, email, phone} | {first_name, last_name} | none | none | citizen data
-| /citizen/ | DELETE | nothing | nothing | none | none | true / false
-| /citizen/verify/ | POST | nothing | {email} | none | id | nothing
+| /citizen | GET | {first_name, last_name} | nothing | id or email | none | citizen list
+| /citizen | POST | {address, email, phone} | {first_name, last_name} | none | none | citizen data
+| /citizen | DELETE | nothing | nothing | none | none | true / false
+| /citizen/move | PATCH | nothing | {email, street, building_number, type} | none | none | nothing
+| /citizen/verify | POST | nothing | {email} | none | id | nothing
+| /misc | GET | nothing | nothing | none | none | authenticated email
+| /misc/bulk_waste | POST | nothing | {street, building_number, type, date} | none | none | nothing
+| /appointment | GET | nothing | nothing | none | id or cid or email or start_date and end_date or nothing | list of appointments
+| /appointment/mine | GET | nothing | nothing | none | none | list of the authenticated users appointments
+| /appointment | POST | nothing | {date, time, issue} | none | none | the created appointment
+| /appointment | DELETE | nothing | nothing | none | id | nothing
 
 ### Events
 
 | **Name** | **Payload** | 
 | :------ | :----- | 
-| buergerbuero.citizen_created | citizen email |
+| buergerbuero.citizen_created | email |
+| buergerbuero.citizen_moved_away | email |
+| buergerbuero.citizen_moved_within | email |
+| buergerbuero.bulk_waste | street, building number, type, date |
 #### TODO
 | **Name** | **Payload** |
 | :------ | :----- |
-| buergerbuero.citizen_moved | old and new address |
-| buergerbuero.citizen_removed | email address |
-| buergerbuero.bulk_waste | address |
-| buergerbuero.bulk_waste | name and address |
+| buergerbuero.citizen_removed | email |
 
 ## Technische Umsetzung
 
@@ -118,7 +128,10 @@ Der Bürgerbüro Microservice soll Informationen und städtische Dienstleistunge
 ### Verwendete Technologien
 * Frontend
   * React.js
+  * MUI
 * Backend
   * Node.js
+  * Express
+  * Sequelize
 * Datenbank
   * MySQL
