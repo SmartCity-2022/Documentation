@@ -88,46 +88,62 @@ Steuerstelle, Strafverfahren, Punktesystem
 
 ## Abläufe
 
-- Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
-- Aktivitätsdiagramme für relevante Use Cases
-- Aktivitätsdiagramm mit Swimlanes sind in der Regel hilfreich 
-  für die Darstellung der Interaktion von Akteuren der Use Cases / User Stories
-- Abläufe der Kommunikation von Rechnerknoten (z.B. Client/Server)
-  in einem Sequenz- oder Aktivitätsdiagramm darstellen
-- Modellieren Sie des weiteren die Diagramme, die für das (eigene) Verständnis des
-  Softwaresystems hilfreich sind. 
+![](media/ablauf.png)
 
 
 ## Schnittstellen
 
-- Schnittstellenbeschreibung (API), z.B. mit OpenAPI 
-- Auflistung der nach außen sichtbaren Schnittstelle des Microservices. Über welche Schnittstelle kann z.B. der Client den Server erreichen?
-- In Event-gesteuerten Systemen ebenfalls die Definition der Ereignisse und deren Attribute
-- Aufteilen in Commands, Events, Queries
-* Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
+### Vehicle Routes
+| **route** |  **Type** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+|/vehicle/create|POST|brand, model, firstregistration, displacement, emissions, hudeadline, licenseplate| None | new vehicle |
+|/vehicle/user/|GET|None|None|User vehicle list|
+|/vehicle/delete/:id|DELTE|NONE|id: int| remove specific vehicle|
+
+### Register-Request Routes
+| **route** |  **Type** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+|/registerrequest/create|POST|vehicle, status, owner| None | new register request |
+|/registerrequest/user/|GET|None|None|User register request list|
+|/registerrequest/delete/:id|DELTE|NONE|id: int| remove specific register request|
+
+### License Routes
+| **route** |  **Type** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+|/license/create|POST|owner, type, received| None | new vehicle |
+|/license/user/|GET|None|None|User license list|
+
+### License-Request Routes
+| **route** |  **Type** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+|/licenserequest/create|POST|citizen, issued, status, licenseclass| None | new license request |
+|/licenserequest/user/|GET|None|None|User license request list|
+|/licenserequest/delete/:id|DELTE|NONE|id: int| remove specific license request|
+
+### Penalty Rotues
+| **route** |  **Type** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+|/penalty/user/|GET|None|None|User penalty list|
+
+### Bill Routes
+| **route** |  **Type** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+|/bill/create|POST|value, description, issued, payed, receiver, deadline| None | new bill |
+|/bill/user/|GET|None|None|User bill list|
 
 **Beispiel:**
 
 ### URL
 
-http://smart.city/microservices/strassenverkehrsamt
+[http://smart.city/microservices/strassenverkehrsamt](https://smartcity.w-mi.de/Strassenverkehrsamt)
 
 ### Events
-
-**Tax event channel**
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-| Tax not payed | int value |
-
-### Dependencies
 
 #### Event-Subscriptions
 
 | **Service** | **Funktion** |
 | :------ | :----- | 
-| Citizen channel | CitizenUpdatedEvent |
-| Citizen channel | CitizenDeletedEvent |
+| service.WORLD | Update Secret Key |
 
 
 ## Technische Umsetzung
@@ -146,10 +162,6 @@ http://smart.city/microservices/strassenverkehrsamt
   * View-Schicht: HTML5, CSS3
   * Logik-Schicht: Javascript
   * Kommunikation-Schicht: Javascript, JSON
-
-### Entwurf
-
-- Detaillierte UML-Diagramme für relevante Softwarebausteine
 
 ### Fehlerbehandlung 
 
