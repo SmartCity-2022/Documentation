@@ -73,17 +73,17 @@
 
 ## Schnittstellen
 
-- **GET ("/application") Gibt alle Bauanträge eines Benutzers
-- **GET ("/appointment") Gibt alle Termine eines Benutzers
-- **GET ("/application/{id}") Gibt einen bestimmten Bauanträge eines Benutzers
-- **GET ("/appointment/{id}") Gibt einen bestimmten Termine eines Benutzers
-- **GET ("/citizen") Gibt alle eingetragenen Benutzers [Testweise]
-- **POST ("/application/new") Erstellt einen neuen Bauantrag für den Benutzer
-- **POST ("/appointment/new") Erstellt einen neuen Termin für den Benutzer
-- **PUT ("/application/edit/{id}") Updatet einen Antrag von einem Benutzer
-- **PUT ("/appointment/edit/{id}") Updatet einen Termin von einem Benutzer
-- **DELETE ("/application/{id}/delete") Löscht einen bestimmten Antrag von einem Benutzer
-- **DELETE ("/appointment/{id}/delete") Löscht einen bestimmten Termin von einem Benutzer
+- **GET** ("/application") Gibt alle Bauanträge eines Benutzers
+- **GET** ("/appointment") Gibt alle Termine eines Benutzers
+- **GET** ("/application/{id}") Gibt einen bestimmten Bauanträge eines Benutzers
+- **GET** ("/appointment/{id}") Gibt einen bestimmten Termine eines Benutzers
+- **GET** ("/citizen") Gibt alle eingetragenen Benutzers [Testweise]
+- **POST** ("/application/new") Erstellt einen neuen Bauantrag für den Benutzer
+- **POST** ("/appointment/new") Erstellt einen neuen Termin für den Benutzer
+- **PUT** ("/application/edit/{id}") Updatet einen Antrag von einem Benutzer
+- **PUT** ("/appointment/edit/{id}") Updatet einen Termin von einem Benutzer
+- **DELETE** ("/application/{id}/delete") Löscht einen bestimmten Antrag von einem Benutzer
+- **DELETE** ("/appointment/{id}/delete") Löscht einen bestimmten Termin von einem Benutzer
 
 ### URL
 
