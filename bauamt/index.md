@@ -73,73 +73,28 @@
 
 ## Schnittstellen
 
-- Schnittstellenbeschreibung (API), z.B. mit OpenAPI 
-- Auflistung der nach außen sichtbaren Schnittstelle des Microservices. Über welche Schnittstelle kann z.B. der Client den Server erreichen?
-- In Event-gesteuerten Systemen ebenfalls die Definition der Ereignisse und deren Attribute
-- Aufteilen in Commands, Events, Queries
-* Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
-
-**Beispiel:**
+- **GET** ("/application") Gibt alle Bauanträge eines Benutzers
+- **GET** ("/appointment") Gibt alle Termine eines Benutzers
+- **GET** ("/application/{id}") Gibt einen bestimmten Bauanträge eines Benutzers
+- **GET** ("/appointment/{id}") Gibt einen bestimmten Termine eines Benutzers
+- **GET** ("/citizen") Gibt alle eingetragenen Benutzers [Testweise]
+- **POST** ("/application/new") Erstellt einen neuen Bauantrag für den Benutzer
+- **POST** ("/appointment/new") Erstellt einen neuen Termin für den Benutzer
+- **PUT** ("/application/edit/{id}") Updatet einen Antrag von einem Benutzer
+- **PUT** ("/appointment/edit/{id}") Updatet einen Termin von einem Benutzer
+- **DELETE** ("/application/{id}/delete") Löscht einen bestimmten Antrag von einem Benutzer
+- **DELETE** ("/appointment/{id}/delete") Löscht einen bestimmten Termin von einem Benutzer
 
 ### URL
 
-http://smart.city/microservices/customer
-
-### Commands
-
-**Synchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| createCustomer() | int id | int id |
-| deleteOrder() | int id | int id |
-
-**Asynchronous**
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| createContract() | int id | int id |
-| changeContract() | int id | - |
+https://smartcity.w-mi.de/Bauamt
 
 ### Events
 
-**Customer event channel**
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-| Customer Authorized | int id |
-| Customer Deleted | int id |
-
-**Contract event channel**
-
-| **Name** | **Payload** | 
-| :------ | :----- | 
-| Contract Received | int id |
-| Contract Deleted | int id |
-
-### Queries
-
-| **Name** | **Parameter** | **Resultat** |
-| :------ | :----- | :------ |
-| getContracts() | - | Contract [] list |
-| getContract() | int id | Contract c |
-
-### Dependencies
-
-#### RPC
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Authorization Service | authenticateUser() |
-| Hospital Service | blockDate() |
-
-#### Event-Subscriptions
-
-| **Service** | **Funktion** |
-| :------ | :----- | 
-| Cinema channel | CancelFilmCreatedEvent |
-| Customer reply channel | CreateCustomerEvent |
-
+| **Key** | **Beschreibung** | **Payload** | 
+| :------ | :----- | :----- | 
+| service.world | Wird verschickt sobald service.hello erhalten wurde | JWT Secret |
+| service.hello | Wird verschickt sobald ein Service starten | Nachricht |
 
 ## Technische Umsetzung
 
@@ -162,28 +117,25 @@ Hier stellen Sie die Verteilung der Softwarebausteine auf die Rechnerknoten dar.
 
 Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach "unten". Die Softwarearchitektur aus Kapitel "Softwarearchitektur" ist demnach detaillierter als die Systemübersicht aus dem Kapitel "Systemübersicht". Die Schichten können entweder als Ganzes als ein Softwarebaustein angesehen werden. In der Regel werden die Schichten aber noch weiter detailliert und in Softwarebausteine aufgeteilt. 
 
-
-
-### Entwurf
-
-- Detaillierte UML-Diagramme für relevante Softwarebausteine
+![](media/artifact.png)
 
 ### Fehlerbehandlung 
 
-* Mögliche Fehler / Exceptions auflisten
-* Fehlercodes / IDs sind hilfreich
-* Nicht nur Fehler technischer Art ("Datenbankserver nicht erreichbar") definieren, sondern auch fachliche Fehler wie "Kunde nicht gefunden", "Nachricht wurde bereits gelöscht" o.ä. sind relevant. 
+* Technische Fehler
+  * Fehler 404 Not Found: Ein Account, Termin oder Bauantrag konnte nicht gefunden werden.
+  * Fehler 422 Unprocessable Entity: Das Objekt was übergeben wird kann nicht verarbeitet werden.
+  * Fehler 500 Internal Server Error: Der Server hat einen Fehler beim Verarbeiten der Anfrage
+  * SQL-Error: Ein Fehler im Umgang mit der Datenbank ist aufgetreten.
+  * Timeout Error: Zeitüberschreibung
 
 ### Validierung
 
-* Relevante (Integrations)-Testfälle, die aus den Use Cases abgeleitet werden können
-* Testfälle für 
-  - Datenmodell
-  - API
-  - User Interface
-* Fokussieren Sie mehr auf Integrationstestfälle als auf Unittests
-* Es bietet sich an, die IDs der Use Cases / User Stories mit den Testfällen zu verbinden,
-  so dass erkennbar ist, ob Sie alle Use Cases getestet haben.
+| **Fall** | **Beschreibung** | **Testschritt** | **Ergebnis** | 
+| :------ | :----- | :----- | :----- | 
+| Bauen | Das Projekt muss erfolgreich gebaut und deployt werden | Das Projekt wird gestartet | Das starten wird erfolgreich ausgeführt ohne auftretende Fehler |
+| Funktionalität | Alle Routen sowie die Middleware funktionieren | Alle Routen und somit auch die Middleware werden getestet | Erfolgreich oder durchgefallen |
+
+Es muss grundsätzlich bevor jeder Route die Authentifizierung stattfinden um somit zu testen, ob die Berechtigung besteht um die Funktion auszuführen. Durch die Authentifizierung kriegt man außerdem den Benutzer aus der Payload den man für die Route dementsprechend brauch. Danach wird die Funktionalität der Route getestet in der man guckt, ob die Request mit den Userinputs auf richtigkeit validiert werden und somit erfolgreich in die Datenbank eingetragen werden können. Wenn alle diese Punkte erfolgreich abgeschlossen werden ist der Test erfolgreich.
 
 ### Verwendete Technologien
 
@@ -192,3 +144,5 @@ Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach 
 * Frontend: React.js Bootstrap und oder Material UI
 * Backend: Python FastApi
 * Datenbank: MySQL
+
+* Wichtige Libs: Sqlalchemy, Urllib3, Starlette, Pika, Jwt
