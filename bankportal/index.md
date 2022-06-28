@@ -50,48 +50,80 @@ Dieser Mircoservice bietet die Dienstleistung einer Bank wie die Eröffnung und 
 
 ## Schnittstellen
 
-- Schnittstellenbeschreibung (API), z.B. mit OpenAPI 
-- Auflistung der nach außen sichtbaren Schnittstelle des Microservices. Über welche Schnittstelle kann z.B. der Client den Server erreichen?
-- In Event-gesteuerten Systemen ebenfalls die Definition der Ereignisse und deren Attribute
-- Aufteilen in Commands, Events, Queries
-* Abhängigkeiten: Liste mit Kommunikationsabhängigkeiten zu anderen Microservices
+**URL**
+https://bank.smartcity.w-mi.de/api
 
-### URL
 
-http://smart.city/microservices/bankportal
+**Account Route**
+| **Route** |  **Method** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+| /account |GET| <center>-----------</center>|<center>-----------</center> | Account Array|
+| /account/:id |GET|<center>-----------</center> | KontoID | Account Object|
+| /account |POST| {name, iban, credit} |<center>-----------</center> | Create Account |
+| /account/:id |DELETE| <center>-----------</center>| KontoID | Delete Account|
 
+**Transaction Route**
+| **Route** |  **Method** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+| /transaction |GET|<center>-----------</center> |<center>-----------</center> | Transaction Array|
+| /transaction |POST| {amount, purposeofuse, receiverId} | <center>-----------</center>| Create Transaction |
+| /transaction/:id |DELETE| <center>-----------</center>| TransactionID | Delete Transaction |
+
+**Card Route**
+| **Route** |  **Method** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+| /card |GET| <center>-----------</center>|<center>-----------</center> | Card Object|
+| /card |POST| {expirydate} |<center>-----------</center> | Create Card|
+| /card/:id |DELETE|<center>-----------</center> | CardID| Delete Card|
+
+**Branchoffice Route**
+| **Route** |  **Method** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+| /branchoffice |GET|<center>-----------</center> |<center>-----------</center> | Branchoffice List|
+| /branchoffice/:id |GET|<center>-----------</center> | BranchofficeID| Branchoffice Object|
+| /branchoffice |POST| {name, address} |<center>-----------</center> | Create Branchoffice |
+| /branchoffice/:id |DELETE|<center>-----------</center> | BranchofficeID| Delete Branchoffice |
+
+**Consultant Route**
+| **Route** |  **Method** | **Consumes** | **Params** | **Produces** |
+| :------ | :----- | :----- | :----- | :----- |
+| /consultant |GET|<center>-----------</center> |<center>-----------</center> | Consultant List|
+| /consultant/:id |GET|<center>-----------</center> | ConsultantID | Consultant Object|
+| /consultant |POST| {name, address} |<center>-----------</center> | Create Consultant |
+| /consultant/:id |DELETE|<center>-----------</center> | ConsultantID | Delete Consultant |
 
 ## Technische Umsetzung
 
-
 ### Softwarearchitektur
+![](media/softwarearchitektur.svg)
 
-- Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
-
-Hier stellen Sie die Verteilung der Softwarebausteine auf die Rechnerknoten dar. Das ist die Softwarearchitektur. Zum Beispiel Javascript-Software auf dem Client und Java-Software auf dem Server. In der Regel wird die Software dabei sowohl auf dem Client als auch auf dem Server in Schichten dargestellt.
-
-* Server
+* **Server**
   * Web-Schicht
+    * JavaScript / Express.js
   * Logik-Schicht
+    * Node.js
+    * Sequelize
   * Persistenz-Schicht
+    * MySQL Datenbank
 
-* Client
+* **Client**
   * View-Schicht
+    * HTML
+    * CSS
   * Logik-Schicht
+    * JavaScript / React.js
   * Kommunikation-Schicht
+    * HTTP
 
-Die Abhängigkeit ist bei diesen Schichten immer unidirektional von "oben" nach "unten". Die Softwarearchitektur aus Kapitel "Softwarearchitektur" ist demnach detaillierter als die Systemübersicht aus dem Kapitel "Systemübersicht". Die Schichten können entweder als Ganzes als ein Softwarebaustein angesehen werden. In der Regel werden die Schichten aber noch weiter detailliert und in Softwarebausteine aufgeteilt. 
 
 
 ### Verwendete Technologien
-
-- Verwendete Technologien (Programmiersprachen, Frameworks, etc.)
-
-* Frontend
-    * Javascript 
-     * React.js
-* Backend
-    * Javascript
-     * Express.js 
-* Datenbank
+* **Frontend**
+  * React.js
+  * MUI
+* **Backend**
+  * Node.js
+  * Express.js
+  * Sequelize
+* **Datenbank**
   * MySQL
