@@ -50,11 +50,13 @@ Dieser Mircoservice bietet die Dienstleistung einer Bank wie die Eröffnung und 
 
 ## Schnittstellen
 
-**URL**
+**URL**  
+
 https://bank.smartcity.w-mi.de/api
 
 
-**Account Route**
+**Account Route**  
+
 | **Route** |  **Method** | **Consumes** | **Params** | **Produces** |
 | :------ | :----- | :----- | :----- | :----- |
 | /account |GET| <center>-----------</center>|<center>-----------</center> | Account Array|
@@ -62,21 +64,24 @@ https://bank.smartcity.w-mi.de/api
 | /account |POST| {name, iban, credit} |<center>-----------</center> | Create Account |
 | /account/:id |DELETE| <center>-----------</center>| KontoID | Delete Account|
 
-**Transaction Route**
+**Transaction Route**  
+
 | **Route** |  **Method** | **Consumes** | **Params** | **Produces** |
 | :------ | :----- | :----- | :----- | :----- |
 | /transaction |GET|<center>-----------</center> |<center>-----------</center> | Transaction Array|
 | /transaction |POST| {amount, purposeofuse, receiverId} | <center>-----------</center>| Create Transaction |
 | /transaction/:id |DELETE| <center>-----------</center>| TransactionID | Delete Transaction |
 
-**Card Route**
+**Card Route**  
+
 | **Route** |  **Method** | **Consumes** | **Params** | **Produces** |
 | :------ | :----- | :----- | :----- | :----- |
 | /card |GET| <center>-----------</center>|<center>-----------</center> | Card Object|
 | /card |POST| {expirydate} |<center>-----------</center> | Create Card|
 | /card/:id |DELETE|<center>-----------</center> | CardID| Delete Card|
 
-**Branchoffice Route**
+**Branchoffice Route**  
+
 | **Route** |  **Method** | **Consumes** | **Params** | **Produces** |
 | :------ | :----- | :----- | :----- | :----- |
 | /branchoffice |GET|<center>-----------</center> |<center>-----------</center> | Branchoffice List|
@@ -84,7 +89,8 @@ https://bank.smartcity.w-mi.de/api
 | /branchoffice |POST| {name, address} |<center>-----------</center> | Create Branchoffice |
 | /branchoffice/:id |DELETE|<center>-----------</center> | BranchofficeID| Delete Branchoffice |
 
-**Consultant Route**
+**Consultant Route**  
+
 | **Route** |  **Method** | **Consumes** | **Params** | **Produces** |
 | :------ | :----- | :----- | :----- | :----- |
 | /consultant |GET|<center>-----------</center> |<center>-----------</center> | Consultant List|
