@@ -255,21 +255,39 @@ Ein Beamter kann durch eine Benachrichtigung in seinem Interface einen Notruf en
 ### Sequenzdiagramm
 ![](media/diagramme/Sequenzdiagramm.jpg)
 
+
+### URL
+http://smartcity.w-mi.de/polizei
+
+### Schnittstellen
+
+#### Interne Schnittstellen (API)
+
+
+| Schnittstelle | Methode | Beschreibung |
+| :------------ | :------ | -----------: |
+| /policeman     | GET("/","/id"), POST("/create")| Endpunkt für Daten von Polizisten |
+| /address     | GET("/","/id"), POST("/create") | Endpunkt für Daten von Adressen |
+| /accident     | GET("/","/id"), POST("/create") | Endpunkt für Daten von Unfällen |
+| /trafficjam     | GET("/","/id"), POST("/create") | Endpunkt für Daten von Stauss |
+| /report     | GET("/","/id"), POST("/create"), DELETE("id") | Endpunkt für Daten von Anzeigen |
+| /wantedPerson     | GET("/","/id"), POST("/create"), DELETE("/id") | Endpunkt für Daten von gesuchten-Personen |
+| /news     | GET("/") | Endpunkt für Daten von Neuigkeiten |
+
 ### Fehlerbehandlung 
 
+#### API
 
-|**Art des Fehlers**|**Gegenmaßnahme**|
-| :----- | :---- |
-| Datenbank nicht erreichbar|-|
-| Benutzer möchte uneingeloggt eine Anzeige erstatten oder Meldungen aufgeben| Prüfen ob der Benutzer eingeloggt ist, bevor Applikation geöffnet wird|
-| Benutzer stellt zu viele Anzeigen/Meldungen/Personenhinweise| Tägliches Limit für Aktionen|
-| Ungültige Hinweise zu Personen wurden abgegeben, da diese schon gefasst wurden | regelmäßig GUI aktualisieren|
-| Meldung zu dem gleichen Ereignis wird mehrmals eingereicht | Beamter muss Meldungen prüfen|
+| Fehlercode | Name | Beschreibung |
+| :--------- | :--- | -----------: |
+| 400 | Bad Request | Fehlerhafte Anfrage |
+| 404 | Not Found | Seite/Information/Eintrag wurde nicht gefunden. |
+| 200 | OK | Alles gut |
 
 
 ### Verwendete Technologien
 
-* Frontend: React mit Typescript
+* Frontend: React mit Typescript (Material UI)
 * Backend: TypeScript / Express zum Server aufsetzen
 * Datenbank: MySQL
 
