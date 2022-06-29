@@ -235,8 +235,8 @@ http://smartcity.w-mi.de/polizei
 
 | Fehlercode | Name | Beschreibung |
 | :--------- | :--- | -----------: |
-| 400 | Bad Request | Fehlende Parameter in der Anfrage |
-| 404 | Not Found | Seite nicht gefunden. |
+| 400 | Bad Request | Fehlerhafte Anfrage |
+| 404 | Not Found | Seite/Information/Eintrag wurde nicht gefunden. |
 | 200 | OK | Alles gut |
 
 
