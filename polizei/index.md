@@ -216,7 +216,8 @@ http://smartcity.w-mi.de/polizei
 
 ### Schnittstellen
 
-#### **Wichtige Interne Schnittstellen (API)**
+#### Interne Schnittstellen (API)
+
 
 | Schnittstelle | Methode | Beschreibung |
 | :------------ | :------ | -----------: |
